@@ -1,81 +1,92 @@
 # ------------------------------------------------------ 
-# Gabriel Lujan - Fullstack Project: Soundcloud (Schema) 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (Schema) 
 # ------------------------------------------------------ 
 
-| * USERS *       | data type | details                   |
+
+* USERS * 
+|-----------------|-----------|---------------------------|
+| column name     | data type | details                   |
 |-----------------|-----------|---------------------------|
 | id              | integer   | not null, primary key     |
 | username        | string    | not null, indexed         |
 | email           | string    | not null, indexed, unique |
 | password_digest | string    | not null, unique          |
 | session_token   | string    | not null, indexed, unique |
-| created_at      | string    | not null                  |
-| updated_at      | string    | not null                  |
 
-| * ARTISTS * | data type | details               |
+
+* ARTISTS * 
+|-------------|-----------|-----------------------|
+| column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
 | name        | string    | not null, indexed     |
-| user_id     | integer   | not null              |
-| created_at  | string    | not null              |
-| updated_at  | string    | not null              |
+| user_id     | integer   | not null, foreign key |
 
-| * SONGS *  | data type | details               |
-|------------|-----------|-----------------------|
-| id         | integer   | not null, primary key |
-| title      | string    | not null, indexed     |
-| artist_id  | integer   | not null              |
-| created_at | string    | not null              |
-| updated_at | string    | not null              |
 
-| * SONGS LIKES (bonus) * | data type | details               |
-|-------------------------|-----------|-----------------------|
-| id                      | integer   | not null, primary key |
-| song_id                 | integer   | not null              |
-| created_at              | string    | not null              |
-| updated_at              | string    | not null              |
+* SONGS * 
+|--------------|-----------|-----------------------|
+| column name  | data type | details               |
+|--------------|-----------|-----------------------|
+| id           | integer   | not null, primary key |
+| title        | string    | not null, indexed     |
+| artist_id    | integer   | not null, foreign key |
+| album_id     | integer   | not null, foreign key |
 
-| * COMMENTS * | data type | details               |
+
+* COMMENTS * 
+|--------------|-----------|-----------------------|
+| column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
 | body         | text      | not null              |
-| author_id    | integer   | not null              |
-| created_at   | string    | not null              |
-| updated_at   | string    | not null              |
+| author_id    | integer   | not null, foreign key |
+| comment_id   | integer   | not null, foreign key |
 
-| * COMMENT REPLIES * | data type | details               |
-|---------------------|-----------|-----------------------|
-| id                  | integer   | not null, primary key |
-| body                | text      | not null              |
-| comment_id          | integer   | not null              |
-| created_at          | string    | not null              |
-| updated_at          | string    | not null              |
 
-| * FOLLOWS * | data type | details               |
+* FOLLOWS * 
+|-------------|-----------|--------------------------------|
+| column name | data type | details                        |
+|-------------|-----------|--------------------------------|
+| id          | integer   | not null, primary key          |
+| user_id     | integer   | not null, indexed, foreign key |
+
+
+* FOLLOWERS * 
+|---------------|-----------|--------------------------------|
+| column name   | data type | details                        |
+|---------------|-----------|--------------------------------|
+| id            | integer   | not null, primary key          |
+| user_id       | integer   | not null, indexed, foreign key |
+
+
+* ALBUMS (bonus) * 
+|-------------|-----------|-----------------------|
+| column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
-| user_id     | integer   | not null, indexed     |
-| created_at  | string    | not null              |
-| updated_at  | string    | not null              |
+| name        | string    | not null              |
+| song_id     | integer   | not null, foreign key |
 
-| * FOLLOWERS * | data type | details               |
-|---------------|-----------|-----------------------|
-| id            | integer   | not null, primary key |
-| user_id       | integer   | not null, indexed     |
-| created_at    | string    | not null              |
-| updated_at    | string    | not null              |
 
-| * PLAYS (bonus) * | data type | details               |
+* SONG LIKES (bonus) * 
+|-------------------------|-----------|-----------------------|
+| column name             | data type | details               |
+|-------------------------|-----------|-----------------------|
+| id                      | integer   | not null, primary key |
+| song_id                 | integer   | not null, foreign key |
+
+
+* PLAYS (bonus) * 
+|-------------------|-----------|-----------------------|
+| column name       | data type | details               |
 |-------------------|-----------|-----------------------|
 | id                | integer   | not null, primary key |
-| song_id           | integer   | not null              |
-| created_at        | string    | not null              |
-| updated_at        | string    | not null              |
+| song_id           | integer   | not null, foreign key |
 
-| * REPOSTS (bonus) * | data type | details               |
+
+* REPOSTS (bonus) * 
+| column name         | data type | details               |
 |---------------------|-----------|-----------------------|
 | id                  | integer   | not null, primary key |
-| user_id             | integer   | not null, indexed     |
-| song_id             | integer   | not null              |
-| created_at          | string    | not null              |
-| updated_at          | string    | not null              |
+| user_id             | integer   | not null, foreign key |
+| song_id             | integer   | not null, foreign key |
