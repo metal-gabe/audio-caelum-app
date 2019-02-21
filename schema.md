@@ -4,7 +4,7 @@
 
 
 * USERS * 
-|-----------------|-----------|---------------------------|
+
 | column name     | data type | details                   |
 |-----------------|-----------|---------------------------|
 | id              | integer   | not null, primary key     |
@@ -15,7 +15,7 @@
 
 
 * ARTISTS * 
-|-------------|-----------|-----------------------|
+
 | column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
@@ -24,7 +24,7 @@
 
 
 * SONGS * 
-|--------------|-----------|-----------------------|
+
 | column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
@@ -34,7 +34,7 @@
 
 
 * COMMENTS * 
-|--------------|-----------|-----------------------|
+
 | column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
@@ -44,7 +44,7 @@
 
 
 * FOLLOWS * 
-|-------------|-----------|--------------------------------|
+
 | column name | data type | details                        |
 |-------------|-----------|--------------------------------|
 | id          | integer   | not null, primary key          |
@@ -52,7 +52,7 @@
 
 
 * FOLLOWERS * 
-|---------------|-----------|--------------------------------|
+
 | column name   | data type | details                        |
 |---------------|-----------|--------------------------------|
 | id            | integer   | not null, primary key          |
@@ -60,7 +60,7 @@
 
 
 * ALBUMS (bonus) * 
-|-------------|-----------|-----------------------|
+
 | column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
@@ -69,7 +69,7 @@
 
 
 * SONG LIKES (bonus) * 
-|-------------------------|-----------|-----------------------|
+
 | column name             | data type | details               |
 |-------------------------|-----------|-----------------------|
 | id                      | integer   | not null, primary key |
@@ -77,7 +77,7 @@
 
 
 * PLAYS (bonus) * 
-|-------------------|-----------|-----------------------|
+
 | column name       | data type | details               |
 |-------------------|-----------|-----------------------|
 | id                | integer   | not null, primary key |
@@ -85,6 +85,7 @@
 
 
 * REPOSTS (bonus) * 
+
 | column name         | data type | details               |
 |---------------------|-----------|-----------------------|
 | id                  | integer   | not null, primary key |
