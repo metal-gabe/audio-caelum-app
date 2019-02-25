@@ -19,7 +19,7 @@
 | column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
-| name        | string    | not null, indexed     |
+| username    | string    | not null, indexed     |
 | user_id     | integer   | not null, foreign key |
 
 
@@ -28,7 +28,7 @@
 | column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
-| title        | string    | not null, indexed     |
+| song_title   | string    | not null, indexed     |
 | artist_id    | integer   | not null, foreign key |
 | album_id     | integer   | not null, foreign key |
 
