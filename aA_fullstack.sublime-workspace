@@ -1,0 +1,1022 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"vowel",
+				"vowels"
+			],
+			[
+				"cons",
+				"constructor\t(js_assessment.js)"
+			],
+			[
+				"first",
+				"firstLetter"
+			],
+			[
+				"quick",
+				"quickSort"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"digital",
+				"digitalRoot"
+			],
+			[
+				"merge",
+				"mergeSort"
+			],
+			[
+				"call",
+				"callArgs"
+			],
+			[
+				"Fun",
+				"Function.prototype.myBind"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"hambug",
+				"hamburger.png\t(exercise.md)"
+			],
+			[
+				"ul",
+				"url()\tbackground-image"
+			],
+			[
+				"ham",
+				"hamburger-dropdown\t(exercise.md)"
+			],
+			[
+				"grid-te",
+				"grid-template-areas\tproperty"
+			],
+			[
+				"grid-temp",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"border",
+				"border-box\t(custom_grid.css)"
+			],
+			[
+				"fahr",
+				"fahrenheit\t(03_temperature_object_spec.rb)"
+			],
+			[
+				"attr",
+				"attr_writer\t(02_timer_spec.rb)"
+			],
+			[
+				"capit",
+				"capitalize\t(01_book_titles_spec.rb)"
+			],
+			[
+				"new",
+				"new_word"
+			],
+			[
+				"each",
+				"each_with_index"
+			],
+			[
+				"curre",
+				"current_player"
+			],
+			[
+				"other",
+				"other_player"
+			],
+			[
+				"current",
+				"current_player"
+			],
+			[
+				"get",
+				"get_rand_empty_pos\t(board.rb)"
+			],
+			[
+				"curren",
+				"current_board"
+			],
+			[
+				"curr",
+				"current_board"
+			],
+			[
+				"computer",
+				"computer_player\t(battleship_spec.rb)"
+			],
+			[
+				"p2",
+				"p2_board"
+			],
+			[
+				"p1",
+				"p1_board"
+			],
+			[
+				"max",
+				"max_ships"
+			],
+			[
+				"guess",
+				"guess_status"
+			],
+			[
+				"play",
+				"player_type"
+			],
+			[
+				"player",
+				"player_type"
+			],
+			[
+				"last",
+				"last_guess"
+			],
+			[
+				"letter",
+				"letter_counts"
+			],
+			[
+				"dict",
+				"dictionary"
+			],
+			[
+				"dcit",
+				"dictionary"
+			],
+			[
+				"render",
+				"render_figure"
+			],
+			[
+				"mathcing",
+				"matching_spots"
+			],
+			[
+				"secret",
+				"secret_word_length"
+			],
+			[
+				"matchin",
+				"matching_spots"
+			],
+			[
+				"default",
+				"default_dict"
+			],
+			[
+				"guessed",
+				"guessed_letter"
+			],
+			[
+				"update",
+				"update_board"
+			],
+			[
+				"secre",
+				"secret_word_length"
+			],
+			[
+				"register",
+				"register_secret_length\t(hangman_01_spec.rb)"
+			],
+			[
+				"place",
+				"place_random_ship\t(board.rb)"
+			],
+			[
+				"game",
+				"game_over"
+			],
+			[
+				"Bat",
+				"Battleship\t(README.md)"
+			],
+			[
+				"Battl",
+				"BattleshipGame"
+			],
+			[
+				"count",
+				"count_ships\t(board.rb)"
+			],
+			[
+				"plac",
+				"place_random_ship"
+			],
+			[
+				"board",
+				"board_size"
+			],
+			[
+				"std",
+				"stdin\t(mastermind_spec.rb)"
+			],
+			[
+				"exac",
+				"exact_matches"
+			],
+			[
+				"sec",
+				"secret_code"
+			],
+			[
+				"num",
+				"num_turns"
+			],
+			[
+				"exa",
+				"exact_matches"
+			],
+			[
+				"self",
+				"self_uniqs"
+			],
+			[
+				"blue",
+				"blue_code_caps"
+			],
+			[
+				"VA",
+				"values"
+			],
+			[
+				"user",
+				"user_guess"
+			],
+			[
+				"to",
+				"to_i\t(human_player.rb)"
+			],
+			[
+				"curretn",
+				"current_player\t(game_spec.rb)"
+			],
+			[
+				"rand",
+				"rand_idx"
+			],
+			[
+				"row1",
+				"row1_idx"
+			],
+			[
+				"find",
+				"find_index"
+			],
+			[
+				"file",
+				"file_shuffler"
+			],
+			[
+				"from",
+				"from_tower_answer"
+			],
+			[
+				"Tower",
+				"TowersOfHanoi"
+			],
+			[
+				"has",
+				"has_conflict"
+			],
+			[
+				"enrolled",
+				"enrolled_course"
+			],
+			[
+				"conflicts",
+				"conflicts_with\t(course.rb)"
+			],
+			[
+				"time",
+				"time_block"
+			],
+			[
+				"alh",
+				"alphabet"
+			],
+			[
+				"temp",
+				"temp_word"
+			],
+			[
+				"chunks",
+				"chunks[5"
+			],
+			[
+				"hun",
+				"hundred_to_thousand"
+			],
+			[
+				"second",
+				"second_num"
+			],
+			[
+				"hundre",
+				"hundreds_conversion"
+			],
+			[
+				"tens",
+				"tens_conversion"
+			],
+			[
+				"nine",
+				"ninety\t(01_in_words_spec.rb)"
+			],
+			[
+				"eight",
+				"eighty\t(01_in_words_spec.rb)"
+			],
+			[
+				"seve",
+				"seventy\t(01_in_words_spec.rb)"
+			],
+			[
+				"thirt",
+				"thirty\t(01_in_words_spec.rb)"
+			],
+			[
+				"twe",
+				"twenty\t(01_in_words_spec.rb)"
+			],
+			[
+				"raise",
+				"raise_error"
+			],
+			[
+				"set2",
+				"set2_keys"
+			],
+			[
+				"sort",
+				"sorted_entries"
+			],
+			[
+				"keyword",
+				"keywords"
+			],
+			[
+				"key",
+				"keywords"
+			],
+			[
+				"optinos",
+				"options_hash"
+			],
+			[
+				"options",
+				"options_hash"
+			],
+			[
+				"capital",
+				"capitalize_word"
+			],
+			[
+				"orig",
+				"orig_int"
+			],
+			[
+				"nomal",
+				"normal_hash"
+			],
+			[
+				"van",
+				"vandal_hash"
+			],
+			[
+				"counts",
+				"counts_hash"
+			],
+			[
+				"clean",
+				"clean_puncutation"
+			],
+			[
+				"norm",
+				"normal_sign"
+			],
+			[
+				"cha",
+				"character_count"
+			],
+			[
+				"small",
+				"smallest_population_size"
+			],
+			[
+				"number",
+				"number_of_species**2"
+			],
+			[
+				"largest",
+				"largest_population_size"
+			],
+			[
+				"vowels",
+				"vowels_array"
+			],
+			[
+				"words",
+				"words_hash"
+			],
+			[
+				"block",
+				"block_given"
+			],
+			[
+				"start",
+				"start_point"
+			],
+			[
+				"bubble",
+				"bubble_sort"
+			],
+			[
+				"sub",
+				"sub_arr"
+			],
+			[
+				"one",
+				"one_week_wonders"
+			],
+			[
+				"end",
+				"end_idx"
+			],
+			[
+				"star",
+				"start_idx"
+			],
+			[
+				"remove",
+				"remove_punctuation"
+			],
+			[
+				"not",
+				"not_repeat_year"
+			],
+			[
+				"years",
+				"years_with_no_repeats"
+			],
+			[
+				"long",
+				"long_strings"
+			],
+			[
+				"ordere",
+				"ordered_vowel_word"
+			],
+			[
+				"factor",
+				"factors_count"
+			],
+			[
+				"nums",
+				"nums_with_n_factors"
+			],
+			[
+				"actual",
+				"actual_retail_price"
+			],
+			[
+				"pigi",
+				"pigified_words"
+			],
+			[
+				"title",
+				"titleized_words"
+			],
+			[
+				"total",
+				"total_prime_factors"
+			],
+			[
+				"with",
+				"with_index"
+			],
+			[
+				"are",
+				"area_code"
+			],
+			[
+				"i_dii",
+				"i_dividend"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 270.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"browse pag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"submlinter setttin",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"sublime linter",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"termin",
+				"Terminal: Open"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"syntax: bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"eslint",
+				"ESLint"
+			],
+			[
+				"browser",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"broswer",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"syntax markd",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"syntax mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"markdown table",
+				"MarkdownTableFormatter: format table"
+			],
+			[
+				"markdownediting: them",
+				"MarkdownEditing: Change color scheme..."
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"spell",
+				"Google Spell Check"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"package cont",
+				"Package Control: List Packages"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"color s",
+				"UI: Select Color Scheme"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"dash",
+				"DashDoc: invoke Dash with selected word"
+			],
+			[
+				"add repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"css",
+				"Run CSScomb"
+			],
+			[
+				"jspre",
+				"JsPrettier: Format Code"
+			]
+		],
+		"width": 558.0
+	},
+	"console":
+	{
+		"height": 304.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"-h",
+			"--h",
+			"help",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AudioCaelum"
+	],
+	"file_history":
+	[
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W7D4--assessment_06p/a06-prep-master--run01/skeleton/frontend/components/posts/post_index_container.jsx",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W7D4--assessment_06p/a06-prep-master--run01/skeleton/frontend/reducers/root_reducer.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W5D3--assessment_04/Gabriel_Lujan/app/controllers/application_controller.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W5D3--assessment_04/Gabriel_Lujan/app/models/user.rb",
+		"/Users/Gambit/.npmrc",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/entry.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/actions.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/store.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/reducer.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/index.html",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/components/job.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/components/widget.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/webpack.config.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/package.json",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/index.html",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/app.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/calculator.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/.gitignore",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/gettingStartedWithNPM/index.html",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/dist/bundle.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/congrats.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/gettingStartedWithNPM/congrats.jsx",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/gettingStartedWithNPM/package.json",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D4--assessment_05/Gabriel_Lujan_Final/src/js_assessment.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/practice_test.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/spec.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05--practice_assessment/run_02/src/js_assessment.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_1/_dirty--lib/04_pig_latin.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/solutions/bubble_sort_solution.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/solutions/digital_root_solution.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05--practice_assessment/README.md",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/solutions/string_include_key_solution.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/solutions/my_flatten_solution.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--doubler.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myReduce_Inject.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myFilter.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myEvery.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myEach.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/solutions/symmetric_substrings_solution.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--jumbleSort.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--caesarCipher.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--bubbleSort.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myJoin.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myFlatten.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--dups.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/twoSum.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--factors.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--median.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/myRotate.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_rotate.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--primes.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--digitalRoot.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--firstEvenNumbersSum.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--primeFactorization.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--factorialsRec.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--real_words_in_string.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D1--assessment_00p/lib/a00.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--digital_root.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--exponent.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--deepDup.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--binarySearch.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--baseConverter.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_inject.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--fibsSum.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--mergeSort.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/index.html",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/specs/merge_sort_spec.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/README.md",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--quicksort.rb",
+		"/Users/Gambit/Downloads/hw_test",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/myCall.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/myBind.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/myCurry.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--merge_sort.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/y_SOLVED--mergeSort.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/inherits.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/myFind.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_flatten.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/y_SOLVED--myFlatten.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_select.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/myFilter.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/y_SOLVED--myEvery.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_all.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/y_SOLVED--myEach.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W1D3--assessment_generator/z_Mine/problems_mine/y_SOLVED--my_each.rb",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/my_bind.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/my_call.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/my_curry.js",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W6D1--assessment_05p/ao5p--test_generator/z_Mine/problems_mine/mergeSort.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D4/js_fun_pt2.js",
+		"/Users/Gambit/Downloads/js_fun_pt2.js",
+		"/Users/Gambit/Downloads/js_fun.js",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_review/skeleton/01-header.html",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_review/SPECIFICATIONS.md",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_review/skeleton/css/00-reset.css",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_review/skeleton/css/01-header.css",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_skeleton/index.html",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_skeleton/exercise.md",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_skeleton/assets/custom_grid.css",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/W5D1/css_skeleton/assets/positioning_media_queries.css",
+		"/Users/Gambit/Documents/repos-xavi/Education/AppAcademy/AppAcademyHW/README.md",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/4--MainCourse/W4D4--assessment_04p/a04-prep-master/skeleton/README.md",
+		"/Users/Gambit/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/0_workspaces/aA_proj.sublime-project",
+		"/Volumes/starscream/Cloud/GoogleDrive--0_GFL/Devices/Comp_Settings/iTerm/iTerm--all_profiles.json",
+		"/Volumes/galvatron/gabriel/.bashrc",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/numbers_in_words/spec/01_in_words_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/numbers_in_words/lib/01_in_words.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rpn_calculator/spec/00_rpn_calculator_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rpn_calculator/lib/00_rpn_calculator.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/05_my_hash_set_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/05_my_hash_set.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/04_dictionary.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/04_dictionary_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/03_temperature_object_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/03_temperature_object.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/02_timer_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/02_timer.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/01_book_titles_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/01_book_titles.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/spec/00_hello_friend_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_4/lib/00_hello_friend.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/enum_debugging--exercises/lib/exercises.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/enum_debugging--exercises/spec/exercises_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_3/spec/01_class_extensions_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_3/lib/01_class_extensions.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_3/lib/00_array_extensions.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/rspec_practice_3/spec/00_array_extensions_spec.rb",
+		"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/3--AlphaCurriculum/hashes--exercises/lib/hashes.rb"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 163.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 128.0
+	},
+	"output.exec":
+	{
+		"height": 335.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "aA_fullstack.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"user.r",
+				"AppAcademy/4--MainCourse/W5D3--assessment_04/Gabriel_Lujan/app/models/user.rb"
+			],
+			[
+				"w7d1 actions",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/actions.js"
+			],
+			[
+				"w7d1 entry",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/entry.jsx"
+			],
+			[
+				"w7d1 store.js",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W7D1/job_listing/frontend/store.js"
+			],
+			[
+				"w6d5 webp",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/webpack.config.js"
+			],
+			[
+				"W6d5 bundle.js",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/dist/bundle.js"
+			],
+			[
+				"W6D5/index.html",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/index.html"
+			],
+			[
+				"calcula",
+				"repos-xavi/Education/AppAcademy/AppAcademyHW/W6D5/react_calculator/calculator.js"
+			],
+			[
+				"myFlatten",
+				"AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myFlatten.js"
+			],
+			[
+				"Flatten.js",
+				"AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--myFlatten.js"
+			],
+			[
+				"mergeSort",
+				"AppAcademy/4--MainCourse/W6D1--assessment_05p/a05p--test_generator/z_Mine/problems_mine/y_SOLVED--mergeSort.js"
+			],
+			[
+				"a04 read me",
+				"AppAcademy/4--MainCourse/W4D4--assessment_04p/a04-prep-master/skeleton/README.md"
+			],
+			[
+				"a04-prep-master",
+				"AppAcademy/4--MainCourse/W4D4--assessment_04p/a04-prep-master/skeleton/README.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "aA_proj",
+		"selected_items":
+		[
+			[
+				"aA_proj",
+				"/Volumes/starscream/Cloud/GoogleDrive--a_NEO/Education/Developer/AppAcademy/0_workspaces/aA_proj.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

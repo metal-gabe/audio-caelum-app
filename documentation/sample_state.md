@@ -1,4 +1,6 @@
-{ 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (Sample State) 
+
+```{ 
   entities: { 
     users: { 
       17: { 
@@ -98,3 +100,4 @@
   }, 
   session: { currentUserId: 17 } 
 } 
+```

@@ -1,6 +1,6 @@
-# --------------------------------------------- 
-# BACKEND ROUTES 
-# --------------------------------------------- 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (MVP List) 
+
+## BACKEND ROUTES 
   # HTML 
   * `GET /` `StaticPagesController#root` 
   
@@ -34,5 +34,3 @@
     * `GET /api/follows` - return all followers of a given user 
     * `POST /api/follows` - add follow to given user 
     * `DELETE /api/follows/:id` - add follow to given user 
-
-more 

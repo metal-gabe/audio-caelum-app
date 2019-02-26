@@ -1,13 +1,11 @@
-# --------------------------------------------- 
-# FRONTEND COMPONENTS 
-# --------------------------------------------- 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (MVP List) 
+
+## FRONTEND COMPONENTS 
   Root 
   * App 
     - Player (if initiated) (overlays everything) 
 
-# --------------------------------------------- 
-# FRONTEND ROUTES 
-# --------------------------------------------- 
+## FRONTEND ROUTES 
   * `/` 
     - FrontHero 
     - FrontContent 
@@ -72,6 +70,3 @@
     - NavBanner 
     - MobileApps 
     - Player (if initiated) 
-  * m 
-
-more 

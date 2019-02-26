@@ -1,10 +1,6 @@
-# ------------------------------------------------------ 
 # Gabriel Lujan - Fullstack Project: AudioCaelum (Schema) 
-# ------------------------------------------------------ 
 
-
-* USERS * 
-
+##* USERS * 
 | column name     | data type | details                   |
 |-----------------|-----------|---------------------------|
 | id              | integer   | not null, primary key     |
@@ -13,18 +9,14 @@
 | password_digest | string    | not null, unique          |
 | session_token   | string    | not null, indexed, unique |
 
-
-* ARTISTS * 
-
+##* ARTISTS * 
 | column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
 | username    | string    | not null, indexed     |
 | user_id     | integer   | not null, foreign key |
 
-
-* SONGS * 
-
+##* SONGS * 
 | column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
@@ -32,9 +24,7 @@
 | artist_id    | integer   | not null, foreign key |
 | album_id     | integer   | not null, foreign key |
 
-
-* COMMENTS * 
-
+##* COMMENTS * 
 | column name  | data type | details               |
 |--------------|-----------|-----------------------|
 | id           | integer   | not null, primary key |
@@ -42,50 +32,38 @@
 | author_id    | integer   | not null, foreign key |
 | comment_id   | integer   | not null, foreign key |
 
-
-* FOLLOWS * 
-
+##* FOLLOWS * 
 | column name | data type | details                        |
 |-------------|-----------|--------------------------------|
 | id          | integer   | not null, primary key          |
 | user_id     | integer   | not null, indexed, foreign key |
 
-
-* FOLLOWERS * 
-
+##* FOLLOWERS * 
 | column name   | data type | details                        |
 |---------------|-----------|--------------------------------|
 | id            | integer   | not null, primary key          |
 | user_id       | integer   | not null, indexed, foreign key |
 
-
-* ALBUMS (bonus) * 
-
+##* ALBUMS (bonus) * 
 | column name | data type | details               |
 |-------------|-----------|-----------------------|
 | id          | integer   | not null, primary key |
 | name        | string    | not null              |
 | song_id     | integer   | not null, foreign key |
 
-
-* SONG LIKES (bonus) * 
-
+##* SONG LIKES (bonus) * 
 | column name             | data type | details               |
 |-------------------------|-----------|-----------------------|
 | id                      | integer   | not null, primary key |
 | song_id                 | integer   | not null, foreign key |
 
-
-* PLAYS (bonus) * 
-
+##* PLAYS (bonus) * 
 | column name       | data type | details               |
 |-------------------|-----------|-----------------------|
 | id                | integer   | not null, primary key |
 | song_id           | integer   | not null, foreign key |
 
-
-* REPOSTS (bonus) * 
-
+##* REPOSTS (bonus) * 
 | column name         | data type | details               |
 |---------------------|-----------|-----------------------|
 | id                  | integer   | not null, primary key |
