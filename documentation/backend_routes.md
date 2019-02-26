@@ -1,10 +1,10 @@
-# Gabriel Lujan - Fullstack Project: AudioCaelum (MVP List) 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (Backend Routes) 
 
 ## BACKEND ROUTES 
-  # HTML 
+  ### HTML 
   * `GET /` `StaticPagesController#root` 
   
-  # API Endpoints 
+  ### API Endpoints 
   `users` 
     * `GET /api/users` - this would filter & return users for the follows/following frontend routes 
     * `POST /api/users` - sign up 

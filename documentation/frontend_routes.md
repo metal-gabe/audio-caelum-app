@@ -1,4 +1,4 @@
-# Gabriel Lujan - Fullstack Project: AudioCaelum (MVP List) 
+# Gabriel Lujan - Fullstack Project: AudioCaelum (Frontend Routes) 
 
 ## FRONTEND COMPONENTS 
   Root 
