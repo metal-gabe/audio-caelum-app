@@ -7,18 +7,18 @@ export const RECEIVE_ERRORS = `RECEIVE_ERRORS`;
 /* --------------------------------------------- 
 // NORMAL ACTION CREATORS 
 --------------------------------------------- */ 
-const receiveCurrentUser = (user) => { 
+const receiveCurrentUserAC = (user) => { 
   return ({ 
     type: RECEIVE_CURRENT_USER, 
     user, 
   }); 
 }; 
-const logoutCurrentUser = () => { 
+const logoutCurrentUserAC = () => { 
   return ({ 
     type: LOGOUT_CURRENT_USER, 
   }); 
 }; 
-const receiveErrors = (errors) => { 
+const receiveErrorsAC = (errors) => { 
   return ({ 
     type: RECEIVE_ERRORS, 
     errors, 
@@ -29,26 +29,26 @@ const receiveErrors = (errors) => {
 // THUNK ACTION CREATORS 
 --------------------------------------------- */ 
 export const signup = (user) => (dispatch) => { 
-  return (SessionApiUtil.signup(user) 
+  return (SessionApiUtil.signupAPI(user) 
     .then( 
-      (user) => dispatch(receiveCurrentUser(user)), 
-      (error) => dispatch(receiveErrors(error.responseJSON)) 
+      (user) => dispatch(receiveCurrentUserAC(user)), 
+      (error) => dispatch(receiveErrorsAC(error.responseJSON)) 
     ) 
   ); 
 }; 
 export const login = (user) => (dispatch) => { 
-  return (SessionApiUtil.signup(user) 
+  return (SessionApiUtil.loginAPI(user) 
     .then( 
-      (user) => dispatch(receiveCurrentUser(user)), 
-      (error) => dispatch(receiveErrors(error.responseJSON)) 
+      (user) => dispatch(receiveCurrentUserAC(user)), 
+      (error) => dispatch(receiveErrorsAC(error.responseJSON)) 
     ) 
   ); 
 }; 
 export const logout = () => (dispatch) => { 
-  return (SessionApiUtil.logout() 
+  return (SessionApiUtil.logoutAPI() 
     .then( 
-      (user) => dispatch(logoutCurrentUser(user)), 
-      (error) => dispatch(receiveErrors(error.responseJSON)) 
+      (user) => dispatch(logoutCurrentUserAC(user)), 
+      (error) => dispatch(receiveErrorsAC(error.responseJSON)) 
     ) 
   ); 
 }; 

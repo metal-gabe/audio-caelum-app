@@ -1,4 +1,6 @@
 class Api::UsersController < ApplicationController 
+  before_action :require_login, except: [:create] 
+
   def index 
     @users = User.all 
     render json: @users 
@@ -15,13 +17,13 @@ class Api::UsersController < ApplicationController
     end 
   end 
 
-  def delete 
+  def destroy 
     # this feature will be implemented later 
   end 
 
   private 
 
   def user_params 
-    params.require(:user).permit(:username, :password) 
+    params.require(:user).permit(:username, :email, :password) 
   end 
 end 
