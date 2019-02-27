@@ -28,7 +28,7 @@ const receiveErrorsAC = (errors) => {
 /* --------------------------------------------- 
 // THUNK ACTION CREATORS 
 --------------------------------------------- */ 
-export const signup = (user) => (dispatch) => { 
+export const signupAC = (user) => (dispatch) => { 
   return (SessionApiUtil.signupAPI(user) 
     .then( 
       (user) => dispatch(receiveCurrentUserAC(user)), 
@@ -36,7 +36,7 @@ export const signup = (user) => (dispatch) => {
     ) 
   ); 
 }; 
-export const login = (user) => (dispatch) => { 
+export const loginAC = (user) => (dispatch) => { 
   return (SessionApiUtil.loginAPI(user) 
     .then( 
       (user) => dispatch(receiveCurrentUserAC(user)), 
@@ -44,7 +44,7 @@ export const login = (user) => (dispatch) => {
     ) 
   ); 
 }; 
-export const logout = () => (dispatch) => { 
+export const logoutAC = () => (dispatch) => { 
   return (SessionApiUtil.logoutAPI() 
     .then( 
       (user) => dispatch(logoutCurrentUserAC(user)), 
