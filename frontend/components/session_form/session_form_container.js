@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'; 
 import { loginAC, signupAC } from '../../actions/session_actions'; 
-import SessionFormA from './session_form_A'; 
+import SessionForm from './session_form'; 
 
 const mapStateToProps = ({ entities, session, errors }) => { 
   return ({ 
@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
   }); 
 }; 
 
-const SessionFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionFormA); 
+const SessionFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionForm); 
 export default SessionFormContainer; 
 
 // Need to put some logic to check the database for the entered email 

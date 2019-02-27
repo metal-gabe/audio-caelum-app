@@ -1,7 +1,10 @@
 import React, { Component } from 'react'; 
 import { Link, Redirect } from 'react-router-dom'; 
+import EmailForm from './email_form'; 
+import SignupForm from './signup_form'; 
+import LoginForm from './login_form'; 
 
-class SessionFormA extends Component { 
+class SessionForm extends Component { 
   constructor(props) { 
     super(props); 
     this.state = { 
@@ -9,6 +12,7 @@ class SessionFormA extends Component {
       password: '', 
       email: '', 
     }; 
+    this.update = this.update.bind(this); 
     this.handleSubmit = this.handleSubmit.bind(this); 
   }; 
 
@@ -23,42 +27,46 @@ class SessionFormA extends Component {
     // The line below creates a new copy of the user object / local state 
     // But is it really needed? 
     const user = Object.assign({}, this.state); 
-    this.props.signup(user); 
+    this.props.action(user); 
   }; 
 
   render() { 
+    // Testing that the input field updates correctly 
+    // console.log(this.state.email); 
+    const EmailFormView = <EmailForm 
+      handleSubmit={this.handleSubmit} 
+      email={this.state.email} 
+      update={this.update} 
+    />; 
+
+    const SignupFormView = <SignupForm 
+      handleSubmit={this.handleSubmit} 
+      email={this.state.email} 
+      update={this.update} 
+    />; 
+
+    const LoginFormView = <LoginForm 
+      handleSubmit={this.handleSubmit} 
+      email={this.state.email} 
+      update={this.update} 
+    />; 
+
+    // Add a ternary here to render the appropriate FormView 
+    // based on whether or not the entered email exists 
+    let currentFormComponent = EmailFormView; 
+
     return ( 
       <section className="modal"> 
         <section className="modal-screen"> 
           <div className="close-button">&times;</div> 
-          <div className="modal-form"> 
-            <Link className="btn-cats" to="http://www.funnycatsite.com/">Continue with Catbook</Link> 
-            <Link className="btn-dogs" to="http://www.funnydogsite.com/">Continue with Doggle</Link> 
-            <div>--- or ---</div> 
-            <form onSubmit={this.handleSubmit}> 
-              <input type="text" value={this.state.email} onChange={this.update('email')} /> 
-              <button>Continue</button> 
-              <div><Link className="helper-link" to="">Need help?</Link></div> 
-            </form> 
-            <div className="disclaimers">
-              <p> 
-                We may use your email and devices for updates and tips on 
-                AudioCaelum's products and services, and for activities notifications. 
-                You can unsubscribe for free at any time in your notification settings. 
-              </p> 
-              <p> 
-                We may use information you provide us in order to show you targeted ads 
-                as described in our <Link className="helper-link" to="">Privacy Policy</Link>. 
-              </p> 
-            </div>
-          </div> 
+          {currentFormComponent} 
         </section> 
       </section> 
     ); 
   }; 
 }; 
 
-export default SessionFormA; 
+export default SessionForm; 
 
 // NOTE: I need to create a Part A && a Part B of this session form 
   // Part A verifies the user's email 
