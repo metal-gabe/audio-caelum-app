@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { Route, Link } from 'react-router-dom'; 
 // Import other containers here 
+import SessionFormContainer from './session_form/session_form_container'; 
 
 const App = () => { 
   return ( 
@@ -12,6 +13,7 @@ const App = () => {
 
         {/* I need to add an AuthRoute here for the SessionForm modal */} 
       </header> 
+      <SessionFormContainer /> 
     </div> 
   ); 
 }; 

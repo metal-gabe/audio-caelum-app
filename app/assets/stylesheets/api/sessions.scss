@@ -1,3 +1,105 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* PHASE 12: Modal */
+.modal { 
+  // display: none; 
+  display: block; 
+}
+
+.is-open { 
+  display: block; 
+}
+
+.modal-screen { 
+  font-size: 12px; 
+  font-family: 
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    "Lucida Sans",
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif
+  ; 
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 2; 
+  background-color: rgba(255, 255, 255, 0.4); 
+} 
+
+.close-button { 
+  font-size: 26px; 
+  float: right; 
+  margin: 6px 20px 0 0; 
+ } 
+
+.modal-form { 
+  // border: 1px solid red; 
+  box-sizing: border-box; 
+  width: 450px; 
+  height: 620px; 
+  margin: 0 auto; 
+  margin-top: 76px; 
+  padding: 123px 25px; 
+  position: relative; 
+  background-color: #fff; 
+  z-index: 3; 
+} 
+
+.disclaimers { 
+  color: #9a9a9a; 
+} 
+
+.modal a { 
+  text-decoration: none; 
+  // display: block; 
+} 
+
+.helper-link { 
+  color: #398bde; 
+} 
+
+.helper-link:hover { 
+  color: #000; 
+} 
+
+.modal-form input { 
+  display: block; 
+} 
+
+.modal-form button { 
+  background-color: #f50; 
+  border: none; 
+  color: #fff; 
+  font-size: 16px; 
+  margin-top: 10px; 
+  padding: 10px; 
+  width: 100%; 
+} 
+
+.btn-cats, 
+.btn-dogs { 
+  border-radius: 3px; 
+  color: #fff; 
+  display: block; 
+  font-size: 16px; 
+  padding: 12px; 
+  text-align: center; 
+} 
+
+.btn-cats { 
+  background-color: #304f97; 
+} 
+
+.btn-cats::before {} 
+
+.btn-dogs { 
+  background-color: #4285f4; 
+  margin-top: 12px; 
+} 
+
+.btn-dogs::before {} 
