@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
       logout! 
       render json: {} 
     else 
-      render json: '418: I\'m a teapot (logout failed)' 
+      render json: "418: I'm a teapot (logout failed)" 
     end 
   end 
 end 
