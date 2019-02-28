@@ -1,11 +1,25 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/* PHASE 12: Modal */
+$font-stack: 
+  "Proxima Nova", 
+  "Lucida Grande",
+  "Lucida Sans Unicode",
+  "Lucida Sans",
+  Garuda,
+  Verdana,
+  Tahoma,
+  sans-serif
+; 
+
 .modal { 
   // display: none; 
   display: block; 
-}
+} 
+
+.modal a { 
+  text-decoration: none; 
+} 
 
 .is-open { 
   display: block; 
@@ -13,93 +27,181 @@
 
 .modal-screen { 
   font-size: 12px; 
-  font-family: 
-    "Lucida Grande",
-    "Lucida Sans Unicode",
-    "Lucida Sans",
-    Garuda,
-    Verdana,
-    Tahoma,
-    sans-serif
-  ; 
+  font-family: $font-stack; 
   position: fixed; 
   top: 0; 
   right: 0; 
   bottom: 0; 
   left: 0; 
   z-index: 2; 
-  background-color: rgba(255, 255, 255, 0.4); 
+  background-color: rgba(220, 220, 220, 0.5); 
 } 
 
 .close-button { 
-  font-size: 26px; 
+  cursor: pointer; 
+  font-size: 4em; 
   float: right; 
-  margin: 6px 20px 0 0; 
+  height: 20px; 
+  margin: 14px 20px 0 0; 
+  width: 20px; 
  } 
 
-.modal-form { 
+.modal-email-form { 
   // border: 1px solid red; 
   box-sizing: border-box; 
-  width: 450px; 
+  width: 455px; 
   height: 620px; 
   margin: 0 auto; 
-  margin-top: 76px; 
+  margin-top: 70px; 
   padding: 123px 25px; 
   position: relative; 
   background-color: #fff; 
   z-index: 3; 
 } 
 
-.disclaimers { 
+.modal-login-form { 
+  // border: 1px solid red; 
+  box-sizing: border-box; 
+  width: 455px; 
+  height: 620px; 
+  margin: 0 auto; 
+  margin-top: 70px; 
+  padding: 230px 25px; 
+  position: relative; 
+  background-color: #fff; 
+  z-index: 3; 
+} 
+
+.modal-signup-form { 
+  // border: 1px solid red; 
+  box-sizing: border-box; 
+  width: 455px; 
+  height: 620px; 
+  margin: 0 auto; 
+  margin-top: 70px; 
+  padding: 20px 25px; 
+  position: relative; 
+  background-color: #fff; 
+  z-index: 3; 
+} 
+
+.modal-signup-form h1 { 
+  font-size: 31px; 
+  font-weight: bold; 
+  text-align: center; 
+} 
+
+.divider { 
+  font-size: 15px; 
+  padding: 4px 0; 
+  text-align: center; 
+} 
+
+.divider::before, 
+.divider::after { 
+  border-top: 1px solid #333; 
+  content: " "; 
+  display: inline-block; 
+  padding: .1em; 
+  width: 43%; 
+} 
+
+.modal input { 
+  border-radius: 3px; 
+  border: 1px solid #999; 
+  color: #333; 
+  display: inline-block; 
+  font-family: "Interstate", $font-stack; 
+  font-size: 18px; 
+  outline: none; 
+  padding: 10px; 
+  margin: 0 auto; 
+  width: 94.5%; 
+} 
+
+.modal input::placeholder { 
   color: #9a9a9a; 
-} 
+  font-size: 19px; 
+}
 
-.modal a { 
-  text-decoration: none; 
-  // display: block; 
-} 
-
-.helper-link { 
-  color: #398bde; 
-} 
-
-.helper-link:hover { 
-  color: #000; 
-} 
-
-.modal-form input { 
-  display: block; 
-} 
-
-.modal-form button { 
+.modal button { 
   background-color: #f50; 
   border: none; 
+  border-radius: 6px; 
   color: #fff; 
+  cursor: pointer; 
   font-size: 16px; 
   margin-top: 10px; 
+  outline: none; 
   padding: 10px; 
   width: 100%; 
+} 
+
+.modal button:active { 
+  border: none; 
 } 
 
 .btn-cats, 
 .btn-dogs { 
   border-radius: 3px; 
   color: #fff; 
-  display: block; 
+  display: inline-block; 
   font-size: 16px; 
   padding: 12px; 
   text-align: center; 
+  width: 94%; 
 } 
 
 .btn-cats { 
   background-color: #304f97; 
 } 
 
-.btn-cats::before {} 
-
 .btn-dogs { 
   background-color: #4285f4; 
   margin-top: 12px; 
 } 
 
-.btn-dogs::before {} 
+.need-help { 
+  text-align: right; 
+}
+
+.no-password { 
+  font-size: 13px; 
+  text-align: center; 
+}
+
+.disclaimers { 
+  // border: 1px solid red; 
+  color: #9a9a9a; 
+} 
+
+.helper-link { 
+  color: #398bde; 
+  &:hover { 
+    color: #000; 
+  } 
+} 
+
+.modal-login-form .return-to-email,
+.modal-signup-form .return-to-email { 
+  background-image: url(image_path('left-caret.png')); 
+  background-position: 5px; 
+  background-repeat: no-repeat; 
+  background-size: 30px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bolder; 
+  margin-bottom: 10px; 
+  text-align: left; 
+  text-indent: 30px; 
+  width: 100%; 
+} 
+
+.signin-reminder { 
+  font-size: 12px; 
+  text-align: center; 
+} 
+
+.signin-reminder h3 { 
+  margin-bottom: 0; 
+} 

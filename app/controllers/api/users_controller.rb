@@ -22,6 +22,16 @@ class Api::UsersController < ApplicationController
     render :show 
   end 
 
+  def verify_email_db 
+    @user = User.find_by(email: params[:email]) 
+
+    if @user 
+      render json: 'true', status: 200  
+    else 
+      render json: 'false', status: 404  
+    end 
+  end 
+
   def destroy 
     # this feature will be implemented later 
   end 
@@ -29,6 +39,6 @@ class Api::UsersController < ApplicationController
   private 
 
   def user_params 
-    params.require(:user).permit(:username, :email, :password) 
+    params.require(:user).permit(:email, :password) 
   end 
 end 

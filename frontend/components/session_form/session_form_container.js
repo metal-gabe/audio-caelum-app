@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'; 
 import { loginAC, signupAC } from '../../actions/session_actions'; 
+import { verifyEmailAPI } from '../../util/session_api_util'; 
 import SessionForm from './session_form'; 
 
 const mapStateToProps = ({ entities, session, errors }) => { 
@@ -14,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return ({ 
     login: (user) => dispatch(loginAC(user)), 
     signup: (user) => dispatch(signupAC(user)), 
+    checkEmail: (email) => verifyEmailAPI(email), 
   }); 
 }; 
 

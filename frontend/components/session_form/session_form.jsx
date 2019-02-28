@@ -1,19 +1,23 @@
 import React, { Component } from 'react'; 
 import { Link, Redirect } from 'react-router-dom'; 
 import EmailForm from './email_form'; 
-import SignupForm from './signup_form'; 
 import LoginForm from './login_form'; 
+import SignupForm from './signup_form'; 
 
 class SessionForm extends Component { 
   constructor(props) { 
     super(props); 
     this.state = { 
-      username: '', 
+      username: 'bueller', 
       password: '', 
       email: '', 
+      currentFormComponent: '', 
     }; 
     this.update = this.update.bind(this); 
-    this.handleSubmit = this.handleSubmit.bind(this); 
+    this.updateFormComponent = this.updateFormComponent.bind(this); 
+    this.handleSignup = this.handleSignup.bind(this); 
+    this.handleLogin = this.handleLogin.bind(this); 
+    this.checkEmail = this.checkEmail.bind(this); 
   }; 
 
   update(field) { 
@@ -22,44 +26,71 @@ class SessionForm extends Component {
     })); 
   }; 
 
-  handleSubmit(e) { 
+  checkEmail(email) { 
+    return ((e) => { 
+      e.preventDefault(); 
+
+      let checkEmailAnswer = 
+        this.props.checkEmail(email) ? 'LoginFormView' : 'SignupFormView'; 
+
+      this.setState({ currentFormComponent: checkEmailAnswer }); 
+    }); 
+  }; 
+
+  updateFormComponent(comp) { 
+    this.setState({ currentFormComponent: comp }); 
+  }; 
+
+  handleLogin(e) { 
     e.preventDefault(); 
-    // The line below creates a new copy of the user object / local state 
-    // But is it really needed? 
     const user = Object.assign({}, this.state); 
-    this.props.action(user); 
+    this.props.login(user); 
+  }; 
+
+  handleSignup(e) { 
+    e.preventDefault(); 
+    const user = Object.assign({}, this.state); 
+    this.props.signup(user); 
   }; 
 
   render() { 
     // Testing that the input field updates correctly 
-    // console.log(this.state.email); 
+    console.log(this.state); 
     const EmailFormView = <EmailForm 
-      handleSubmit={this.handleSubmit} 
-      email={this.state.email} 
-      update={this.update} 
-    />; 
-
-    const SignupFormView = <SignupForm 
-      handleSubmit={this.handleSubmit} 
+      checkEmail={this.checkEmail} 
       email={this.state.email} 
       update={this.update} 
     />; 
 
     const LoginFormView = <LoginForm 
-      handleSubmit={this.handleSubmit} 
+      handleLogin={this.handleLogin} 
       email={this.state.email} 
+      updateFormComponent={this.updateFormComponent} 
       update={this.update} 
     />; 
 
-    // Add a ternary here to render the appropriate FormView 
-    // based on whether or not the entered email exists 
-    let currentFormComponent = EmailFormView; 
+    const SignupFormView = <SignupForm 
+      handleSignup={this.handleSignup} 
+      email={this.state.email} 
+      updateFormComponent={this.updateFormComponent} 
+      update={this.update} 
+    />; 
+
+    let renderFormComponent = SignupFormView; 
+    // switch (this.state.currentFormComponent) { 
+    //   case 'LoginFormView': 
+    //     renderFormComponent = LoginFormView; 
+    //   case 'SignupFormView': 
+    //     renderFormComponent = SignupFormView; 
+    //   default: 
+    //     renderFormComponent = EmailFormView; 
+    // } 
 
     return ( 
       <section className="modal"> 
         <section className="modal-screen"> 
           <div className="close-button">&times;</div> 
-          {currentFormComponent} 
+          {renderFormComponent} 
         </section> 
       </section> 
     ); 
@@ -84,3 +115,7 @@ export default SessionForm;
 // Ignore the Goog/Fb options and the "Privacy Policy" && "Need help?" links 
 
 // The text below the submit button is a good place for an easter egg 
+
+
+// Create a custom backend route and ajax call to verify the user's email 
+// based on the success/failure, render the appropriate component 

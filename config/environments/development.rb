@@ -49,6 +49,10 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Adding a custom Fonts folder to hold custom fonts 
+  config.assets.enabled = true 
+  config.assets.paths << Rails.root.join("app", "assets", "fonts") 
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 

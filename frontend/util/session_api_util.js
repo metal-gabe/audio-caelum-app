@@ -21,3 +21,12 @@ export const logoutAPI = () => {
     url: `/api/session`, 
   })); 
 }; 
+export const verifyEmailAPI = (email) => { 
+  return ($.ajax({ 
+    method: 'GET', 
+    url: `/api/users/email`, 
+    data: { email }, 
+    success: () => true, 
+    failure: () => false, 
+  })); 
+}; 
