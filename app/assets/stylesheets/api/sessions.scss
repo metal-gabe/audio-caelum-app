@@ -3,14 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $font-stack: 
   "Proxima Nova", 
-  "Lucida Grande",
-  "Lucida Sans Unicode",
-  "Lucida Sans",
-  Garuda,
-  Verdana,
-  Tahoma,
-  sans-serif
+  "Lucida Grande", 
+  "Lucida Sans Unicode", 
+  "Lucida Sans", 
+  Garuda, 
+  Verdana, 
+  Tahoma, 
+  sans-serif 
 ; 
+
+$sc-orange: #f50; 
 
 .modal { 
   // display: none; 
@@ -34,7 +36,7 @@ $font-stack:
   bottom: 0; 
   left: 0; 
   z-index: 2; 
-  background-color: rgba(220, 220, 220, 0.5); 
+  background-color: rgba(185, 185, 185, 0.5); 
 } 
 
 .close-button { 
@@ -42,7 +44,7 @@ $font-stack:
   font-size: 4em; 
   float: right; 
   height: 20px; 
-  margin: 14px 20px 0 0; 
+  margin: 2px 20px 0 0; 
   width: 20px; 
  } 
 
@@ -111,7 +113,7 @@ $font-stack:
   border: 1px solid #999; 
   color: #333; 
   display: inline-block; 
-  font-family: "Interstate", $font-stack; 
+  font-family: $font-stack; 
   font-size: 18px; 
   outline: none; 
   padding: 10px; 
@@ -125,7 +127,7 @@ $font-stack:
 }
 
 .modal button { 
-  background-color: #f50; 
+  background-color: $sc-orange; 
   border: none; 
   border-radius: 6px; 
   color: #fff; 
@@ -199,9 +201,36 @@ $font-stack:
 
 .signin-reminder { 
   font-size: 12px; 
+  margin-top: 22px; 
   text-align: center; 
 } 
 
 .signin-reminder h3 { 
+  font-weight: 900; 
   margin-bottom: 0; 
+} 
+
+.choose-password { 
+  font-size: 14px; 
+  font-weight: 900; 
+  margin: 5px 0; 
+} 
+
+.captcha { 
+  background-color: #f9f9f9; 
+  // background-image: url(image_path('recaptcha-02.png')); 
+  // background-position: 90%; 
+  // background-repeat: no-repeat; 
+  // background-size: 80px; 
+  border: 1px solid #d3d3d3; 
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 1.6em; 
+} 
+
+.modal-signup-form .checkbox { 
+  // border: 1px solid red; 
+  box-sizing: border-box; 
+  height: 60px; 
+  width: 60px; 
 } 

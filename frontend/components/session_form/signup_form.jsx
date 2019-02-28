@@ -9,18 +9,25 @@ class SignupForm extends Component {
         <form> 
           <input 
             className="return-to-email" 
-            type="submit" 
+            type="button" 
             value={this.props.email} 
-            // onClick={this.props.updateFormComponent('EmailForm')} 
+            onClick={() => this.props.updateFormComponent('EmailForm')} 
           /> 
-          <p>Choose a password <span>*</span></p> 
+          <p className="choose-password">Choose a password <span>*</span></p> 
           <input 
             type="password" 
             value={this.props.password} 
             onChange={this.props.update('password')} 
           /> 
-          <p>Enter a password</p> 
-          <div className="captcha">[] We believe that you're not a robot</div> 
+          <div className="captcha"> 
+            <div> 
+              <input className="checkbox" type="checkbox" /> 
+              <div>We believe that you're not a robot.</div> 
+            </div> 
+            <div>
+              <img src={window.images.CaptchaLogo} alt="reCAPTCHA" /> 
+            </div>
+          </div> 
           <p>By signing up...</p> 
           <button onSubmit={this.props.handleSignup}>Accept & continue</button> 
           <div className="signin-reminder"> 

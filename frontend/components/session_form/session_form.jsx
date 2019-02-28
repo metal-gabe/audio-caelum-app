@@ -8,10 +8,10 @@ class SessionForm extends Component {
   constructor(props) { 
     super(props); 
     this.state = { 
-      username: 'bueller', 
-      password: '', 
-      email: '', 
-      currentFormComponent: '', 
+      username: "", 
+      password: "", 
+      email: "", 
+      currentFormComponent: "", 
     }; 
     this.update = this.update.bind(this); 
     this.updateFormComponent = this.updateFormComponent.bind(this); 
@@ -30,10 +30,13 @@ class SessionForm extends Component {
     return ((e) => { 
       e.preventDefault(); 
 
-      let checkEmailAnswer = 
-        this.props.checkEmail(email) ? 'LoginFormView' : 'SignupFormView'; 
-
-      this.setState({ currentFormComponent: checkEmailAnswer }); 
+      this.props.checkEmail(email).then(() => { 
+        this.setState({ currentFormComponent: "LoginFormView" }); 
+      },
+        () => {
+          this.setState({ currentFormComponent: "SignupFormView" }); 
+        } 
+      ); 
     }); 
   }; 
 
@@ -76,15 +79,19 @@ class SessionForm extends Component {
       update={this.update} 
     />; 
 
-    let renderFormComponent = SignupFormView; 
-    // switch (this.state.currentFormComponent) { 
-    //   case 'LoginFormView': 
-    //     renderFormComponent = LoginFormView; 
-    //   case 'SignupFormView': 
-    //     renderFormComponent = SignupFormView; 
-    //   default: 
-    //     renderFormComponent = EmailFormView; 
-    // } 
+    let renderFormComponent; 
+    // debugger; 
+    switch (this.state.currentFormComponent) { 
+      case "LoginFormView": 
+        renderFormComponent = LoginFormView; 
+        break 
+      case "SignupFormView": 
+        renderFormComponent = SignupFormView; 
+        break 
+      default: 
+        renderFormComponent = EmailFormView; 
+        break 
+    } 
 
     return ( 
       <section className="modal"> 

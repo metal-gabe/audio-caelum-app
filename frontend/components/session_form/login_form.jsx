@@ -8,9 +8,9 @@ class LoginForm extends Component {
         <form> 
           <input 
             className="return-to-email" 
-            type="submit" 
+            type="button" 
             value={this.props.email} 
-            onClick={this.props.updateFormComponent('EmailForm')} 
+            onClick={() => this.props.updateFormComponent('EmailForm')} 
           /> 
           <input 
             type="password" 

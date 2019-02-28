@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return ({ 
     login: (user) => dispatch(loginAC(user)), 
     signup: (user) => dispatch(signupAC(user)), 
-    checkEmail: (email) => verifyEmailAPI(email), 
+    checkEmail: (email) => verifyEmailAPI(email), // maybe wrap this call in "Boolean" to do the check  
   }); 
 }; 
 
