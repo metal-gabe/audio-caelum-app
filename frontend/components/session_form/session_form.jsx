@@ -94,7 +94,7 @@ class SessionForm extends Component {
     />; 
 
     const executeRedirect = this.state.loggedIn ? 
-      <Redirect exact to="/discover" /> : null 
+      <Redirect to="/discover" /> : null 
 
     let renderFormComponent; 
     switch (this.state.currentFormComponent) { 

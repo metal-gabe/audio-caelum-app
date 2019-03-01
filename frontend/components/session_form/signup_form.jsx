@@ -3,7 +3,6 @@ import { Link, Route, Redirect } from 'react-router-dom';
 
 class SignupForm extends Component { 
   render() { 
-    // debugger; 
     return ( 
       <div className="modal-signup-form"> 
         <h1>Create your AudioCaelum account</h1> 

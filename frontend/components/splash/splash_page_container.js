@@ -9,5 +9,6 @@ const mapDispatchToProps = (dispatch) => {
   return ({}); 
 }; 
 
-const SplashContainer = connect(mapStateToProps, mapDispatchToProps)(SplashPage); 
-export default SplashContainer; 
+const SplashPageContainer = 
+  connect(mapStateToProps, mapDispatchToProps)(SplashPage); 
+export default SplashPageContainer; 
