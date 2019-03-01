@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import { Link, Redirect, Route } from 'react-router-dom'; 
-import { loginAPI } from '../../util/session_api_util'; 
+import { loginAC } from '../../actions/session_actions'; 
 import SessionFormContainer from '../session_form/session_form_container'; 
 
 class SplashPage extends Component { 
@@ -18,8 +18,9 @@ class SplashPage extends Component {
   }; 
 
   demoLogin() { 
+    // debugger; 
     const demoUser = { username: 'bueller', email: 'b@b.com', password: 'password' }; 
-    loginAPI(demoUser) 
+    loginAC(demoUser) 
   }; 
 
   render() { 
@@ -27,14 +28,15 @@ class SplashPage extends Component {
       <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null 
 
     return ( 
-      <header> 
-        <h1>AudioCaelum</h1> 
-        <div><Link to="" onClick={this.toggleSessionModal}>Sign In</Link></div> 
-        <div><Link to="" onClick={this.toggleSessionModal}>Create Account</Link></div> 
-        <div><Link to="" onClick={this.demoLogin}>Demo Login</Link></div> 
-        
-        <Route to="/" component={renderSessionForm} /> 
-      </header> 
+      <div> 
+        <header> 
+          <h1>AudioCaelum</h1> 
+          <div><Link to="" onClick={this.toggleSessionModal}>Sign In</Link></div> 
+          <div><Link to="" onClick={this.toggleSessionModal}>Create Account</Link></div> 
+          <div><Link to="" onClick={this.demoLogin}>Demo Login</Link></div> 
+        </header> 
+        {renderSessionForm} 
+      </div> 
     ); 
   }; 
 }; 

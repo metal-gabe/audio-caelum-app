@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   attr_reader :password 
 
-  # has_many :songs 
+  has_many :songs 
   # has_many :follows 
   # has_many :followers, through: :follows 
   # has_many :playlists # (bonus feature to be implemented later) 

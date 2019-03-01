@@ -9259,3 +9259,659 @@ Processing by StaticPagesController#main as HTML
 Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:42:44 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (7.2ms)
+  Rendered static_pages/main.html.erb within layouts/application (83.9ms)
+Completed 200 OK in 961ms (Views: 928.3ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:44:20 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/main.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:44:26 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (2.2ms)
+  Rendered static_pages/main.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:44:47 -0800
+  [1m[35m (30.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered static_pages/main.html.erb within layouts/application (1986.3ms)
+Completed 200 OK in 2039ms (Views: 2020.9ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:45:46 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/main.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 495ms (Views: 489.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:46:26 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/main.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 513ms (Views: 507.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/email?email=b%40b.com" for 127.0.0.1 at 2019-02-28 17:46:37 -0800
+Processing by Api::UsersController#verify_email_db as */*
+  Parameters: {"email"=>"b@b.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:26
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-28 17:46:40 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"b@b.com", "currentFormComponent"=>"LoginFormView", "loggedIn"=>"false"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:46:53 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "upTsodlkUQeR4ijkKHtKCA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/main.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 56ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-28 17:48:30 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"bueller", "email"=>"b@b.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (32.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bueller"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (25.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "b@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Update (39.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["updated_at", "2019-03-01 01:48:30.823767"], ["id", 1]]
+  ↳ app/models/user.rb:29
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:29
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (15.0ms)
+Completed 200 OK in 285ms (Views: 74.8ms | ActiveRecord: 113.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:49:33 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/main.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 680ms (Views: 673.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:50:09 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/main.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 2504ms (Views: 2497.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:50:36 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/main.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:50:55 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/main.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 537ms (Views: 533.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:51:18 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/main.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 505ms (Views: 500.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:52:03 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/main.html.erb within layouts/application (7.2ms)
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:52:03 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/main.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 551ms (Views: 546.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 459ms (Views: 442.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/users/email?email=b%40b.com" for 127.0.0.1 at 2019-02-28 17:52:09 -0800
+Processing by Api::UsersController#verify_email_db as */*
+  Parameters: {"email"=>"b@b.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-s9JlnA4IN_IOHeBZaPRsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:26
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-28 17:52:14 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"b@b.com", "currentFormComponent"=>"LoginFormView", "loggedIn"=>"false"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-28 17:52:52 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"bueller", "password"=>"[FILTERED]", "email"=>"b@b.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bueller"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "b@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["updated_at", "2019-03-01 01:52:52.803998"], ["id", 1]]
+  ↳ app/models/user.rb:29
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:29
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered api/users/show.json.jbuilder (13.7ms)
+Completed 200 OK in 150ms (Views: 73.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:53:10 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:53:13 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/main.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:55:55 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/main.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 1122ms (Views: 1109.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:55:57 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/main.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 64ms (Views: 43.4ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 17:59:51 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (51.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/main.html.erb within layouts/application (88.4ms)
+Completed 200 OK in 912ms (Views: 850.9ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/api/users/email?email=8%40b.com" for 127.0.0.1 at 2019-02-28 18:00:09 -0800
+Processing by Api::UsersController#verify_email_db as */*
+  Parameters: {"email"=>"8@b.com"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "8@b.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:26
+Completed 404 Not Found in 22ms (Views: 0.2ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/api/users/email?email=" for 127.0.0.1 at 2019-02-28 20:39:04 -0800
+Processing by Api::UsersController#verify_email_db as */*
+  Parameters: {"email"=>""}
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:26
+Completed 404 Not Found in 71ms (Views: 6.7ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:39:26 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (4.9ms)
+  Rendered static_pages/main.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 155ms (Views: 147.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/email?email=" for 127.0.0.1 at 2019-02-28 20:39:33 -0800
+Processing by Api::UsersController#verify_email_db as */*
+  Parameters: {"email"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:26
+Completed 404 Not Found in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:40:00 -0800
+Processing by StaticPagesController#main as HTML
+  Rendering static_pages/main.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJH_WFIrXxMaXr4d57ix3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (5.2ms)
+  Rendered static_pages/main.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 159ms (Views: 143.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:51:34 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/fd22f3b61260b4af/variables" for 127.0.0.1 at 2019-02-28 20:51:34 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:54:18 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/a1f929a5ad4c53b7/variables" for 127.0.0.1 at 2019-02-28 20:54:18 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:55:05 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/cba5e7197cecd80f/variables" for 127.0.0.1 at 2019-02-28 20:55:05 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:59:02 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/7cd398a090bc2516/variables" for 127.0.0.1 at 2019-02-28 20:59:03 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 20:59:41 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/cafc5776e822648d/variables" for 127.0.0.1 at 2019-02-28 20:59:41 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:00:08 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/424df1d83b171f89/variables" for 127.0.0.1 at 2019-02-28 21:00:09 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:00:24 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/4f61f171d7cf45c5/variables" for 127.0.0.1 at 2019-02-28 21:00:24 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:01:00 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/eb4a942a1db61286/variables" for 127.0.0.1 at 2019-02-28 21:01:01 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:01:13 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/41acc9a04ec10213/variables" for 127.0.0.1 at 2019-02-28 21:01:13 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:02:02 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/2ffc1ffdf6661add/variables" for 127.0.0.1 at 2019-02-28 21:02:03 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:02:39 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/bb54352593671c1a/variables" for 127.0.0.1 at 2019-02-28 21:02:40 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:04:06 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/04d7727a68dae7d1/variables" for 127.0.0.1 at 2019-02-28 21:04:06 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:05:28 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/94e63714f71ba125/variables" for 127.0.0.1 at 2019-02-28 21:05:28 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:05:46 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/76b15d003874b38a/variables" for 127.0.0.1 at 2019-02-28 21:05:47 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:06:07 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/1a7f81a9f9290381/variables" for 127.0.0.1 at 2019-02-28 21:06:07 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:06:17 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/e3d8243a1e96b4db/variables" for 127.0.0.1 at 2019-02-28 21:06:18 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:06:49 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/d06434af6f917431/variables" for 127.0.0.1 at 2019-02-28 21:06:49 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:08:29 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8840355e1e3541f5/variables" for 127.0.0.1 at 2019-02-28 21:08:30 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:08:34 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/2d8c5ceffe064d57/variables" for 127.0.0.1 at 2019-02-28 21:08:34 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:09:40 -0800
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/0bac683cdd2ca062/variables" for 127.0.0.1 at 2019-02-28 21:09:40 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:11:44 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/dda1c39b0b6e9851/variables" for 127.0.0.1 at 2019-02-28 21:11:44 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:12:04 -0800
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/a1e5420d664cfe0f/variables" for 127.0.0.1 at 2019-02-28 21:12:05 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:13:17 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/c06a7cd72f99c123/variables" for 127.0.0.1 at 2019-02-28 21:13:17 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:14:11 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/52f408d82fb0ee14/variables" for 127.0.0.1 at 2019-02-28 21:14:11 -0800
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:14:41 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/cadaabde6be4f930/variables" for 127.0.0.1 at 2019-02-28 21:14:41 -0800
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7750903352214193710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20190301045132)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (59.6ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "song_title" character varying NOT NULL, "artist_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190301045132_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301045132"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (18.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7750903352214193710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-28 21:15:42 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Gambit/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+NameError - Couldn't find Api::SessionsHelper, expected it to be defined in helpers/api/sessions_helper.rb:
+  app/controllers/application_controller.rb:1:in `<main>'
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/3b07e2775054eb4d/variables" for 127.0.0.1 at 2019-02-28 21:15:42 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7750903352214193710)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToSongTitle (20190301051810)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE  INDEX  "index_songs_on_song_title" ON "songs"  ("song_title")[0m
+  ↳ db/migrate/20190301051810_add_index_to_song_title.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190301051810"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (21.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7750903352214193710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

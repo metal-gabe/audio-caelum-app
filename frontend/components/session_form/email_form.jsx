@@ -6,7 +6,6 @@ class EmailForm extends Component {
     super(props); 
     this.state = { 
       currentErrors: null, 
-      disabled: '', 
     }; 
     // this.myOnBlur = this.myOnBlur.bind(this); 
   }; 
@@ -44,13 +43,13 @@ class EmailForm extends Component {
         <form onSubmit={this.props.checkEmail(this.props.email)}> 
           <input 
             autoFocus 
-            type="text" 
+            type="email" 
             value={this.props.email} 
             placeholder="Your email address *" 
             onChange={this.props.update('email')} 
           /> 
           {renderErrors} 
-          <button disabled={this.state.disabled}>Continue</button> 
+          <button>Continue</button> 
         </form> 
         <p className="need-help"> 
           <a className="helper-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Need help?</a> 

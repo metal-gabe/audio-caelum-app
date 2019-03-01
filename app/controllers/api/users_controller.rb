@@ -6,6 +6,11 @@ class Api::UsersController < ApplicationController
     render json: @users 
   end 
 
+  def show 
+    @user = User.find(params[:id]) 
+    render :show 
+  end 
+
   def create 
     @user = User.new(user_params) 
 
@@ -17,9 +22,8 @@ class Api::UsersController < ApplicationController
     end 
   end 
 
-  def show 
-    @user = User.find(params[:id]) 
-    render :show 
+  def destroy 
+    # this feature will be implemented later 
   end 
 
   def verify_email_db 
@@ -30,10 +34,6 @@ class Api::UsersController < ApplicationController
     else 
       render json: 'false', status: 404  
     end 
-  end 
-
-  def destroy 
-    # this feature will be implemented later 
   end 
 
   private 
