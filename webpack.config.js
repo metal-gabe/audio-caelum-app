@@ -7,12 +7,6 @@ module.exports = {
   },
   devtool: 'source-map',
   module: { 
-    loaders: [ 
-      { 
-        test: /\.(png|jpg)$/, 
-        loader: 'url-loader?limit=8192' 
-      } 
-    ], 
     rules: [
       {
         test: /\.jsx?$/, //a regular expression that tests what kind of files to run through this loader.

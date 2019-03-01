@@ -16,6 +16,7 @@ class SignupForm extends Component {
           /> 
           <p className="choose-password">Choose a password <span>*</span></p> 
           <input 
+            autoFocus 
             type="password" 
             value={this.props.password} 
             onChange={this.props.update('password')} 

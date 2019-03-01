@@ -13,6 +13,7 @@ class LoginForm extends Component {
             onClick={() => this.props.updateFormComponent('EmailForm')} 
           /> 
           <input 
+            autoFocus 
             type="password" 
             value={this.props.password} 
             placeholder="Your password *" 

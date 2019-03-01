@@ -11,6 +11,7 @@ class SessionForm extends Component {
       password: "", 
       email: "", 
       currentFormComponent: "", 
+      loggedIn: false, 
     }; 
     this.update = this.update.bind(this); 
     this.updateFormComponent = this.updateFormComponent.bind(this); 
@@ -47,6 +48,8 @@ class SessionForm extends Component {
     e.preventDefault(); 
     const user = Object.assign({}, this.state); 
     this.props.login(user); 
+    this.setState({ loggedIn: true }); 
+    // this.resetState(); 
   }; 
 
   handleSignup(e) { 
@@ -54,6 +57,17 @@ class SessionForm extends Component {
     e.preventDefault(); 
     const user = Object.assign({}, this.state); 
     this.props.signup(user); 
+    this.setState({ loggedIn: true }); 
+    // this.resetState(); 
+  }; 
+
+  resetState() { 
+    this.setState({ 
+      password: "", 
+      email: "", 
+      currentFormComponent: "", 
+      loggedIn: false, 
+    }); 
   }; 
 
   render() { 
@@ -79,6 +93,9 @@ class SessionForm extends Component {
       update={this.update} 
     />; 
 
+    const executeRedirect = this.state.loggedIn ? 
+      <Redirect exact to="/discovery" /> : null 
+
     let renderFormComponent; 
     switch (this.state.currentFormComponent) { 
       case "LoginFormView": 
@@ -95,8 +112,9 @@ class SessionForm extends Component {
     return ( 
       <section className="modal"> 
         <section className="modal-screen"> 
-          <div className="close-button" onClick={this.props.toggleModal}>&times;</div> 
+          <div className="close-button" onClick={this.props.toggleSessionModal}>&times;</div> 
           {renderFormComponent} 
+          {executeRedirect} 
         </section> 
       </section> 
     ); 
