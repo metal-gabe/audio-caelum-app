@@ -1,6 +1,12 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* --------------------------------------------- 
+// SASS VARIABLES 
+--------------------------------------------- */ 
+$sc-orange: #f50; 
+$disclaimer-text: #9a9a9a; 
 $font-stack: 
   "Proxima Nova", 
   "Lucida Grande", 
@@ -12,20 +18,14 @@ $font-stack:
   sans-serif 
 ; 
 
-$sc-orange: #f50; 
 
 .modal { 
-  // display: none; 
   display: block; 
 } 
 
 .modal a { 
   text-decoration: none; 
 } 
-
-.is-open { 
-  display: block; 
-}
 
 .modal-screen { 
   font-size: 12px; 
@@ -48,32 +48,8 @@ $sc-orange: #f50;
   width: 20px; 
  } 
 
-.modal-email-form { 
-  // border: 1px solid red; 
-  box-sizing: border-box; 
-  width: 455px; 
-  height: 620px; 
-  margin: 0 auto; 
-  margin-top: 70px; 
-  padding: 123px 25px; 
-  position: relative; 
-  background-color: #fff; 
-  z-index: 3; 
-} 
-
-.modal-login-form { 
-  // border: 1px solid red; 
-  box-sizing: border-box; 
-  width: 455px; 
-  height: 620px; 
-  margin: 0 auto; 
-  margin-top: 70px; 
-  padding: 230px 25px; 
-  position: relative; 
-  background-color: #fff; 
-  z-index: 3; 
-} 
-
+.modal-email-form, 
+.modal-login-form, 
 .modal-signup-form { 
   // border: 1px solid red; 
   box-sizing: border-box; 
@@ -81,10 +57,21 @@ $sc-orange: #f50;
   height: 620px; 
   margin: 0 auto; 
   margin-top: 70px; 
-  padding: 20px 25px; 
   position: relative; 
   background-color: #fff; 
   z-index: 3; 
+} 
+
+.modal-email-form { 
+  padding: 123px 25px; 
+} 
+
+.modal-login-form { 
+  padding: 230px 25px; 
+} 
+
+.modal-signup-form { 
+  padding: 20px 25px; 
 } 
 
 .modal-signup-form h1 { 
@@ -105,7 +92,7 @@ $sc-orange: #f50;
   content: " "; 
   display: inline-block; 
   padding: .1em; 
-  width: 43%; 
+  width: 46%; 
 } 
 
 .modal input { 
@@ -122,14 +109,14 @@ $sc-orange: #f50;
 } 
 
 .modal input::placeholder { 
-  color: #9a9a9a; 
+  color: $disclaimer-text; 
   font-size: 19px; 
 }
 
 .modal button { 
   background-color: $sc-orange; 
   border: none; 
-  border-radius: 6px; 
+  border-radius: 4px; 
   color: #fff; 
   cursor: pointer; 
   font-size: 16px; 
@@ -174,7 +161,7 @@ $sc-orange: #f50;
 
 .disclaimers { 
   // border: 1px solid red; 
-  color: #9a9a9a; 
+  color: $disclaimer-text; 
 } 
 
 .helper-link { 
@@ -211,26 +198,46 @@ $sc-orange: #f50;
 } 
 
 .choose-password { 
-  font-size: 14px; 
+  font-size: 15px; 
   font-weight: 900; 
   margin: 5px 0; 
 } 
 
+.choose-password span { 
+  color: $sc-orange; 
+} 
+
 .captcha { 
   background-color: #f9f9f9; 
-  // background-image: url(image_path('recaptcha-02.png')); 
-  // background-position: 90%; 
-  // background-repeat: no-repeat; 
-  // background-size: 80px; 
   border: 1px solid #d3d3d3; 
   display: flex; 
   justify-content: space-between; 
-  margin-top: 1.6em; 
+  margin-top: 1.8em; 
+  width: 78%; 
 } 
 
-.modal-signup-form .checkbox { 
-  // border: 1px solid red; 
-  box-sizing: border-box; 
-  height: 60px; 
-  width: 60px; 
+.captcha div { 
+  font-size: 14px; 
+  font-weight: bolder; 
+  padding: 20px; 
+  width: 50%; 
+} 
+
+.captcha-logo { 
+  height: 20%; 
+  padding: 5px; 
+  width: 20%; 
+} 
+
+.terms-of-use { 
+  color: $disclaimer-text; 
+  font-size: 13px; 
+  margin-bottom: 0; 
+} 
+
+.errors { 
+  color: $sc-orange; 
+  margin: 3px 0 0 0; 
+  font-size: 14px; 
+  font-weight: bolder; 
 } 

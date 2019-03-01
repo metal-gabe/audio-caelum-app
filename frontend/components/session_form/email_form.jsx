@@ -1,8 +1,31 @@
 import React, { Component } from 'react'; 
-import { Link, Redirect } from 'react-router-dom'; 
+import { Link, Route, Redirect } from 'react-router-dom'; 
 
-class EmailForm extends Component {
+class EmailForm extends Component { 
+  constructor(props) { 
+    super(props); 
+    this.state = { 
+      currentErrors: null, 
+      disabled: '', 
+    }; 
+    // this.myOnBlur = this.myOnBlur.bind(this); 
+  }; 
+
+  // This is to render the error when the input field is empty 
+  // and also when the input field does not have focus 
+  // myOnBlur() { 
+  //   let hasErrors = (this.props.email === '' ? true : false); 
+  //   this.setState({ currentErrors: hasErrors }); 
+  // }; 
+
   render() { 
+    let renderErrors; 
+    // if (this.state.currentErrors === true) { // this version is connected to the myOnBlur above 
+    if (this.props.email === '') { 
+      // this.setState({ disabled: 'disabled' }); 
+      renderErrors = <p className="errors">Enter a valid email address</p>;         
+    } 
+
     return ( 
       <div className="modal-email-form"> 
         <a 
@@ -20,12 +43,14 @@ class EmailForm extends Component {
         <h2 className="divider"> or </h2> 
         <form onSubmit={this.props.checkEmail(this.props.email)}> 
           <input 
+            autoFocus 
             type="text" 
             value={this.props.email} 
             placeholder="Your email address *" 
             onChange={this.props.update('email')} 
           /> 
-          <button>Continue</button> 
+          {renderErrors} 
+          <button disabled={this.state.disabled}>Continue</button> 
         </form> 
         <p className="need-help"> 
           <a className="helper-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Need help?</a> 

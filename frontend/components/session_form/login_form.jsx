@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { Link, Redirect } from 'react-router-dom'; 
+import { Link, Route, Redirect } from 'react-router-dom'; 
 
 class LoginForm extends Component { 
   render() { 
@@ -18,7 +18,7 @@ class LoginForm extends Component {
             placeholder="Your password *" 
             onChange={this.props.update('password')} 
           /> 
-          <button onSubmit={this.props.handleLogin}>Sign in</button> 
+          <button onClick={this.props.handleLogin}>Sign in</button> 
           <p className="no-password"> 
             <Link className="helper-link" to="">Don't know your password?</Link> 
           </p> 

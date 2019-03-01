@@ -3,4 +3,6 @@ bundle.js
 bundle.js.map 
 .byebug_history 
 .DS_store 
-npm-debug.log
+npm-debug.log 
+aA_fullstack.sublime-project 
+aA_fullstack.sublime-workspace 
