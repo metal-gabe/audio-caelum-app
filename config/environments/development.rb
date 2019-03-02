@@ -28,7 +28,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon_dev 
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -49,10 +49,6 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Adding a custom Fonts folder to hold custom fonts 
-  config.assets.enabled = true 
-  config.assets.paths << Rails.root.join("app", "assets", "fonts") 
-
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -62,4 +58,12 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # --------------------------------------------- 
+  #  MY CUSTOM SETTINGS 
+  # --------------------------------------------- 
+  # Adding a custom Fonts folder to hold custom fonts 
+  config.assets.enabled = true 
+  config.assets.paths << Rails.root.join("app", "assets", "fonts") 
+  config.assets.paths << Rails.root.join("app", "assets", "audio") 
 end

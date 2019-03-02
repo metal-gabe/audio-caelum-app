@@ -21,5 +21,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }); 
 }; 
 
-const SessionFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionForm); 
+const SessionFormContainer = 
+  connect(mapStateToProps, mapDispatchToProps)(SessionForm); 
+
 export default SessionFormContainer; 

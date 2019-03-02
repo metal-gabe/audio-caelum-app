@@ -4,7 +4,7 @@ import { Link, Redirect, Route } from 'react-router-dom';
 class Navbar extends Component {
   render() { 
     return ( 
-      <div>I am your Navbar</div> 
+      <div id="navbar">I am your Navbar</div> 
     ); 
   }; 
 }; 

@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon_prod 
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -91,4 +91,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # --------------------------------------------- 
+  #  MY CUSTOM SETTINGS 
+  # --------------------------------------------- 
+  # Adding a custom Fonts folder to hold custom fonts 
+  config.assets.enabled = true 
+  config.assets.paths << Rails.root.join("app", "assets", "fonts") 
+  config.assets.paths << Rails.root.join("app", "assets", "audio") 
 end

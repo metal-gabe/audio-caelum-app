@@ -11,4 +11,5 @@ const mapDispatchToProps = (dispatch) => {
 
 const PlayerContainer = 
   connect(mapStateToProps, mapDispatchToProps)(Player); 
+
 export default PlayerContainer; 

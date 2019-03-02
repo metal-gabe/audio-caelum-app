@@ -26,6 +26,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use jquery as the Javascript library 
 gem 'jquery-rails' 
 
+# Official AWS gem to work with Active Storage 
+gem 'aws-sdk-s3', require: false  
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks 
 # gem 'turbolinks', '~> 5' 
 
@@ -48,6 +51,7 @@ group :development, :test do
   gem 'better_errors' 
   gem 'binding_of_caller' 
   gem 'shoulda-matchers' 
+  gem 'annotate' 
 end 
 
 group :development do 

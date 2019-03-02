@@ -1,2 +1,2 @@
-module SongsHelper
+module Api::SongsHelper
 end

@@ -14,6 +14,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params) 
 
     if @song 
+      # attach the audio_file to AWS here? 
       render :show 
     else 
       render json: @song.errors.full_messages, status: 422 
@@ -21,14 +22,18 @@ class SongsController < ApplicationController
   end 
 
   def update 
+    @song = Song.find(params[:id]) 
   end 
 
   def destroy 
+    @song = Song.find(params[:id]) 
+    @song.destroy if @song.artist == current_user 
+    # do I need to render anything here? 
   end 
 
   private 
 
   def song_params 
-    params.require(:song).permit(:song_title) 
+    params.require(:song).permit(:song_title, :audio_file) 
   end 
 end 

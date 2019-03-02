@@ -1,23 +1,4 @@
-// Place all the styles related to the api/sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-/* --------------------------------------------- 
-// SASS VARIABLES 
---------------------------------------------- */ 
-$sc-orange: #f50; 
-$disclaimer-text: #9a9a9a; 
-$font-stack: 
-  "Proxima Nova", 
-  "Lucida Grande", 
-  "Lucida Sans Unicode", 
-  "Lucida Sans", 
-  Garuda, 
-  Verdana, 
-  Tahoma, 
-  sans-serif 
-; 
-
+@import '_base_styles.scss'; 
 
 .modal { 
   display: block; 

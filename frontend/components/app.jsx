@@ -3,7 +3,7 @@ import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import NavbarContainer from './globals/navbar_container'; 
 import PlayerContainer from './globals/player_container'; 
 import SessionFormContainer from './session_form/session_form_container'; 
-import SplashPageContainer from './splash/splash_page_container'; 
+import SplashPageContainer from './splash_page/splash_page_container'; 
 import DiscoverPageContainer from './discover_page/discover_page_container'; 
 import UploadPageContainer from './upload_page/upload_page_container'; 
 
@@ -13,11 +13,13 @@ const App = () => {
   return ( 
     <div> 
       <NavbarContainer /> 
-      <Switch> 
-        <Route path="/discover" component={DiscoverPageContainer} /> 
-        <Route path="/upload" component={UploadPageContainer} /> 
-        <Route path="/" component={SplashPageContainer} /> 
-      </Switch> 
+      <div id="content"> 
+        <Switch> 
+          <Route path="/discover" component={DiscoverPageContainer} /> 
+          <Route path="/upload" component={UploadPageContainer} /> 
+          <Route path="/" component={SplashPageContainer} /> 
+        </Switch> 
+      </div> 
       <PlayerContainer /> 
     </div> 
   ); 
