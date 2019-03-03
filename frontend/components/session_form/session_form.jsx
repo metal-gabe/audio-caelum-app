@@ -1,124 +1,129 @@
-import React, { Component } from 'react'; 
-import { Link, Redirect } from 'react-router-dom'; 
-import EmailForm from './email_form'; 
-import LoginForm from './login_form'; 
-import SignupForm from './signup_form'; 
+import React, { Component } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import EmailForm from './email_form';
+import LoginForm from './login_form';
+import SignupForm from './signup_form';
 
-class SessionForm extends Component { 
-  constructor(props) { 
-    super(props); 
-    this.state = { 
-      password: "", 
-      email: "", 
-      currentFormComponent: "", 
-      loggedIn: false, 
-    }; 
-    this.update = this.update.bind(this); 
-    this.updateFormComponent = this.updateFormComponent.bind(this); 
-    this.handleSignup = this.handleSignup.bind(this); 
-    this.handleLogin = this.handleLogin.bind(this); 
-    this.checkEmail = this.checkEmail.bind(this); 
-  }; 
+class SessionForm extends Component {
+  constructor(props) {
+    super(props);
 
-  update(field) { 
-    return ((e) => this.setState({ 
-      [field]: e.target.value, 
-    })); 
-  }; 
+    this.state = {
+      password: '',
+      email: '',
+      currentFormComponent: '',
+    };
 
-  checkEmail(email) { 
-    return ((e) => { 
-      e.preventDefault(); 
+    this.update = this.update.bind(this);
+    this.updateFormComponent = this.updateFormComponent.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    this.checkEmail = this.checkEmail.bind(this);
+  };
 
-      this.props.checkEmail(email).then(() => { 
-        this.setState({ currentFormComponent: "LoginFormView" }); 
-      },
-        () => {
-          this.setState({ currentFormComponent: "SignupFormView" }); 
-        } 
-      ); 
-    }); 
-  }; 
+  update(field) {
+    return ((e) => this.setState({
+      [field]: e.target.value,
+    }));
+  };
 
-  updateFormComponent(comp) { 
-    this.setState({ currentFormComponent: comp }); 
-  }; 
+  checkEmail(email) {
+    return ((e) => {
+      e.preventDefault();
 
-  handleLogin(e) { 
-    e.preventDefault(); 
-    const user = Object.assign({}, this.state); 
-    this.props.login(user); 
-    this.setState({ loggedIn: true }); 
-    // this.resetState(); 
-  }; 
+      this.props.checkEmail(email).then(
+        () => { this.setState({ currentFormComponent: "LoginFormView"  }); },
+        () => { this.setState({ currentFormComponent: "SignupFormView" }); }
+      );
+    });
+  };
 
-  handleSignup(e) { 
-    console.log('bueller'); 
-    e.preventDefault(); 
-    const user = Object.assign({}, this.state); 
-    this.props.signup(user); 
-    this.setState({ loggedIn: true }); 
-    // this.resetState(); 
-  }; 
+  updateFormComponent(comp) {
+    this.setState({ currentFormComponent: comp });
+  };
 
-  resetState() { 
-    this.setState({ 
-      password: "", 
-      email: "", 
-      currentFormComponent: "", 
-      loggedIn: false, 
-    }); 
-  }; 
+  handleLogin(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    delete user.currentFormComponent;
+    // console.log(user);
+    this.props.login(user);
+    // this.resetState(); // chain this into a .then() on the line above
+  };
 
-  render() { 
-    // Testing that the input field updates correctly 
-    console.log(this.state); 
-    const EmailFormView = <EmailForm 
-      checkEmail={this.checkEmail} 
-      email={this.state.email} 
-      update={this.update} 
-    />; 
+  handleSignup(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    delete user.currentFormComponent;
+    // console.log(user);
+    this.props.signup(user);
+    // this.resetState(); // chain this into a .then() on the line above
+  };
 
-    const LoginFormView = <LoginForm 
-      handleLogin={this.handleLogin} 
-      email={this.state.email} 
-      updateFormComponent={this.updateFormComponent} 
-      update={this.update} 
-    />; 
+  resetState() {
+    this.setState({
+      password: '',
+      email: '',
+      currentFormComponent: '',
+      loggedIn: false,
+    });
+  };
 
-    const SignupFormView = <SignupForm 
-      handleSignup={this.handleSignup} 
-      email={this.state.email} 
-      updateFormComponent={this.updateFormComponent} 
-      update={this.update} 
-    />; 
+  render() {
+    // Testing that the input field updates correctly
+    console.log(this.state);
+    const EmailFormView = <EmailForm
+      checkEmail={this.checkEmail}
+      email={this.state.email}
+      errors={this.props.errors}
+      update={this.update}
+    />;
 
-    const executeRedirect = this.state.loggedIn ? 
-      <Redirect to="/discover" /> : null 
+    const LoginFormView = <LoginForm
+      handleLogin={this.handleLogin}
+      email={this.state.email}
+      errors={this.props.errors}
+      updateFormComponent={this.updateFormComponent}
+      update={this.update}
+    />;
 
-    let renderFormComponent; 
-    switch (this.state.currentFormComponent) { 
-      case "LoginFormView": 
-        renderFormComponent = LoginFormView; 
-        break 
-      case "SignupFormView": 
-        renderFormComponent = SignupFormView; 
-        break 
-      default: 
-        renderFormComponent = EmailFormView; 
-        break 
-    } 
+    const SignupFormView = <SignupForm
+      handleSignup={this.handleSignup}
+      email={this.state.email}
+      errors={this.props.errors}
+      updateFormComponent={this.updateFormComponent}
+      update={this.update}
+    />;
 
-    return ( 
-      <section className="modal"> 
-        <section className="modal-screen"> 
-          <div className="close-button" onClick={this.props.toggleSessionModal}>&times;</div> 
-          {renderFormComponent} 
-          {executeRedirect} 
-        </section> 
-      </section> 
-    ); 
-  }; 
-}; 
+    // Change this.state to be this.props
+      // when I get the form submissions working
+      // and remove this.state.loggedIn from this form
+    const executeRedirect = this.props.loggedIn ?
+      <Redirect to="/discover" /> : null
 
-export default SessionForm; 
+    let renderFormComponent;
+    switch (this.state.currentFormComponent) {
+      case "LoginFormView":
+        renderFormComponent = LoginFormView;
+        break
+      case "SignupFormView":
+        renderFormComponent = SignupFormView;
+        break
+      default:
+        renderFormComponent = EmailFormView;
+        break
+    }
+
+    return (
+      <section className="modal">
+        <section className="modal-screen">
+          <div className="close-button" onClick={this.props.toggleSessionModal}>&times;</div>
+          {renderFormComponent}
+          {executeRedirect}
+        </section>
+      </section>
+    );
+  };
+};
+
+export default SessionForm;

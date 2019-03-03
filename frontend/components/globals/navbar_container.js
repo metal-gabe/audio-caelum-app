@@ -1,21 +1,22 @@
-import { connect } from 'react-redux'; 
-import { logoutAC } from '../../actions/session_actions'; 
-import Navbar from './navbar'; 
+import { connect } from 'react-redux';
+import { logoutAC } from '../../actions/session_actions';
+import Navbar from './navbar';
 
-const mapStateToProps = ({ entities, session }) => { 
-  const userId = session.id; 
-  return ({ 
-    currentUser: entities.users[userId], 
-  }); 
-}; 
+const mapStateToProps = ({ entities, session }) => {
+  const userId = session.id;
+  return ({
+    currentUser: entities.users[userId],
+    loggedIn: Boolean(session.id),
+  });
+};
 
-const mapDispatchToProps = (dispatch) => { 
-  return ({ 
-    logout: () => dispatch(logoutAC()), 
-  }); 
-}; 
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    logout: () => dispatch(logoutAC()),
+  });
+};
 
-const NavbarContainer = 
-  connect(mapStateToProps, mapDispatchToProps)(Navbar); 
+const NavbarContainer =
+  connect(mapStateToProps, mapDispatchToProps)(Navbar);
 
-export default NavbarContainer; 
+export default NavbarContainer;

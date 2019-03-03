@@ -1,17 +1,8 @@
-<!-- This is bootstrapping the user -->
-<% if logged_in? %> 
-  <script> 
-    window.currentUser = <%= render( 
-      'api/users/user.json.jbuilder', 
-      user: current_user, 
-    ).html_safe %> 
-  </script> 
-<% end %> 
 <script>
-  window.images = { 
-    CaptchaLogo: '<%= asset_path('recaptcha-02.png') %>', 
-  } 
+  window.images = {
+    CaptchaLogo: '<%= asset_path('recaptcha-02.png') %>',
+  }
 </script>
-<main id='main'> 
-  <marquee>WHERE IS REACT?!?!?!?! :(</marquee> 
-</main> 
+<main id='main'>
+  <marquee>WHERE IS REACT?!?!?!?! :(</marquee>
+</main>

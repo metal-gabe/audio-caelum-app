@@ -1,28 +1,35 @@
-import React from 'react'; 
-import { Link, Redirect, Route, Switch } from 'react-router-dom'; 
-import NavbarContainer from './globals/navbar_container'; 
-import PlayerContainer from './globals/player_container'; 
-import SessionFormContainer from './session_form/session_form_container'; 
-import SplashPageContainer from './splash_page/splash_page_container'; 
-import DiscoverPageContainer from './discover_page/discover_page_container'; 
-import UploadPageContainer from './upload_page/upload_page_container'; 
+import React from 'react';
+import { connect } from 'react-redux';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import NavbarContainer from './globals/navbar_container';
+import PlayerContainer from './globals/player_container';
+import SplashPageContainer from './splash_page/splash_page_container';
+import DiscoverPageContainer from './discover_page/discover_page_container';
+import UploadPageContainer from './upload_page/upload_page_container';
 
-// Can/should I put some conditional rendering here if the user is logged in? 
-// If they aren't, I will render SplashPageContainer (use an AuthRoute?) 
-const App = () => { 
-  return ( 
-    <div> 
-      <NavbarContainer /> 
-      <div id="content"> 
-        <Switch> 
-          <Route path="/discover" component={DiscoverPageContainer} /> 
-          <Route path="/upload" component={UploadPageContainer} /> 
-          <Route path="/" component={SplashPageContainer} /> 
-        </Switch> 
-      </div> 
-      <PlayerContainer /> 
-    </div> 
-  ); 
-}; 
+const mapStateToProps = (state) => {
+  return ({
+    loggedIn: Boolean(state.session.id),
+  });
+};
+const App = () => {
+  let renderPlayer;
+  // if (playerIsActive) {
+  //   renderPlayer = <PlayerContainer />;
+  // }
 
-export default App; 
+  return (
+    <div id="content">
+      <Switch>
+        <ProtectedRoute path="/discover" component={DiscoverPageContainer} />
+        <ProtectedRoute path="/upload" component={UploadPageContainer} />
+        <AuthRoute path="/" component={SplashPageContainer} />
+      </Switch>
+      {/*renderPlayer*/}
+    </div>
+  );
+};
+
+const AppConnected = connect(mapStateToProps)(App);
+export default AppConnected;

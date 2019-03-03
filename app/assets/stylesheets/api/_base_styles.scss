@@ -1,14 +1,24 @@
-@import '_css_reset.css'; 
+// @import 'css_reset';
 
-$disclaimer-text: #9a9a9a; 
-$font-stack: 
-  "Proxima Nova", 
-  "Lucida Grande", 
-  "Lucida Sans Unicode", 
-  "Lucida Sans", 
-  Garuda, 
-  Verdana, 
-  Tahoma, 
-  sans-serif 
-; 
-$sc-orange: #f50; 
+$font-stack:
+'Proxima Nova',
+'Lucida Grande',
+'Lucida Sans Unicode',
+'Lucida Sans',
+Garuda,
+Verdana,
+Tahoma,
+sans-serif
+;
+
+// BASE COLORS
+$black: #000;
+$disclaimer-text: #9a9a9a;
+$fb-blue: #304f97;
+$goog-blue: #4285f4;
+$light-med-gray: #999;
+$link-blue: #398bde;
+$med-gray: #333;
+$modal-grayscale: rgba(185, 185, 185, .5);
+$sc-orange: #f50;
+$white: #fff;

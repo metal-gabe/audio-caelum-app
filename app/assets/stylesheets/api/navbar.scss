@@ -1,10 +1,12 @@
-@import '_base_styles.scss'; 
+@import 'base_styles';
 
-#navbar { 
-  border: 1px solid red; 
-  height: 2.75em; 
-  margin: 0; 
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-} 
+#navbar {
+  border: 1px solid red;
+  display: flex;
+  height: 2.75em;
+  justify-content: space-around;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

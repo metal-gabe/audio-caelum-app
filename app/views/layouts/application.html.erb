@@ -7,6 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <!-- This is bootstrapping the user -->
+    <% if logged_in? %>
+      <script>
+        window.currentUser =
+          <%= render(
+            'api/users/user.json.jbuilder',
+            user: current_user,
+          ).html_safe %>
+      </script>
+    <% end %>
   </head>
 
   <body>

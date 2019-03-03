@@ -1,18 +1,20 @@
-import { connect } from 'react-redux'; 
-import UploadPage from './upload_page'; 
-import { createSongAC } from '../../actions/song_actions'; 
+import { connect } from 'react-redux';
+import UploadPage from './upload_page';
+import { createSongAC } from '../../actions/song_actions';
 
-const mapStateToProps = ({ entities, session, errors }) => { 
-  return ({}); 
-}; 
+const mapStateToProps = ({ entities, session, errors }) => {
+  return ({
+    currentUser: entities.users[session.id],
+  });
+};
 
-const mapDispatchToProps = (dispatch) => { 
-  return ({ 
-    createSong: (song) => dispatch(createSongAC(song)), 
-  }); 
-}; 
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    createSong: (song) => dispatch(createSongAC(song)),
+  });
+};
 
-const UploadPageContainer = 
-  connect(mapStateToProps, mapDispatchToProps)(UploadPage); 
+const UploadPageContainer =
+  connect(mapStateToProps, mapDispatchToProps)(UploadPage);
 
-export default UploadPageContainer; 
+export default UploadPageContainer;
