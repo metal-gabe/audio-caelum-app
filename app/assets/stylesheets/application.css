@@ -26,3 +26,9 @@
 .content {
   margin-top: 2.8em;
 }
+
+/*@media screen and ( max-width: 950 ) {
+  .content {
+    width: 100%;
+  }
+}*/

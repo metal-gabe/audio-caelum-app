@@ -96,6 +96,21 @@
 
 .modal-email-form {
   padding: 123px 25px;
+
+  .divider {
+    font-size: 15px;
+    padding: 4px 0;
+    text-align: center;
+
+    ::before,
+    ::after {
+      border-top: 1px solid $gray-med;
+      content: ' ';
+      display: inline-block;
+      padding: .1em;
+      width: 46%;
+    }
+  }
 }
 
 .modal-login-form {
@@ -109,21 +124,6 @@
     font-size: 31px;
     font-weight: bold;
     text-align: center;
-  }
-}
-
-.divider {
-  font-size: 15px;
-  padding: 4px 0;
-  text-align: center;
-
-  ::before,
-  ::after {
-    border-top: 1px solid $gray-med;
-    content: ' ';
-    display: inline-block;
-    padding: .1em;
-    width: 46%;
   }
 }
 
