@@ -1,39 +1,39 @@
-class SongsController < ApplicationController 
-  before_action :require_login, except: [:show] 
+class SongsController < ApplicationController
+  before_action :require_login, except: [:show]
 
-  def index 
-    @songs = Song.all 
-  end 
+  def index
+    @songs = Song.all
+  end
 
-  def show 
-    @song = Song.find(params[:id]) 
-    render :show 
-  end 
+  def show
+    @song = Song.find(params[:id])
+    render :show
+  end
 
-  def create 
-    @song = Song.new(song_params) 
+  def create
+    @song = Song.new(song_params)
+    # @song.attach(#something)
 
-    if @song 
-      # attach the audio_file to AWS here? 
-      render :show 
-    else 
-      render json: @song.errors.full_messages, status: 422 
-    end 
-  end 
+    if @song.save
+      render :show
+    else
+      render json: @song.errors.full_messages, status: 422
+    end
+  end
 
-  def update 
-    @song = Song.find(params[:id]) 
-  end 
+  def update
+    @song = Song.find(params[:id])
+  end
 
-  def destroy 
-    @song = Song.find(params[:id]) 
-    @song.destroy if @song.artist == current_user 
-    # do I need to render anything here? 
-  end 
+  def destroy
+    @song = Song.find(params[:id])
+    @song.destroy if @song.artist == current_user
+    # do I need to render anything here?
+  end
 
-  private 
+  private
 
-  def song_params 
-    params.require(:song).permit(:song_title, :audio_file) 
-  end 
-end 
+  def song_params
+    params.require(:song).permit(:song_title, :audio_file)
+  end
+end
