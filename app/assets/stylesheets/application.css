@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@import 'base_styles';
+@import '_base_styles';
 
 @font-face {
   font-family: 'Proxima Nova';
