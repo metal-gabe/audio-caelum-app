@@ -46,7 +46,6 @@ class SessionForm extends Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     delete user.currentFormComponent;
-    // console.log(user);
     this.props.login(user);
     // this.resetState(); // chain this into a .then() on the line above
   };
@@ -55,7 +54,6 @@ class SessionForm extends Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     delete user.currentFormComponent;
-    // console.log(user);
     this.props.signup(user);
     // this.resetState(); // chain this into a .then() on the line above
   };
@@ -71,7 +69,7 @@ class SessionForm extends Component {
 
   render() {
     // Testing that the input field updates correctly
-    console.log(this.state);
+    // console.log(this.state);
     const EmailFormView = <EmailForm
       checkEmail={this.checkEmail}
       email={this.state.email}

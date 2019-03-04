@@ -40,10 +40,7 @@ export const loginAC = (user) => (dispatch) => {
   return (SessionApiUtil.loginAPI(user)
     .then(
       (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => {
-        // console.log(error);
-        dispatch(receiveErrorsAC(error.responseText));
-      }
+      (error) => dispatch(receiveErrorsAC(error.responseText))
     )
   );
 };

@@ -7,7 +7,12 @@
   "directories": {},
   "private": true,
   "scripts": {
-    "start": "webpack -w --mode=development"
+    "start": "webpack -w --mode=development",
+    "postinstall": "webpack"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.8.0"
   },
   "keywords": [
     "react",
