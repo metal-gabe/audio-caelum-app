@@ -1,4 +1,5 @@
 @import 'base_styles';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 .nav-parent {
   background-color: $gray-med;
@@ -80,7 +81,7 @@
 
 .navbar-right {
   .nav-button {
-    width: 33.333%;
+    width: 100%;
   }
 
   .menu-system,
@@ -94,14 +95,32 @@
   }
 
   .menu-system {
-    border: 1px solid $red;
     font-size: 40px;
+    padding-bottom: .75em;
     width: 18%;
+
+    .ellipsis {
+      font-family: 'Lato', sans-serif;
+    }
   }
 
   .menu-user {
     display: flex;
-    justify-content: space-between;
+    padding: 0 10px;
+
+    // TRYING TO USE THE FONT-AWESOME-RAILS GEM
+    // &::after {
+    //   content: '\f0d7';
+    // }
+
+    span {
+      &:nth-child(2) {
+        font-size: 11px;
+        margin-left: 6px;
+        padding-left: 4px;
+        transform: rotate(90deg);
+      }
+    }
   }
 
   .profile-img {

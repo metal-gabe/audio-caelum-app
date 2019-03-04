@@ -16,7 +16,7 @@ class NavbarRight extends Component {
   render() {
     return (
       <div className="navbar-right">
-        <Link className="nav-button selected" to='/upload'>
+        <Link className="upload nav-button selected" to='/upload'>
           <div>Upload</div>
         </Link>
         <div className="nav-button menu-user">
@@ -24,9 +24,10 @@ class NavbarRight extends Component {
             <img src={window.images.UserProfileImg} />
           </span>
           {this.props.currentUser.email}
+          <span>&#62;</span>
         </div>
         <div className="nav-button menu-system">
-          ...
+          <span className="ellipsis">&#8230;</span>
         </div>
       </div>
     );
@@ -41,3 +42,5 @@ export default NavbarRight;
 //   value="Logout"
 //   onClick={this.handleLogout}
 // />
+
+// font-family: 'Lato', sans-serif;
