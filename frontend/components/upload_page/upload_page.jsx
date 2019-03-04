@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
-import NavbarContainer from '../globals/navbar_container';
+import NavbarContainer from '../navbar/navbar_container';
 
 class UploadPage extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class UploadPage extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const songFormData = new FormData();
-    songFormData.append('song[title]', this.state.songTitle);
+    songFormData.append('song[songTitle]', this.state.songTitle);
 
     if (this.state.audioFile) {
       songFormData.append('song[audioFile]', this.state.audioFile);
@@ -24,9 +24,11 @@ class UploadPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <NavbarContainer />
-        <h1>I am the upload page</h1>
+        <div className="upload-content">
+          <h1>I am the upload page</h1>
+        </div>
       </div>
     );
   };

@@ -1,12 +1,141 @@
 @import 'base_styles';
 
-#navbar {
-  border: 1px solid red;
+.nav-parent {
+  background-color: $gray-med;
   display: flex;
   height: 2.75em;
-  justify-content: space-around;
-  margin: 0;
+  justify-content: center;
+  max-height: 2.75em;
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.navbar {
+  color: $gray-light;
+  height: 100%;
+  width: 1240px;
+
+  a {
+    color: $gray-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .selected {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.navbar,
+.navbar-left,
+.navbar-right,
+.search {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 33.333%;
+
+  .nav-button {
+    align-items: center;
+    font-size: 14px;
+    height: 100%;
+    padding-top: 1.5em;
+    text-align: center;
+  }
+}
+
+.navbar-left {
+  .nav-button {
+    border-right: 1px solid $gray-dark;
+    width: 25%;
+  }
+
+  a {
+    &:first-child {
+      background-color: $sc-orange;
+      height: 100%;
+      width: 18%;
+    }
+  }
+
+  .logo {
+    background-image: url(image-path('cloud-icon'));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.navbar-right {
+  .nav-button {
+    width: 33.333%;
+  }
+
+  .menu-system,
+  .menu-user {
+    cursor: pointer;
+    padding-top: 0;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .menu-system {
+    border: 1px solid $red;
+    font-size: 40px;
+    width: 18%;
+  }
+
+  .menu-user {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-img {
+    img {
+      border-radius: 50%;
+      height: 30px;
+      padding-right: 10px;
+      width: 30px;
+    }
+  }
+}
+
+.search {
+  border-left: $gray-dark;
+  height: 100%;
+  padding: 0 .5em;
+  width: 33.333%;
+
+  input {
+    background-color: $search-bg;
+    background-image: url(image-path('search-icon-gray'));
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    background-size: 5%;
+    border: 1px solid $gray-light-med;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 60%;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: $disclaimer-text;
+      padding-left: 6px;
+    }
+  }
 }

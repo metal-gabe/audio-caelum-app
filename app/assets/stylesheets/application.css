@@ -14,9 +14,15 @@
  *= require_self
  */
 
-@font-face { 
-  font-family: 'Proxima Nova'; 
-  src:url(font_path('proxima_nova_regular.otf')); 
-  font-weight: normal; 
-  font-style: normal; 
-} 
+@import '_base_styles';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  src: url(font_path('proxima_nova_regular.otf'));
+}
+
+.content {
+  margin-top: 2.8em;
+}

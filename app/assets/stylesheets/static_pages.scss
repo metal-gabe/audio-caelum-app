@@ -1,10 +1,14 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// body { 
-//   background-color: #333; 
-// } 
+// body {
+//   background-color: #333;
+// }
+
+@import './api/_base_styles';
 
 body {
+  background-color: $body-bg;
+  font-family: $font-stack;
   margin: 0;
 }

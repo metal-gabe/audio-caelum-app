@@ -20,10 +20,11 @@ const App = () => {
   // }
 
   return (
-    <div id="content">
+    <div>
       <Switch>
         <ProtectedRoute path="/discover" component={DiscoverPageContainer} />
         <ProtectedRoute path="/upload" component={UploadPageContainer} />
+        {/*<ProtectedRoute path="/you" component={YouPageContainer} />*/}
         <AuthRoute path="/" component={SplashPageContainer} />
       </Switch>
       {/*renderPlayer*/}

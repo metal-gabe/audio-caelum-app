@@ -1,0 +1,226 @@
+@import 'base_styles';
+
+.modal {
+  display: block;
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    background-color: $sc-orange;
+    border: 0;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+
+    :active {
+      border: 0;
+    }
+  }
+
+  input {
+    border: 1px solid $gray-light-med;
+    border-radius: 3px;
+    color: $gray-med;
+    display: inline-block;
+    font-family: $font-stack;
+    font-size: 18px;
+    margin: 0 auto;
+    outline: none;
+    padding: 10px;
+    width: 94.5%;
+
+    &::placeholder {
+      color: $disclaimer-text;
+      font-size: 19px;
+    }
+  }
+}
+
+.modal-screen {
+  background-color: $modal-grayscale;
+  bottom: 0;
+  font-family: $font-stack;
+  font-size: 12px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.close-button {
+  cursor: pointer;
+  float: right;
+  font-size: 4em;
+  height: 20px;
+  margin: 2px 30px 0 0;
+  width: 20px;
+ }
+
+.modal-email-form,
+.modal-login-form,
+.modal-signup-form {
+  background-color: $white;
+  box-sizing: border-box;
+  height: 620px;
+  margin: 0 auto;
+  margin-top: 70px;
+  position: relative;
+  width: 455px;
+  z-index: 3;
+}
+
+.modal-login-form,
+.modal-signup-form {
+  .return-to-email {
+    background-image: url(image-path('left-caret.png'));
+    background-position: 5px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: left;
+    text-indent: 30px;
+    width: 100%;
+  }
+}
+
+.modal-email-form {
+  padding: 123px 25px;
+}
+
+.modal-login-form {
+  padding: 230px 25px;
+}
+
+.modal-signup-form {
+  padding: 20px 25px;
+
+  h1 {
+    font-size: 31px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.divider {
+  font-size: 15px;
+  padding: 4px 0;
+  text-align: center;
+
+  ::before,
+  ::after {
+    border-top: 1px solid $gray-med;
+    content: ' ';
+    display: inline-block;
+    padding: .1em;
+    width: 46%;
+  }
+}
+
+.btn-cats,
+.btn-dogs {
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px;
+  text-align: center;
+  width: 94%;
+}
+
+.btn-cats {
+  background-color: $fb-blue;
+}
+
+.btn-dogs {
+  background-color: $goog-blue;
+  margin-top: 12px;
+}
+
+.need-help {
+  text-align: right;
+}
+
+.no-password {
+  font-size: 13px;
+  text-align: center;
+}
+
+.disclaimers {
+  color: $disclaimer-text;
+}
+
+.helper-link {
+  color: $link-blue;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.signin-reminder {
+  font-size: 12px;
+  margin-top: 22px;
+  text-align: center;
+
+  h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+}
+
+.choose-password {
+  font-size: 15px;
+  font-weight: 900;
+  margin: 5px 0;
+
+  span {
+    color: $sc-orange;
+  }
+}
+
+.captcha {
+  background-color: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8em;
+  width: 78%;
+
+  div {
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 20px;
+    width: 50%;
+  }
+}
+
+.captcha-logo {
+  height: 20%;
+  padding: 5px;
+  width: 20%;
+}
+
+.terms-of-use {
+  color: $disclaimer-text;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.errors {
+  color: $sc-orange;
+  font-size: 14px;
+  font-weight: bolder;
+  list-style-type: none;
+  margin: 3px 0 0;
+}
