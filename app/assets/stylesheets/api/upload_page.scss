@@ -45,12 +45,12 @@
 
   .upload-form {
     border: 1px solid $body-bg;
+    color: $gray-med;
     margin: 0 auto;
     margin-top: 88px;
     width: 65%;
 
     .uploader {
-      color: $gray-med;
       font-size: 14px;
       padding: 100px;
       text-align: center;
@@ -75,6 +75,12 @@
           font-size: 12px;
         }
       }
+    }
+
+    .file-type-restrictions {
+      font-size: 14px;
+      padding: 0 30px 30px;
+      text-align: center;
     }
 
     .rando-facts {
