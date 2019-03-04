@@ -12,12 +12,11 @@ const mapStateToProps = ({ entities, session, errors }) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const toggleSessionModal = ownProps.toggleSessionModal;
   return ({
     login: (user) => dispatch(loginAC(user)),
     signup: (user) => dispatch(signupAC(user)),
     checkEmail: (email) => verifyEmailAPI(email), // maybe wrap this call in "Boolean" to do the check
-    toggleSessionModal,
+    toggleSessionModal: ownProps.toggleSessionModal,
   });
 };
 
