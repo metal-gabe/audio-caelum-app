@@ -16,16 +16,24 @@ class Navbar extends Component {
   };
 
   updateIsActive() {
-    // do stuff here
+    this.setState({ isActive: !this.state.isActive });
   }
 
   render() {
     return (
       <section className="nav-parent">
         <nav className="navbar">
-          <NavbarLeft />
+          <NavbarLeft
+            isActive={this.state.isActive}
+            updateIsActive={this.updateIsActive}
+          />
           <SearchBarContainer />
-          <NavbarRight currentUser={this.props.currentUser} />
+          <NavbarRight
+            currentUser={this.props.currentUser}
+            isActive={this.state.isActive}
+            updateIsActive={this.updateIsActive}
+            logout={this.props.logout}
+          />
         </nav>
       </section>
     );
