@@ -1,37 +1,34 @@
-export const createSongAPI = (song) => { 
-  return ({ 
-    method: `POST`, 
-    dataType: `json`, 
-    url: `/api/songs`, 
-    data: { song }, 
-  }); 
-}; 
-export const fetchAllSongsAPI = () => { 
-  return ({ 
-    method: `GET`, 
-    dataType: `json`, 
-    url: `/api/songs`, 
-  }); 
-}; 
-export const fetchSongAPI = (id) => { 
-  return ({ 
-    method: `GET`, 
-    dataType: `json`, 
-    url: `/api/songs/${id}`, 
-  }); 
-}; 
-export const updateSongAPI = (song) => { 
-  return ({ 
-    method: `PATCH`, 
-    dataType: `json`, 
-    url: `/api/songs/${song.id}`, 
-    data: { song }, 
-  }); 
-}; 
-export const deleteSongAPI = (id) => { 
-  return ({ 
-    method: `DELETE`, 
-    dataType: `json`, 
-    url: `/api/songs/${id}`, 
-  }); 
-}; 
+export const createSongAPI = (song) => {
+  return ($.ajax({
+    method: `POST`,
+    url: `/api/songs`,
+    data: song,
+    contentType: false,
+    processData: false,
+  }));
+};
+export const fetchAllSongsAPI = () => {
+  return ($.ajax({
+    method: `GET`,
+    url: `/api/songs`,
+  }));
+};
+export const fetchSongAPI = (id) => {
+  return ($.ajax({
+    method: `GET`,
+    url: `/api/songs/${id}`,
+  }));
+};
+export const updateSongAPI = (song) => {
+  return ($.ajax({
+    method: `PATCH`,
+    url: `/api/songs/${song.id}`,
+    data: { song },
+  }));
+};
+export const deleteSongAPI = (id) => {
+  return ($.ajax({
+    method: `DELETE`,
+    url: `/api/songs/${id}`,
+  }));
+};

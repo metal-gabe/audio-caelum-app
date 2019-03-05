@@ -30,7 +30,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 
 # Official AWS gem to work with Active Storage
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'

@@ -80,6 +80,11 @@
         }
       }
 
+      .song-name {
+        font-weight: 700;
+        margin-top: 8px;
+      }
+
       .song-title {
         border: 1px solid $gray-light-med;
         border-radius: 3px;
@@ -107,6 +112,17 @@
       border-top: 1px solid $body-bg;
       // height: 68px;
       padding: 22px 20px;
+
+      .chosen-fact {
+        color: $sc-orange;
+        font-style: italic;
+
+        span {
+          margin-right: 12px;
+
+          &:last-child { margin-right: 0; }
+        }
+      }
     }
   }
 
@@ -133,9 +149,7 @@
       a {
         text-decoration: none;
 
-        &:hover {
-          color: $gray-light-med;
-        }
+        &:hover { color: $gray-light-med; }
       }
     }
 

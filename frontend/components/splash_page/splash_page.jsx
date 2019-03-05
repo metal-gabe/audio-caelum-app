@@ -25,8 +25,6 @@ class SplashPage extends Component {
   };
 
   render() {
-    debugger;
-
     const renderSessionForm = this.state.sessionModalIsOpen ?
       <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null
 

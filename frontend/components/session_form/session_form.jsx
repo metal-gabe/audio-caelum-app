@@ -68,8 +68,6 @@ class SessionForm extends Component {
   };
 
   render() {
-    // Testing that the input field updates correctly
-    // console.log(this.state);
     const EmailFormView = <EmailForm
       checkEmail={this.checkEmail}
       email={this.state.email}
@@ -91,9 +89,6 @@ class SessionForm extends Component {
       update={this.update}
     />;
 
-    // Change this.state to be this.props
-      // when I get the form submissions working
-      // and remove this.state.loggedIn from this form
     const executeRedirect = this.props.loggedIn ?
       <Redirect to="/discover" /> : null
 

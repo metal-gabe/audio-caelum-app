@@ -14,6 +14,7 @@ class UploadPage extends Component {
           <UploadNavbar />
           <UploadForm
             createSong={this.props.createSong}
+            currentUser={this.props.currentUser}
             errors={this.props.errors}
           />
           <UploadFooter />

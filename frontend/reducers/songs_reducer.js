@@ -1,7 +1,7 @@
 import {
   RECEIVE_ALL_SONGS,
   RECEIVE_SONG,
-  REMOVE_SONG
+  REMOVE_SONG,
 } from '../actions/song_actions';
 import { merge } from 'lodash';
 
