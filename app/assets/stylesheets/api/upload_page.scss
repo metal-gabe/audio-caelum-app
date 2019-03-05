@@ -67,6 +67,10 @@
         width: 300px;
       }
 
+      .file-picker {
+        display: none;
+      }
+
       h1 {
         // outline: 1px dashed red;
         font-size: 22px;
@@ -74,6 +78,22 @@
         span {
           font-size: 12px;
         }
+      }
+
+      .song-title {
+        border: 1px solid $gray-light-med;
+        border-radius: 3px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        outline: none;
+        padding: 6px;
+        width: 200px;
+      }
+
+      .submit-song {
+        margin-top: 12px;
+        outline: none;
       }
     }
 
@@ -106,6 +126,7 @@
       border-top: 1px solid $body-bg;
       color: $gray;
       font-size: 12px;
+      margin-top: 10px;
       padding-top: 16px;
       text-align: left;
 
@@ -116,6 +137,11 @@
           color: $gray-light-med;
         }
       }
+    }
+
+    small {
+      color: $gray-light-med;
+      font-style: italic;
     }
   }
 }

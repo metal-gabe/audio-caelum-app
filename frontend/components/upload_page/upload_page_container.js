@@ -5,6 +5,7 @@ import { createSongAC } from '../../actions/song_actions';
 const mapStateToProps = ({ entities, session, errors }) => {
   return ({
     currentUser: entities.users[session.id],
+    errors: errors,
   });
 };
 

@@ -12,7 +12,10 @@ class UploadPage extends Component {
         <NavbarContainer />
         <div className="upload-content">
           <UploadNavbar />
-          <UploadForm />
+          <UploadForm
+            createSong={this.props.createSong}
+            errors={this.props.errors}
+          />
           <UploadFooter />
         </div>
       </div>
