@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
+import { Link, withRouter, Redirect, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container';
 
 class SplashPage extends Component {
@@ -21,11 +21,12 @@ class SplashPage extends Component {
   demoLogin(e) {
     e.preventDefault();
     const demoUser = { username: 'bueller', email: 'b@b.com', password: 'password' };
-    this.props.login(demoUser)
-      .then(() => this.props.history.push('/discover'));
+    this.props.login(demoUser);
   };
 
   render() {
+    debugger;
+
     const renderSessionForm = this.state.sessionModalIsOpen ?
       <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null
 

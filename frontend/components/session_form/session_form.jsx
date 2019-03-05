@@ -76,7 +76,6 @@ class SessionForm extends Component {
       errors={this.props.errors}
       update={this.update}
     />;
-
     const LoginFormView = <LoginForm
       handleLogin={this.handleLogin}
       email={this.state.email}
@@ -84,7 +83,6 @@ class SessionForm extends Component {
       updateFormComponent={this.updateFormComponent}
       update={this.update}
     />;
-
     const SignupFormView = <SignupForm
       handleSignup={this.handleSignup}
       email={this.state.email}

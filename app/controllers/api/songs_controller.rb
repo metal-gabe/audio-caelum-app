@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    # @song.attach(#something)
+    # @song.audio_file.attach(#something)
 
     if @song.save
       render :show
