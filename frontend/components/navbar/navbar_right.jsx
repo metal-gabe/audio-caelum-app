@@ -41,7 +41,7 @@ class NavbarRight extends Component {
     const btnClassUpload = classNames({
       upload: true,
       'nav-button': true,
-      'nav-selected': this.props.isActive,
+      'nav-selected': this.props.uploadBtnIsActive,
     });
     const btnClassUserMenu = classNames({
       'nav-button': true,

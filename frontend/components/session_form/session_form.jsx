@@ -11,7 +11,7 @@ class SessionForm extends Component {
     this.state = {
       password: '',
       email: '',
-      currentFormComponent: '',
+      currentFormComponent: null,
     };
 
     this.update = this.update.bind(this);
@@ -62,8 +62,7 @@ class SessionForm extends Component {
     this.setState({
       password: '',
       email: '',
-      currentFormComponent: '',
-      loggedIn: false,
+      currentFormComponent: null,
     });
   };
 

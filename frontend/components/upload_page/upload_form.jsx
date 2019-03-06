@@ -4,12 +4,6 @@ class UploadForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      songTitle: '',
-      audioFile: null,
-      artistId: this.props.currentUser.id,
-    };
-
     this.facts = [
       'Say cheese? Victorians said "prunes" instead.',
       "Forrest Mars, the creator of Peanut M&M's, was allergic to peanuts.",
@@ -33,12 +27,28 @@ class UploadForm extends Component {
       'According to a 2015 study, sarcasm can promote creative thinking.'
     ];
 
+    this.state = {
+      songTitle: '',
+      audioFile: null,
+      artistId: this.props.currentUser.id,
+      currRandomFact: this.randomFact(),
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.selectFile = this.selectFile.bind(this);
     this.updateAudioFile = this.updateAudioFile.bind(this);
     this.randomFact = this.randomFact.bind(this);
+
+    setInterval(() => {
+      this.setState({
+        currRandomFact: this.randomFact()
+      });
+    }, 10000);
   };
 
+  /* ---------------------------------------------
+  // INTERNAL METHODS AFTER THE CONSTRUCTOR
+  --------------------------------------------- */
   randomFact() {
     const randNum = Math.floor(Math.random()*this.facts.length);
     const randFact = this.facts[randNum];
@@ -70,8 +80,11 @@ class UploadForm extends Component {
     if (this.state.audioFile) {
       songFormData.append('song[audio_file]', this.state.audioFile);
     }
-    // debugger
-    this.props.createSong(songFormData);
+    this.props.createSong(songFormData)
+      .then(
+        () => {this.resetState()},
+        // () => {},
+      );
   };
 
   grabErrors() {
@@ -92,7 +105,6 @@ class UploadForm extends Component {
   };
 
   render() {
-    console.log(this.state);
     const renderSubmitButton = this.state.audioFile && (this.state.songTitle !== '') ?
       <input className="submit-song" type="submit" onClick={this.handleSubmit} value="Submit your song" />
         : null
@@ -101,7 +113,7 @@ class UploadForm extends Component {
       <div className="chosen-fact">
         <span>Did You Know?</span>
         <span>&#10137;</span>
-        <span>{this.randomFact()}</span>
+        <span>{this.state.currRandomFact}</span>
       </div>
     );
     // Find a way to make this use setInterval to constantly update the fact
@@ -111,6 +123,9 @@ class UploadForm extends Component {
 
     const renderErrors = this.props.errors ? <ul className="errors">{this.grabErrors()}</ul> : null
 
+    /* ---------------------------------------------
+    // FINAL RENDER & RETURN
+    --------------------------------------------- */
     return (
       <div className="upload-form">
         <div className="uploader">
@@ -130,13 +145,16 @@ class UploadForm extends Component {
               className="song-title"
               type="text"
               placeholder="Now, add a title for your song..."
+              value={this.state.songTitle}
               onChange={this.update('songTitle')}
             />
             {renderSubmitButton}
             {renderErrors}
           </form>
           <p className="mac-or-pc">
-            Mac or PC?:  <input type="radio" name="macOrPc" /> Mac is wack!  <input type="radio" name="macOrPc" defaultChecked /> PC is greasy!
+            <span>Mac or PC?:</span>
+            <span><input type="radio" name="macOrPc" /> Mac is wack!</span>
+            <span><input type="radio" name="macOrPc" defaultChecked /> PC is greasy!</span>
           </p>
         </div>
         <div className="file-type-restrictions">

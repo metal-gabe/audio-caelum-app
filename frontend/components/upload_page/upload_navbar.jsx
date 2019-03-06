@@ -15,7 +15,7 @@ class UploadNavbar extends Component {
     return (
       <div className="upload-navbar">
         <ul className="upload-navbar-list">
-          <li><Link to="">Upload</Link></li>
+          <li><Link to="/upload">Upload</Link></li>
           {/* <li><Link to="">Your tracks</Link></li> */}
           {/* <li><Link to="">For fun</Link></li> */}
         </ul>

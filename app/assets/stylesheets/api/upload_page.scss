@@ -80,6 +80,12 @@
         }
       }
 
+      .mac-or-pc {
+        span {
+          margin: 0 .5em;
+        }
+      }
+
       .song-name {
         font-weight: 700;
         margin-top: 8px;
@@ -118,7 +124,7 @@
         font-style: italic;
 
         span {
-          margin-right: 12px;
+          margin-right: .8em;
 
           &:last-child { margin-right: 0; }
         }

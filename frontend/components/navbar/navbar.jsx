@@ -9,14 +9,22 @@ class Navbar extends Component {
     super(props);
 
     this.state = {
-      isActive: false,
+      homeBtnIsActive: false,
+      streamBtnIsActive: false,
+      libraryBtnIsActive: false,
+      uploadBtnIsActive: false,
     };
 
     this.updateIsActive = this.updateIsActive.bind(this);
   };
 
   updateIsActive() {
-    this.setState({ isActive: !this.state.isActive });
+    this.setState({
+      homeBtnIsActive: !this.state.homeBtnIsActive,
+      streamBtnIsActive: !this.state.streamBtnIsActive,
+      libraryBtnIsActive: !this.state.libraryBtnIsActive,
+      uploadBtnIsActive: !this.state.uploadBtnIsActive,
+    });
   }
 
   render() {
@@ -24,13 +32,13 @@ class Navbar extends Component {
       <section className="nav-parent">
         <nav className="navbar">
           <NavbarLeft
-            isActive={this.state.isActive}
+            isActive={this.state.homeBtnIsActive}
             updateIsActive={this.updateIsActive}
           />
           <SearchBarContainer />
           <NavbarRight
             currentUser={this.props.currentUser}
-            isActive={this.state.isActive}
+            isActive={this.state.homeBtnIsActive}
             updateIsActive={this.updateIsActive}
             logout={this.props.logout}
           />

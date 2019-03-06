@@ -11,7 +11,7 @@ class NavbarLeft extends Component {
     });
     const btnClass = classNames({
       'nav-button': true,
-      'nav-selected': this.props.isActive,
+      'nav-selected': this.props.homeBtnIsActive,
     });
 
     return (
