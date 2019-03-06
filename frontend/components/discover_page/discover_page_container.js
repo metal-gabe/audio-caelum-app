@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { logoutAC } from '../../actions/session_actions';
+import { requestAllSongsAC } from '../../actions/song_actions';
 import DiscoverPage from './discover_page';
 
 const mapStateToProps = ({ entities, session, errors }) => {
@@ -10,7 +11,9 @@ const mapStateToProps = ({ entities, session, errors }) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return ({});
+  return ({
+    requestAllSongs: () => dispatch(requestAllSongsAC()),
+  });
 };
 
 const DiscoverPageContainer =

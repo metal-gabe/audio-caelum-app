@@ -13,10 +13,12 @@ export const fetchAllSongsAPI = () => {
     url: `/api/songs`,
   }));
 };
-export const fetchSongAPI = (id) => {
+export const fetchSongAPI = (songTitle) => {
+  // debugger
   return ($.ajax({
     method: `GET`,
-    url: `/api/songs/${id}`,
+    url: `/api/songs/${songTitle}`,
+    data: { song: { song_title: songTitle } }
   }));
 };
 export const updateSongAPI = (song) => {

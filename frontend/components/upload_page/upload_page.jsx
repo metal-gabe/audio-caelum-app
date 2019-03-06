@@ -15,6 +15,7 @@ class UploadPage extends Component {
           <UploadForm
             createSong={this.props.createSong}
             currentUser={this.props.currentUser}
+            history={this.props.history}
             errors={this.props.errors}
           />
           <UploadFooter />

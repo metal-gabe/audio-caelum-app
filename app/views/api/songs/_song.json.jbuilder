@@ -1,2 +1,5 @@
 json.extract! song, :id, :song_title
-json.songUrl url_for(song.audio_file)
+
+if song.audio_file.attached?
+  json.songUrl url_for(song.audio_file)
+end

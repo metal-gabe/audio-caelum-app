@@ -24,7 +24,7 @@ export const logoutAPI = () => {
 export const verifyEmailAPI = (email) => {
   return ($.ajax({
     method: `GET`,
-    url: `/api/users/email`,
+    url: `/api/users/${email}`,
     dataType: `json`,
     data: { email },
     success: () => true,

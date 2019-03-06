@@ -27,8 +27,11 @@
   margin-top: 2.8em;
 }
 
-/*@media screen and ( max-width: 950 ) {
-  .content {
+@media screen and ( max-width: 1024px ) {
+  .navbar,
+  .discover-content,
+  .song-page-content,
+  .upload-content {
     width: 100%;
   }
-}*/
+}

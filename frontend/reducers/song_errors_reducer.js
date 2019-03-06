@@ -1,5 +1,5 @@
 import {
-  RECEIVE_ERRORS,
+  RECEIVE_SONG_ERRORS,
 } from '../actions/song_actions';
 import { merge } from 'lodash';
 
@@ -8,11 +8,8 @@ const SongErrorsReducer = (oldState=[], action) => {
   let newState;
 
   switch (action.type) {
-    case RECEIVE_ERRORS:
+    case RECEIVE_SONG_ERRORS:
       return (action.errors);
-    // case RECEIVE_CURRENT_USER:
-    //   newState = [];
-    //   return (newState);
     default:
       return (oldState);
   }

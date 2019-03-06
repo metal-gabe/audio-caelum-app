@@ -43,7 +43,7 @@ class UploadForm extends Component {
       this.setState({
         currRandomFact: this.randomFact()
       });
-    }, 10000);
+    }, 30000);
   };
 
   /* ---------------------------------------------
@@ -80,11 +80,11 @@ class UploadForm extends Component {
     if (this.state.audioFile) {
       songFormData.append('song[audio_file]', this.state.audioFile);
     }
+
     this.props.createSong(songFormData)
-      .then(
-        () => {this.resetState()},
-        // () => {},
-      );
+    .then(() => {
+      this.props.history.push(`/${this.props.currentUser.username}/${this.state.songTitle}`);
+    });
   };
 
   grabErrors() {
@@ -95,13 +95,6 @@ class UploadForm extends Component {
       );
     });
     return (allErrors);
-  };
-
-  resetState() {
-    this.setState({
-      songTitle: '',
-      audioFile: '',
-    });
   };
 
   render() {

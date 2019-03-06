@@ -7,7 +7,10 @@ class Api::SongsController < ApplicationController
   end
 
   def show
-    @song = Song.find(params[:id])
+    # debugger
+    title = params[:song][:song_title].downcase
+    # @song = Song.find_by(song_title: params[:song][:song_title])
+    @song = Song.where('lower(song_title) = ?', title).first
     render :show
   end
 

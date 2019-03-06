@@ -29,7 +29,7 @@ class SplashPage extends Component {
       <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null
 
     return (
-      <div>
+      <div className="splash">
         <header>
           <h1>AudioCaelum</h1>
           <div><Link to="" onClick={this.toggleSessionModal}>Sign In</Link></div>

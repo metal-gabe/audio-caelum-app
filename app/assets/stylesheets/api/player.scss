@@ -1,10 +1,10 @@
 @import './_base_styles.scss';
 
-#player {
+.audio-player {
   border: 1px solid red;
   bottom: 0;
   height: 3em;
   margin: 0;
   position: fixed;
-  width: 100%;
+  width: 99.9%;
 }

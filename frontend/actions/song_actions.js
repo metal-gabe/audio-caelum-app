@@ -3,15 +3,15 @@ import * as SongApiUtil from '../util/song_api_util';
 export const RECEIVE_ALL_SONGS = `RECEIVE_ALL_SONGS`;
 export const RECEIVE_SONG = `RECEIVE_SONG`;
 export const REMOVE_SONG = `REMOVE_SONG`;
-export const RECEIVE_ERRORS = `RECEIVE_ERRORS`;
+export const RECEIVE_SONG_ERRORS = `RECEIVE_SONG_ERRORS`;
 
 /* ---------------------------------------------
 // NORMAL ACTION CREATORS
 --------------------------------------------- */
-const receiveAllSongsAC = (payload) => {
+const receiveAllSongsAC = (songs) => {
   return ({
     type: RECEIVE_ALL_SONGS,
-    payload,
+    songs,
   });
 };
 const receiveSongAC = (song) => {
@@ -26,9 +26,9 @@ const removeSongAC = (id) => {
     songId: id,
   });
 };
-const receiveErrorsAC = (errors) => {
+const receiveSongErrorsAC = (errors) => {
   return ({
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_SONG_ERRORS,
     errors,
   });
 };
@@ -39,32 +39,32 @@ const receiveErrorsAC = (errors) => {
 export const createSongAC = (song) => (dispatch) => {
   return (SongApiUtil.createSongAPI(song).then(
     (song) => dispatch(receiveSongAC(song)),
-    (error) => {
-      return (dispatch(receiveErrorsAC(error.responseJSON)));
-    }
+    (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };
 export const requestAllSongsAC = () => (dispatch) => {
-  return (SongApiUtil.createSongAPI().then(
+  // debugger
+  return (SongApiUtil.fetchAllSongsAPI().then(
     (payload) => dispatch(receiveAllSongsAC(payload)),
-    (error) => dispatch(receiveErrorsAC(error.responseJSON))
+    (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };
-export const requestSongAC = (id) => (dispatch) => {
-  return (SongApiUtil.createSongAPI(id).then(
+export const requestSongAC = (songTitle) => (dispatch) => {
+  // debugger
+  return (SongApiUtil.fetchSongAPI(songTitle).then(
     (song) => dispatch(receiveSongAC(song)),
-    (error) => dispatch(receiveErrorsAC(error.responseJSON))
+    (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };
 export const updateSongAC = (song) => (dispatch) => {
-  return (SongApiUtil.createSongAPI(song).then(
+  return (SongApiUtil.updateSongAPI(song).then(
     (song) => dispatch(receiveSongAC(song)),
-    (error) => dispatch(receiveErrorsAC(error.responseJSON))
+    (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };
 export const deleteSongAC = (id) => (dispatch) => {
-  return (SongApiUtil.createSongAPI(id).then(
+  return (SongApiUtil.deleteSongAPI(id).then(
     (id) => dispatch(removeSongAC(id)),
-    (error) => dispatch(receiveErrorsAC(error.responseJSON))
+    (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };

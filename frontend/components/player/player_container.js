@@ -1,15 +1,13 @@
-import { connect } from 'react-redux'; 
-import Player from './player'; 
+import { connect } from 'react-redux';
+import Player from './player';
 
 const mapStateToProps = (state) => {
-  return ({}); 
-}; 
-
+  return ({});
+};
 const mapDispatchToProps = (dispatch) => {
-  return ({}); 
-}; 
+  return ({});
+};
 
-const PlayerContainer = 
-  connect(mapStateToProps, mapDispatchToProps)(Player); 
-
-export default PlayerContainer; 
+const PlayerContainer =
+  connect(mapStateToProps, mapDispatchToProps)(Player);
+export default PlayerContainer;

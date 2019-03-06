@@ -1,4 +1,14 @@
-// Place all the styles related to the Songs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import './_base_styles.scss';
+
+.song-page-content {
+  background-color: $white;
+  height: 100vh;
+  margin: 0 auto;
+  width: 65%;
+
+  .song-page-header {
+    height: 380px;
+    outline: 1px dashed blue;
+    width: 100;
+  }
+}

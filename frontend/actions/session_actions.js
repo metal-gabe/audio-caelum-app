@@ -2,7 +2,7 @@ import * as SessionApiUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 export const LOGOUT_CURRENT_USER = `LOGOUT_CURRENT_USER`;
-export const RECEIVE_ERRORS = `RECEIVE_ERRORS`;
+export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
 
 /* ---------------------------------------------
 // NORMAL ACTION CREATORS
@@ -18,9 +18,9 @@ const logoutCurrentUserAC = () => {
     type: LOGOUT_CURRENT_USER,
   });
 };
-const receiveErrorsAC = (errors) => {
+const receiveSessionErrorsAC = (errors) => {
   return ({
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_SESSION_ERRORS,
     errors,
   });
 };
@@ -32,7 +32,7 @@ export const signupAC = (user) => (dispatch) => {
   return (SessionApiUtil.signupAPI(user)
     .then(
       (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => dispatch(receiveErrorsAC(error.responseText))
+      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
     )
   );
 };
@@ -40,7 +40,7 @@ export const loginAC = (user) => (dispatch) => {
   return (SessionApiUtil.loginAPI(user)
     .then(
       (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => dispatch(receiveErrorsAC(error.responseText))
+      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
     )
   );
 };
@@ -48,7 +48,7 @@ export const logoutAC = () => (dispatch) => {
   return (SessionApiUtil.logoutAPI()
     .then(
       (user) => dispatch(logoutCurrentUserAC(user)),
-      (error) => dispatch(receiveErrorsAC(error.responseText))
+      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
     )
   );
 };

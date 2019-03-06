@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 
 class DiscoverPage extends Component {
+  componentDidMount() {
+    this.props.requestAllSongs();
+  };
+
   render() {
     return (
       <div className="content">
