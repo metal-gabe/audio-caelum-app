@@ -43,14 +43,12 @@ export const createSongAC = (song) => (dispatch) => {
   ));
 };
 export const requestAllSongsAC = () => (dispatch) => {
-  // debugger
   return (SongApiUtil.fetchAllSongsAPI().then(
     (payload) => dispatch(receiveAllSongsAC(payload)),
     (error) => dispatch(receiveSongErrorsAC(error.responseJSON))
   ));
 };
 export const requestSongAC = (songTitle) => (dispatch) => {
-  // debugger
   return (SongApiUtil.fetchSongAPI(songTitle).then(
     (song) => dispatch(receiveSongAC(song)),
     (error) => dispatch(receiveSongErrorsAC(error.responseJSON))

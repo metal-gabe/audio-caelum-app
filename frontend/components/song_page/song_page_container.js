@@ -6,12 +6,13 @@ import SongPage from './song_page';
 const mapStateToProps = (state, ownProps) => {
   const { entities, session, errors } = state;
   const songTitle = ownProps.match.params.songTitle;
-  // debugger
+  const artist = ownProps.match.params.username;
   return ({
     currentUser: entities.users[session.id],
+    currentArtist: artist,
     songTitle,
     songFromState: selectSong(state, songTitle),
-    errors,
+    errors: errors.songErrors,
   });
 };
 const mapDispatchToProps = (dispatch) => {

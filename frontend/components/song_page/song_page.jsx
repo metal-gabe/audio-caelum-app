@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
 import NavbarContainer from '../navbar/navbar_container';
 import SongPageHeader from './song_page_header';
 // import CommentsFormContainer from '../comments_form/comments_form_container';
-// import SidebarContainer from '../sidebar/sidebar_container';
+import SidebarContainer from '../sidebar/sidebar_container';
 
 class SongPage extends Component {
   componentDidMount() {
@@ -23,30 +22,34 @@ class SongPage extends Component {
     const renderErrors = this.props.errors ?
       <div className="errors">You have an error</div> : null
 
-    // debugger
     const { songFromState } = this.props;
+    console.log(songFromState);
     if (!songFromState) {
       return (null);
     }
 
+    // Setup the currentArtist to actually pull a user from the database
     return (
       <div className="content">
         <NavbarContainer />
         <div className="song-page-content">
-          <SongPageHeader />
-          {/* <CommentsFormContainer /> */}
-          <div>
-            <p>{this.props.currentUser.username}</p>
-            <p>{songFromState.songTitle}</p>
-            <p>
-              <ReactPlayer
-                url={songFromState.songUrl}
-                width="100%"
-                height="3em"
-              />
-            </p>
+          <SongPageHeader
+            artist={this.props.currentArtist}
+            songTitle={this.props.songTitle}
+            song={this.props.songFromState}
+          />
+          <div className="song-info-wrapper">
+            <section className="about-song">
+              {/* <CommentsFormContainer /> */}
+              <div className="hero-bar"></div>
+              <div className="song-info">
+                <div className="song-description"></div>
+                <div className="comments-feed"></div>
+                {/* <div className="comments-footer"></div> */}
+              </div>
+            </section>
+            <SidebarContainer />
           </div>
-          {/* {renderErrors} */}
         </div>
       </div>
     );
@@ -54,3 +57,7 @@ class SongPage extends Component {
 };
 
 export default SongPage;
+// <div>
+//   <p>{this.props.currentArtist}</p>
+//   <p>{songFromState.songTitle}</p>
+// </div>

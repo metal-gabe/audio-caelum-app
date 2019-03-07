@@ -24,6 +24,8 @@ class User < ApplicationRecord
   # has_many :followers, through: :follows
   # has_many :playlists # (bonus feature to be implemented later)
 
+  has_one_attached :profile_img
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     user && user.valid_password?(password) ? user : nil

@@ -1,15 +1,16 @@
-import { connect } from 'react-redux'; 
-import Sidebar from './sidebar'; 
+import { connect } from 'react-redux';
+import Sidebar from './sidebar';
 
-const mapStateToProps = (state) => {
-  return ({}); 
-}; 
+const mapStateToProps = ({ entities, session, errors }) => {
+  return ({
+    allSongs: Object.values(entities.songs),
+  });
+};
 
 const mapDispatchToProps = (dispatch) => {
-  return ({}); 
-}; 
+  return ({});
+};
 
-const SidebarContainer = 
-  connect(mapStateToProps, mapDispatchToProps)(Sidebar); 
-
-export default SidebarContainer; 
+const SidebarContainer =
+  connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default SidebarContainer;

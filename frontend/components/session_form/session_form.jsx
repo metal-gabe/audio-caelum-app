@@ -31,10 +31,14 @@ class SessionForm extends Component {
     return ((e) => {
       e.preventDefault();
 
-      this.props.checkEmail(email).then(
-        () => { this.setState({ currentFormComponent: "LoginFormView"  }); },
-        () => { this.setState({ currentFormComponent: "SignupFormView" }); }
-      );
+      if (email === '') {
+        return
+      } else {
+        this.props.checkEmail(email).then(
+          () => { this.setState({ currentFormComponent: "LoginFormView"  }); },
+          () => { this.setState({ currentFormComponent: "SignupFormView" }); },
+        );
+      }
     });
   };
 
@@ -47,7 +51,6 @@ class SessionForm extends Component {
     const user = Object.assign({}, this.state);
     delete user.currentFormComponent;
     this.props.login(user);
-    // this.resetState(); // chain this into a .then() on the line above
   };
 
   handleSignup(e) {
@@ -55,15 +58,6 @@ class SessionForm extends Component {
     const user = Object.assign({}, this.state);
     delete user.currentFormComponent;
     this.props.signup(user);
-    // this.resetState(); // chain this into a .then() on the line above
-  };
-
-  resetState() {
-    this.setState({
-      password: '',
-      email: '',
-      currentFormComponent: null,
-    });
   };
 
   render() {

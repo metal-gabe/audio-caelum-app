@@ -10,6 +10,9 @@ class Api::SessionsController < ApplicationController
       render '/api/users/show'
     else
       render json: 'Invalid Username/Password', status: 422
+        # Not returning the string above in an array means that
+          # our AJAX promise won't include a "responseJSON" property
+          # It will just default to giving us "responseText"
     end
   end
 

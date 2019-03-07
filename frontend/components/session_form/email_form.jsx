@@ -6,8 +6,10 @@ class EmailForm extends Component {
     super(props);
     this.state = {
       currentErrors: null,
+      emailInputIsFocused: true,
     };
     // this.myOnBlur = this.myOnBlur.bind(this);
+    this.updateEmailInputFocus = this.updateEmailInputFocus.bind(this);
   };
 
   // This is to render the error when the input field is empty
@@ -17,11 +19,21 @@ class EmailForm extends Component {
   //   this.setState({ currentErrors: hasErrors });
   // };
 
+  updateEmailInputFocus() {
+    this.setState({
+      emailInputIsFocused: !this.state.emailInputIsFocused,
+    });
+  };
+
   render() {
     let renderErrors;
-    // if (this.state.currentErrors === true) { // this version is connected to the myOnBlur above
+
+    // THIS VERSION IS CONNECTED TO THE "myOnBlur" ABOVE
+    // if (this.state.currentErrors === true) {
       // this.setState({ disabled: 'disabled' });
-    if (this.props.email === '') {
+
+    // TRYING TO USE THE FIELD FOCUS (OUT OF FOCUS) TO DETERMINE ERROR RENDERS
+    if ((this.props.email === '') && (this.state.emailInputIsFocused)) {
       renderErrors = <p className="errors">Enter a valid email address</p>;
     }
 
@@ -46,6 +58,8 @@ class EmailForm extends Component {
             type="email"
             value={this.props.email}
             placeholder="Your email address *"
+            onFocus={this.updateEmailInputFocus}
+            onBlur={this.updateEmailInputFocus}
             onChange={this.props.update('email')}
           />
           {renderErrors}

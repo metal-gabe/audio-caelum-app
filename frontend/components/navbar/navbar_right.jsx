@@ -38,6 +38,9 @@ class NavbarRight extends Component {
   };
 
   render() {
+    /* ---------------------------------------------
+    // "CLASSNAMES" OBJECTS FOR DYNAMIC STYLING
+    --------------------------------------------- */
     const btnClassUpload = classNames({
       upload: true,
       'nav-button': true,
@@ -54,12 +57,24 @@ class NavbarRight extends Component {
       // 'menu-is-shown': this.state.systemMenuShown,
     });
 
+    /* ---------------------------------------------
+    // RENDERING MENUS & USER INFO
+    --------------------------------------------- */
     const renderUserMenu = this.state.userMenuShown ?
       <UserMenu /> : null
 
     const renderSystemMenu = this.state.systemMenuShown ?
       <SystemMenu handleLogout={this.handleLogout} /> : null
 
+    const renderUserInfo = this.props.currentUser.username ?
+      this.props.currentUser.username : this.props.currentUser.email
+
+    const renderProfileImg = this.props.currentUser.profileImgUrl ?
+      this.props.currentUser.profileImgUrl : window.images.defaultProfileImg
+
+    /* ---------------------------------------------
+    // FINAL RETURN/RENDER/OUTPUT
+    --------------------------------------------- */
     return (
       <div className="navbar-right">
         <Link
@@ -70,9 +85,9 @@ class NavbarRight extends Component {
         </Link>
         <div className={btnClassUserMenu} onClick={this.toggleUserMenu}>
           <span className="profile-img">
-            <img src={window.images.UserProfileImg} />
+            <img src={renderProfileImg} />
           </span>
-          {this.props.currentUser.username}
+          {renderUserInfo}
           <span>&#62;</span>
           {renderUserMenu}
         </div>

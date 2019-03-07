@@ -7,10 +7,11 @@ class Api::SongsController < ApplicationController
   end
 
   def show
-    # debugger
     title = params[:song][:song_title].downcase
     # @song = Song.find_by(song_title: params[:song][:song_title])
     @song = Song.where('lower(song_title) = ?', title).first
+      # This line above ignores case sensitivity
+      # when querying the database for a specific song
     render :show
   end
 

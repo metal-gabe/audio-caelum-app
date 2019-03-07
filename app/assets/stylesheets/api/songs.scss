@@ -7,8 +7,64 @@
   width: 65%;
 
   .song-page-header {
+    background-image: url(image-path('song-page-header'));
+    background-position-y: -200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    display: flex;
     height: 380px;
-    outline: 1px dashed blue;
-    width: 100;
+    justify-content: space-between;
+    padding: 1.4em 1.2em 0;
+    width: 100%;
+
+    .song-info {
+      margin-top: 4px;
+
+      .artist-name,
+      .song-title {
+        background-color: $black;
+      }
+
+      .artist-name {
+        color: $gray-light;
+        font-size: 1.1em;
+        padding: 2px 6px;
+      }
+
+      .song-title {
+        color: $white;
+        font-size: 1.5em;
+        margin-top: 5px;
+        padding: 6px 12px;
+      }
+    }
+
+    .album-img {
+      height: 340px;
+      width: 340px;
+
+      img { width: 100%; }
+    }
+  }
+
+  .song-info-wrapper {
+    display: flex;
+
+    .about-song {
+      outline: 1px dashed green;
+      width: 73%;
+
+      .song-info {
+        border-top: 1px solid $body-bg;
+      }
+    }
+
+    .sidebar-content {
+      box-sizing: border-box;
+      outline: 1px dashed red;
+      padding: 30px;
+      width: 30%;
+    }
   }
 }

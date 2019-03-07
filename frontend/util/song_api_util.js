@@ -14,7 +14,6 @@ export const fetchAllSongsAPI = () => {
   }));
 };
 export const fetchSongAPI = (songTitle) => {
-  // debugger
   return ($.ajax({
     method: `GET`,
     url: `/api/songs/${songTitle}`,

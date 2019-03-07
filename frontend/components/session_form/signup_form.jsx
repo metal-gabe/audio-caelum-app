@@ -3,6 +3,11 @@ import { Link, Route, Redirect } from 'react-router-dom';
 
 class SignupForm extends Component {
   render() {
+    let renderErrors;
+    if (this.props.errors) {
+      renderErrors = <p className="errors">{this.props.errors}</p>;
+    }
+
     return (
       <div className="modal-signup-form">
         <h1>Create your AudioCaelum account</h1>
@@ -20,6 +25,7 @@ class SignupForm extends Component {
             value={this.props.password}
             onChange={this.props.update('password')}
           />
+          {renderErrors}
           <div className="captcha">
             <div>We believe that you're not a robot.</div>
             <img
@@ -36,7 +42,7 @@ class SignupForm extends Component {
           <div className="signin-reminder">
             <h3>Are you trying to sign in?</h3>
             The email address that you entered was not found. <br />
-            Double-check your email address.
+            Think of another one and get back to us. ;-)
           </div>
         </form>
       </div>

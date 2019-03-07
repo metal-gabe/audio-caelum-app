@@ -88,10 +88,10 @@ class UploadForm extends Component {
   };
 
   grabErrors() {
-    const errors = this.props.errors.songs;
+    const errors = this.props.errors.songErrors;
     const allErrors = errors.map((error) => {
       return (
-        <li>error</li>
+        <li>{error}</li>
       );
     });
     return (allErrors);
