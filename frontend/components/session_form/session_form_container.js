@@ -4,7 +4,6 @@ import { verifyEmailAPI } from '../../util/session_api_util';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ entities, session, errors }) => {
-  console.log(errors);
   return ({
     errors: errors.sessionErrors,
     formType: 'Signup',

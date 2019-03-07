@@ -4,7 +4,6 @@ import { requestAllSongsAC } from '../../actions/song_actions';
 import DiscoverPage from './discover_page';
 
 const mapStateToProps = ({ entities, session, errors }) => {
-  console.log('Song from state MSP', entities.songs);
   return ({
     currentUser: entities.users[session.id],
     loggedIn: Boolean(session.id),

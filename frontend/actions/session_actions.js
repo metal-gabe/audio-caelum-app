@@ -32,7 +32,7 @@ export const signupAC = (user) => (dispatch) => {
   return (SessionApiUtil.signupAPI(user)
     .then(
       (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
+      (error) => dispatch(receiveSessionErrorsAC(error.responseJSON))
     )
   );
 };

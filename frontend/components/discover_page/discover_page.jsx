@@ -17,15 +17,9 @@ class DiscoverPage extends Component {
 
   render() {
     const { allSongs } = this.props;
-
-    console.log('All Songs in Render', allSongs);
-    console.log('Props inside of render', this.props);
-
     const collectAllSongs = allSongs.map((song) => {
       return <Link to=""><li>{song.songTitle}</li></Link>
     });
-
-    console.log('All Songs in LI', collectAllSongs);
 
     return (
       <div className="content">

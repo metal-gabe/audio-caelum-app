@@ -23,10 +23,7 @@ class SongPage extends Component {
       <div className="errors">You have an error</div> : null
 
     const { songFromState } = this.props;
-    console.log(songFromState);
-    if (!songFromState) {
-      return (null);
-    }
+    if (!songFromState) return (null);
 
     // Setup the currentArtist to actually pull a user from the database
     return (
