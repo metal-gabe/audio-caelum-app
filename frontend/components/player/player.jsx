@@ -8,8 +8,15 @@ class Player extends Component {
     this.togglePlayPause = this.togglePlayPause.bind(this);
   };
 
+  // componentDidUpdate() {
+  //   if (!this.state.isSongPlaying && this.props.loadedSong) {
+  //     const player = document.getElementById('player');
+  //     player.play();
+  //   }
+  // };
+
   togglePlayPause(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const x = e.which;
     console.log(x);
     const player = document.getElementById('player');
