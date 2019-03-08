@@ -4,9 +4,7 @@ import ReactPlayer from 'react-player';
 class Player extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSongPlaying: false,
-    };
+    this.state = { isSongPlaying: false, };
     // this.togglePlayPause = this.togglePlayPause.bind(this);
   };
 
@@ -18,9 +16,7 @@ class Player extends Component {
     } else {
       player.play();
     }
-    this.setState({
-      isSongPlaying: !this.state.isSongPlaying,
-    });
+    this.setState({ isSongPlaying: !this.state.isSongPlaying, });
   };
 
   render() {

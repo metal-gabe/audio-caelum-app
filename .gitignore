@@ -1,3 +1,4 @@
+credentials.yml.enc
 tmp/
 node_modules/
 bundle.js
