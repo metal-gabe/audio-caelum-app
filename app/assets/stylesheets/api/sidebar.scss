@@ -1,0 +1,64 @@
+@import '_base_styles.scss';
+
+.sidebar-content {
+  border-left: 1px solid $body-bg;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 30%;
+
+  .related-tracks {
+    .related-tracks-header {
+      align-items: baseline;
+      color: $gray-light-med;
+      display: flex;
+      font-size: 15px;
+      justify-content: space-between;
+      padding: 6px 0;
+
+      a {
+        text-decoration: none;
+
+        &:visited {
+          color: $gray-light-med;
+        }
+      }
+    }
+
+    .related-track {
+      align-items: center;
+      display: flex;
+      margin-bottom: 18px;
+
+      &:first-child {
+        border-top: 1px solid $body-bg;
+        padding-top: 15px;
+      }
+
+      img {
+        width: 50px;
+        margin-right: 10px;
+      }
+
+      .related-track-info {
+        font-size: 14px;
+
+        div {
+          color: $gray-med;
+
+          &:first-child { color: $gray-light-med; }
+
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 1024px ) {
+  .sidebar-content {
+    width: 43%;
+  }
+}

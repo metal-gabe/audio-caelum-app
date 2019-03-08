@@ -13,7 +13,7 @@ class SongPageHeader extends Component {
         <div className="song-info">
           {/* add a div here for a big orange play button here */}
           <div>
-            <div className="artist-name">{this.capitalize(this.props.artist)}</div>
+            <span className="artist-name">{this.capitalize(this.props.artist)}</span>
             <div className="song-title">{this.capitalize(this.props.songTitle)}</div>
           </div>
         {/* add a div to hold submission age & genre tags info */}

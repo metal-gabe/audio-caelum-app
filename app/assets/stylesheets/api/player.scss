@@ -1,10 +1,21 @@
 @import './_base_styles.scss';
 
-.audio-player {
-  border: 1px solid red;
+.audio-player-wrapper {
+  background-color: $body-bg;
+  border-top: 1px solid $gray-light;
   bottom: 0;
+  display: flex;
   height: 3em;
+  justify-content: center;
   margin: 0;
   position: fixed;
   width: 99.9%;
+
+  .player-container {
+    width: 65%;
+
+    .audio-player { width: 70%; }
+
+    .playing-artist { width: 30%; }
+  }
 }

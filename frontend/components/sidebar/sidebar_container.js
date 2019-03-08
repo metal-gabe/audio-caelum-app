@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { requestAllSongsAC } from '../../actions/song_actions';
 import Sidebar from './sidebar';
 
 const mapStateToProps = ({ entities, session, errors }) => {
@@ -8,7 +9,9 @@ const mapStateToProps = ({ entities, session, errors }) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return ({});
+  return ({
+    requestAllSongs: () => dispatch(requestAllSongsAC()),
+  });
 };
 
 const SidebarContainer =

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavbarContainer from '../navbar/navbar_container';
 import SongPageHeader from './song_page_header';
-// import CommentsFormContainer from '../comments_form/comments_form_container';
+import CommentsFormContainer from '../comments_form/comments_form_container';
 import SidebarContainer from '../sidebar/sidebar_container';
 
 class SongPage extends Component {
@@ -35,14 +35,21 @@ class SongPage extends Component {
             songTitle={this.props.songTitle}
             song={this.props.songFromState}
           />
-          <div className="song-info-wrapper">
+          <div className="about-song-wrapper">
             <section className="about-song">
-              {/* <CommentsFormContainer /> */}
-              <div className="hero-bar"></div>
-              <div className="song-info">
-                <div className="song-description"></div>
-                <div className="comments-feed"></div>
-                {/* <div className="comments-footer"></div> */}
+              <CommentsFormContainer />
+              <div className="song-info-wrapper">
+                <div className="hero-bar">
+                  <img src={songFromState.albumImgUrl} />
+                  <p>{this.props.currentArtist}</p>
+                </div>
+                <div className="song-info">
+                  <div className="song-description">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit torquent, luctus praesent quis nulla imperdiet habitant quam fames, porta dapibus est justo integer viverra aenean. Scelerisque vivamus dictumst duis aenean id a curae, commodo luctus congue pharetra praesent facilisi dictum sed, mattis ligula tristique faucibus justo libero.
+                  </div>
+                  <div className="comments-feed"></div>
+                  {/* <div className="comments-footer"></div> */}
+                </div>
               </div>
             </section>
             <SidebarContainer />

@@ -48,23 +48,39 @@
     }
   }
 
-  .song-info-wrapper {
+  .about-song-wrapper {
     display: flex;
+    margin-top: 21px;
 
     .about-song {
-      outline: 1px dashed green;
+      justify-content: center;
+      margin-left: 30px;
       width: 73%;
 
-      .song-info {
-        border-top: 1px solid $body-bg;
-      }
-    }
+      .song-info-wrapper {
+        display: flex;
 
-    .sidebar-content {
-      box-sizing: border-box;
-      outline: 1px dashed red;
-      padding: 30px;
-      width: 30%;
+        .hero-bar {
+          margin-top: 20px;
+          padding-right: 20px;
+
+          img {
+            // outline: 1px dashed green;
+            border-radius: 50%;
+            width: 7.5em;
+          }
+
+          p {
+            color: $gray-med;
+            margin-top: .3em;
+          }
+        }
+
+        .song-info {
+          margin-right: 31px;
+          padding-top: 20px;
+        }
+      }
     }
   }
 }

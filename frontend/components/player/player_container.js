@@ -2,12 +2,11 @@ import { connect } from 'react-redux';
 import Player from './player';
 
 const mapStateToProps = (state) => {
-  return ({});
-};
-const mapDispatchToProps = (dispatch) => {
-  return ({});
+  return ({
+    // playingArtist: ,
+    // playingSong: ,
+  });
 };
 
-const PlayerContainer =
-  connect(mapStateToProps, mapDispatchToProps)(Player);
+const PlayerContainer = connect(mapStateToProps)(Player);
 export default PlayerContainer;
