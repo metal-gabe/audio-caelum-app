@@ -3,7 +3,7 @@ import Player from './player';
 
 const mapStateToProps = ({ entities, ui }) => {
   return ({
-    playingSong: entities.songs[ui.playingSong],
+    loadedSong: entities.songs[ui.playingSong],
     // playingArtist: ,
   });
 };

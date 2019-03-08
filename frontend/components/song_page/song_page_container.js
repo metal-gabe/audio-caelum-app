@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestSongAC } from '../../actions/song_actions';
+import { playSongAC, requestSongAC } from '../../actions/song_actions';
 import selectSong from '../../reducers/selectors';
 import SongPage from './song_page';
 
@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return ({
     requestSong: (songTitle) => dispatch(requestSongAC(songTitle)),
+    playSong: (song) => dispatch(playSongAC(song)),
   });
 };
 

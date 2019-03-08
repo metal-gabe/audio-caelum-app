@@ -5,25 +5,27 @@ class Player extends Component {
   constructor(props) {
     super(props);
     this.state = { isSongPlaying: false, };
-    // this.togglePlayPause = this.togglePlayPause.bind(this);
+    this.togglePlayPause = this.togglePlayPause.bind(this);
   };
 
   togglePlayPause(e) {
+    e.preventDefault();
     const x = e.which;
+    console.log(x);
     const player = document.getElementById('player');
-    if (x === 32 && this.state.isSongPlaying) {
-      player.pause();
-    } else {
-      player.play();
+    if (this.props.loadedSong) {
+      if (x === 32 && this.state.isSongPlaying) {
+        player.pause();
+      } else {
+        player.play();
+      }
+      this.setState({ isSongPlaying: !this.state.isSongPlaying, });
     }
-    this.setState({ isSongPlaying: !this.state.isSongPlaying, });
   };
 
   render() {
-    const song = this.props.playingSong ? this.props.playingSong : '';
-    document.addEventListener("keydown", function(event) {
-      if (song) this.togglePlayPause(event);
-    });
+    const song = this.props.loadedSong ? this.props.loadedSong : '';
+    document.addEventListener("keydown", this.togglePlayPause);
 
     return (
       <div className="audio-player-wrapper">

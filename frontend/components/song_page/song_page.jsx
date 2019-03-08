@@ -35,6 +35,7 @@ class SongPage extends Component {
             artist={this.props.currentArtist}
             songTitle={this.props.songTitle}
             song={songFromState}
+            playSong={this.props.playSong}
           />
           <div className="about-song-wrapper">
             <section className="about-song">

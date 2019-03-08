@@ -11,9 +11,6 @@ const PlayingSongReducer = (oldState={}, action) => {
     case PLAY_SONG:
       newState = { playingSong: action.songId };
       return (newState);
-    case RECEIVE_SONG:
-      newState = { playingSong: action.songId };
-      return (newState);
     default:
       return (oldState);
   }

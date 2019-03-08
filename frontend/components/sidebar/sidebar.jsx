@@ -12,6 +12,12 @@ class Sidebar extends Component {
     const songB = allSongs[1];
     const songC = allSongs[2];
 
+    if (allSongs.length === 0) {
+      return (
+        <div>You have no songs.</div>
+      );
+    }
+
     return (
       <section className="sidebar-content">
         <div className="related-tracks">
