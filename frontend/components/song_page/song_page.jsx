@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { playSongAC } from '../../actions/song_actions';
 import NavbarContainer from '../navbar/navbar_container';
 import SongPageHeader from './song_page_header';
 import CommentsFormContainer from '../comments_form/comments_form_container';
@@ -33,7 +34,7 @@ class SongPage extends Component {
           <SongPageHeader
             artist={this.props.currentArtist}
             songTitle={this.props.songTitle}
-            song={this.props.songFromState}
+            song={songFromState}
           />
           <div className="about-song-wrapper">
             <section className="about-song">

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import Player from './player';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ entities, ui }) => {
   return ({
+    playingSong: entities.songs[ui.playingSong],
     // playingArtist: ,
-    // playingSong: ,
   });
 };
 

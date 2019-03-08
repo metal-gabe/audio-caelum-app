@@ -2,7 +2,41 @@
 
 .discover-content {
   background-color: $white;
-  height: 100vh;
+  display: flex;
   margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 40px;
   width: 65%;
+
+  .index-wrapper {
+    // margin-left: 30px;
+    margin-bottom: 5.25em;
+    padding-top: 35px;
+    width: 70%;
+
+    a {
+      color: $gray-med;
+      text-decoration: none;
+
+      &:visited { color: inherit; }
+
+      li {
+        align-items: center;
+        background-color: $body-bg;
+        border: 1px solid $gray-light;
+        display: flex;
+        font-size: 40px;
+        height: 220px;
+        list-style-type: none;
+        margin-bottom: 20px;
+        margin-right: 30px;
+
+        img {
+          // margin-right: 20px;
+          padding: 20px;
+          width: 180px;
+        }
+      }
+    }
+  }
 }

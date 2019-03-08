@@ -1,5 +1,6 @@
 import * as SongApiUtil from '../util/song_api_util';
 
+export const PLAY_SONG = `PLAY_SONG`;
 export const RECEIVE_ALL_SONGS = `RECEIVE_ALL_SONGS`;
 export const RECEIVE_SONG = `RECEIVE_SONG`;
 export const REMOVE_SONG = `REMOVE_SONG`;
@@ -8,6 +9,12 @@ export const RECEIVE_SONG_ERRORS = `RECEIVE_SONG_ERRORS`;
 /* ---------------------------------------------
 // NORMAL ACTION CREATORS
 --------------------------------------------- */
+export const playSongAC = (song) => {
+  return ({
+    type: PLAY_SONG,
+    songId: song.id,
+  });
+};
 const receiveAllSongsAC = (songs) => {
   return ({
     type: RECEIVE_ALL_SONGS,

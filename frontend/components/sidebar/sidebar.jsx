@@ -8,13 +8,9 @@ class Sidebar extends Component {
 
   render() {
     const { allSongs } = this.props;
-    console.log(allSongs);
-
     const songA = allSongs[0];
-    // const songB = allSongs[1];
-    // const songC = allSongs[2];
-
-    // debugger
+    const songB = allSongs[1];
+    const songC = allSongs[2];
 
     return (
       <section className="sidebar-content">

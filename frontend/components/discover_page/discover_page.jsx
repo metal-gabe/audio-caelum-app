@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
+import SidebarContainer from '../sidebar/sidebar_container';
 
 class DiscoverPage extends Component {
   constructor(props) {
@@ -17,15 +18,25 @@ class DiscoverPage extends Component {
 
   render() {
     const { allSongs } = this.props;
-    const collectAllSongs = allSongs.map((song) => {
-      return <Link to=""><li>{song.songTitle}</li></Link>
+    const formattedSongs = allSongs.map((song) => {
+      return (
+        <Link to={`/dethklok/${song.songTitle}`}>
+          <li>
+            <img src={song.albumImgUrl} />
+            {song.songTitle}
+          </li>
+        </Link>
+      );
     });
 
     return (
       <div className="content">
         <NavbarContainer />
         <div className="discover-content">
-          <ul>{collectAllSongs}</ul>
+          <div className="index-wrapper">
+            <ul>{formattedSongs}</ul>
+          </div>
+          <SidebarContainer />
         </div>
       </div>
     );

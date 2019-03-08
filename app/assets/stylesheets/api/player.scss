@@ -12,10 +12,42 @@
   width: 99.9%;
 
   .player-container {
+    display: flex;
+    justify-content: space-between;
     width: 65%;
 
-    .audio-player { width: 70%; }
+    .audio-player {
+      color: red;
+      width: 71%;
+    }
 
-    .playing-artist { width: 30%; }
+    .playing-artist {
+      align-items: center;
+      display: flex;
+      padding-left: 12px;
+      width: 28.5%;
+
+      img {
+        height: 30px;
+        margin-right: 12px;
+        width: 30px;
+      }
+
+      .artist-info {
+        color: $gray-med;
+        font-size: 14px;
+
+        div:first-child {
+          color: $gray-light-med;
+          // font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 1024px ) {
+  .audio-player-wrapper {
+    .player-container { width: 100%; }
   }
 }
