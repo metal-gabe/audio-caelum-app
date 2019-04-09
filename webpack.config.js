@@ -6,7 +6,7 @@ module.exports = {
     filename: './bundle.js'
   },
   devtool: 'source-map',
-  module: { 
+  module: {
     rules: [
       {
         test: /\.jsx?$/, //a regular expression that tests what kind of files to run through this loader.

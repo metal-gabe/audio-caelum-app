@@ -9,6 +9,7 @@ import {
 
 document.addEventListener('DOMContentLoaded', () => {
   const mainEl = document.getElementById('main');
+
   let store;
   if (window.currentUser) {
     const { currentUser } = window;
@@ -17,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
       entities: {
         users: {
           [id]: currentUser
-        }
+        },
       },
-      session: { id }
-      };
+      session: { id },
+    };
     store = configureStore(preloadedState);
 
     // Clean up after ourselves so we don't accidentally use the
