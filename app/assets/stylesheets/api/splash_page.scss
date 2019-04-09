@@ -6,6 +6,34 @@
   margin: 0 auto;
   margin-top: -1.3em;
   width: 65%;
+
+  header {
+    outline: 1px dashed red;
+    height: 450px;
+    position: relative;
+
+    .header-info {
+      position: relative;
+      z-index: 10;
+    }
+
+    .slides {
+      background-image: url(image-path('splash_page/listening-04'));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: grayscale(30%);
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .trending {
+    outline: 1px dashed green;
+  }
 }
 
 @media screen and ( max-width: 1024px ) {

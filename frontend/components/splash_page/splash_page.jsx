@@ -30,13 +30,21 @@ class SplashPage extends Component {
 
     return (
       <div className="splash">
-        <header>
-          <h1>AudioCaelum</h1>
-          <div><Link to="" onClick={this.toggleSessionModal}>Sign In</Link></div>
-          <div><Link to="" onClick={this.toggleSessionModal}>Create Account</Link></div>
-          <div><Link to="" onClick={this.demoLogin}>Demo Login</Link></div>
-        </header>
         {renderSessionForm}
+        <header>
+          <div className="header-info">
+            <h1>AudioCaelum</h1>
+            <div><Link to="" onClick={this.toggleSessionModal}>Sign In</Link></div>
+            <div><Link to="" onClick={this.toggleSessionModal}>Create Account</Link></div>
+            <div><Link to="" onClick={this.demoLogin}>Demo Login</Link></div>
+          </div>
+          <div className="slides"></div>
+        </header>
+        <section className="search"></section>
+        <section className="trending"></section>
+        <section className="mobile"></section>
+        <section className="creators"></section>
+        <footer></footer>
       </div>
     );
   };

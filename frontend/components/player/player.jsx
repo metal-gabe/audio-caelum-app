@@ -44,8 +44,8 @@ class Player extends Component {
           <div className="playing-artist">
             <img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d6e882ee85e18d60f492166e1f5400b4af1310d3/album_wow_1.jpg" />
             <div className="artist-info">
-              <div>AnneX</div>
-              <div>Bound by Goat's Blood</div>
+              <div className="band-name">AnneX</div>
+              <div className="song-title">Bound by Goat's Blood</div>
             </div>
           </div>
         </div>
