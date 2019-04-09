@@ -16,15 +16,16 @@ class Player extends Component {
   // };
 
   togglePlayPause(e) {
-    // e.preventDefault();
     const x = e.which;
-    console.log(x);
+    console.log('CURRENT KEY PRESS: ', x);
     const player = document.getElementById('player');
     if (this.props.loadedSong) {
       if (x === 32 && this.state.isSongPlaying) {
         player.pause();
+        e.stopPropagation();
       } else {
         player.play();
+        e.stopPropagation();
       }
       this.setState({ isSongPlaying: !this.state.isSongPlaying, });
     }
@@ -36,17 +37,6 @@ class Player extends Component {
 
     return (
       <div className="audio-player-wrapper">
-        {/*
-        <ReactPlayer
-          url=""
-          width="100%"
-          height="3em"
-          controls={true}
-          config={
-            {}
-          }
-        />
-        */}
         <div className="player-container">
           <audio id="player" className="audio-player" src={song.songUrl} controls>
             Your browser does not support the HTML5 audio player
