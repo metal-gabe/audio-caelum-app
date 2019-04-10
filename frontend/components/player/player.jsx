@@ -17,7 +17,6 @@ class Player extends Component {
 
   togglePlayPause(e) {
     const x = e.which;
-    console.log('CURRENT KEY PRESS: ', x);
     const player = document.getElementById('player');
     if (this.props.loadedSong) {
       if (x === 32 && this.state.isSongPlaying) {

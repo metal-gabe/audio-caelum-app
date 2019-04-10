@@ -68,6 +68,7 @@
 
         .signup {
           background-color: $sc-orange;
+          border: 1px solid $sc-orange;
         }
 
         .demo-login {}
@@ -90,14 +91,78 @@
     }
   }
 
-  .search,
-  .trending,
-  .mobile,
-  .creators {
-    outline: 1px dashed green;
-    height: 300px;
+  .splash-search,
+  .splash-trending,
+  .splash-mobile,
+  .splash-creators,
+  .splash-thanks,
+  .footer-container {
+    margin: 0;
     padding: 0;
     width: 100%;
+  }
+
+  .splash-trending,
+  .footer-container {
+    height: 325px;
+  }
+
+  .splash-search {
+    height: 7em;
+  }
+
+  .splash-trending {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .splash-mobile {
+    background-color: $body-bg;
+    height: 450px;
+  }
+
+  .splash-creators {
+    align-items: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, .15);
+    background-image: url(image-path('splash_page/recording-05'));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    display: flex;
+    filter: saturate(350%);
+    height: 350px;
+
+    .creators-caption {
+      margin-left: 3em;
+      width: 35%;
+
+      h2 { font-size: 26px; }
+
+      p {
+        font-size: 18px;
+        font-weight: 200;
+        padding-bottom: 1.25em;
+
+        span { font-size: 12px; }
+      }
+
+      .creators-start {
+        border: 1px solid $search-bg;
+        border-radius: 3px;
+        color: $white;
+        font-size: 19px;
+        outline: none;
+        padding: 14px 26px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .splash-thanks {
+    height: 375px;
   }
 }
 
@@ -113,8 +178,12 @@
   }
 }
 
-@media screen and ( max-width: 1024px ) {
+@media screen and ( max-width: 1079px ) {
   .splash-page {
     width: 100%;
+
+    .splash-mobile {
+      height: 325px;
+    }
   }
 }
