@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
-    window.requestAllSongs = requestAllSongsAC;
-    window.requestSong = requestSongAC;
+    // window.requestAllSongs = requestAllSongsAC;
+    // window.requestSong = requestSongAC;
 
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
   // TESTING END
 
   ReactDOM.render(<Root store={store} />, mainEl);
