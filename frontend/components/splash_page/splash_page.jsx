@@ -33,11 +33,32 @@ class SplashPage extends Component {
         {renderSessionForm}
         <header>
           <div className="header-info">
-            <h4>AudioCaelum</h4>
+            <div className="logo-banner">
+              <div className="logo"></div>
+              <h4>AudioCaelum</h4>
+            </div>
             <div className="authorization">
-              <Link to="" onClick={this.toggleSessionModal}>Sign In</Link>
-              <Link to="" onClick={this.toggleSessionModal}>Create Account</Link>
-              <Link to="" onClick={this.demoLogin}>Demo Login</Link>
+              <Link
+                to=""
+                className="signin"
+                onClick={this.toggleSessionModal}
+              >
+                Sign in
+              </Link>
+              <Link
+                to=""
+                className="signup"
+                onClick={this.toggleSessionModal}
+              >
+                Create account
+              </Link>
+              <Link
+                to=""
+                className="demo-login"
+                onClick={this.demoLogin}
+              >
+                Demo Login
+              </Link>
             </div>
           </div>
           <div className="carousel"></div>
