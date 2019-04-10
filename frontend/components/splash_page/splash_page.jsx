@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link, withRouter, Redirect, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container';
 import SearchBar from '../navbar/search_bar';
+import appStoreBadge from '../../../app/assets/images/splash_page/app_store_badges/apple-app-store.png';
+import playStoreBadge from '../../../app/assets/images/splash_page/app_store_badges/google-play-store.png';
 
 class SplashPage extends Component {
   constructor(props) {
@@ -81,8 +83,22 @@ class SplashPage extends Component {
               But you can find really cool games & apps at these locations:
             </p>
             <div className="mobile-links">
-              <div className="app-store">App Store</div>
-              <div className="play-store">Play Store</div>
+              <div className="app-store">
+                <a href=''>
+                  <img
+                    alt='Download on the App Store'
+                    src={appStoreBadge}
+                  />
+                </a>
+              </div>
+              <div className="play-store">
+                <a href='https://play.google.com/store/apps/details?id=com.soundcloud.android&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                  <img
+                    alt='Get it on Google Play'
+                    src={playStoreBadge}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -90,8 +106,7 @@ class SplashPage extends Component {
           <div className="creators-caption">
             <h2>Calling all creators</h2>
             <p>
-              Get on AudioCaelum <span>(and remember, you sell your soul)</span>&nbsp;
-              to connect with fans & share your sounds. What are you waiting for? 😈
+              Get on AudioCaelum <span>(and remember, you sell your soul)</span> to connect with fans & share your sounds. What are you waiting for? 😈
             </p>
             <Link
               to=""

@@ -2,6 +2,7 @@
 
 .splash-page {
   background-color: $white;
+  color: $gray-med;
   height: 100%;
   margin: 0 auto;
   margin-top: -1.3em;
@@ -26,9 +27,10 @@
       .logo-banner {
         align-items: center;
         display: flex;
+        top: 0;
 
         .logo {
-          background-image: url(image-path('cloud-icon'));
+          background-image: url(image-path('splash_page/logo-banner-grade'));
           background-position: center;
           background-repeat: no-repeat;
           background-size: 100%;
@@ -78,7 +80,7 @@
     .carousel {
       background-blend-mode: darken;
       background-color: rgba(0, 0, 0, .55);
-      background-image: url(image-path('splash_page/listening-04'));
+      background-image: url(image-path('splash_page/carousel/listening-04'));
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
@@ -102,16 +104,13 @@
     width: 100%;
   }
 
-  .splash-trending,
-  .footer-container {
-    height: 325px;
-  }
-
   .splash-search {
     height: 7em;
   }
 
   .splash-trending {
+    height: 350px;
+
     h2 {
       text-align: center;
     }
@@ -119,15 +118,27 @@
 
   .splash-mobile {
     background-color: $body-bg;
+    background-image: url(image-path('splash_page/devices'));
+    background-position: bottom left 12.5%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    display: flex;
     height: 450px;
+    justify-content: flex-end;
+
+    .mobile-caption {
+      outline: 1px dashed red;
+      box-sizing: border-box;
+      padding: 40px;
+      width: 35%;
+    }
   }
 
   .splash-creators {
-    align-items: center;
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, .15);
-    background-image: url(image-path('splash_page/recording-05'));
-    background-position: bottom;
+    background-image: url(image-path('splash_page/creators/recording-05'));
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: $white;
@@ -136,13 +147,14 @@
     height: 350px;
 
     .creators-caption {
-      margin-left: 3em;
+      margin-left: 5%;
+      margin-top: 1.5em;
       width: 35%;
 
-      h2 { font-size: 26px; }
+      h2 { font-size: 34px; }
 
       p {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 200;
         padding-bottom: 1.25em;
 
@@ -162,7 +174,11 @@
   }
 
   .splash-thanks {
-    height: 375px;
+    height: 750px;
+  }
+
+  .footer-container {
+    height: 196px;
   }
 }
 
@@ -184,6 +200,21 @@
 
     .splash-mobile {
       height: 325px;
+    }
+
+    .splash-creators {
+      .creators-caption {
+        margin-left: 3em;
+        margin-top: 3em;
+
+        h2 { font-size: 26px; }
+
+        p { font-size: 18px; }
+      }
+    }
+
+    .splash-thanks {
+      height: 375px;
     }
   }
 }
