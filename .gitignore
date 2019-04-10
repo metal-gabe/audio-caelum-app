@@ -1,5 +1,6 @@
 # credentials.yml.enc
 tmp/
+log/
 node_modules/
 bundle.js
 bundle.js.map
