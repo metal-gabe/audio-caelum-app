@@ -32,13 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  // TESTING START
-    // window.requestAllSongs = requestAllSongsAC;
-    // window.requestSong = requestSongAC;
-
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
-  // TESTING END
-
   ReactDOM.render(<Root store={store} />, mainEl);
 });

@@ -107,6 +107,15 @@ class SplashPage extends Component {
             <div className="trending-group-2">
               {renderTrendingGroup2}
             </div>
+            <div className="explore-trending">
+              <Link
+                to=''
+                className="explore-music-btn"
+                onClick={this.toggleSessionModal}
+              >
+                Explore more music
+              </Link>
+            </div>
           </div>
         </section>
         <section className="splash-mobile">
@@ -151,11 +160,11 @@ class SplashPage extends Component {
         <section className="splash-thanks">
           <h1>Thanks for listening. Now join in.</h1>
           <h3>
-            Upload tracks, hear songs and sleep peacefully. All for free <span>(sort of)</span>.
+            Upload tracks, hear songs and sleep peacefully <span>(maybe)</span>. All for free <span>(sort of)</span>.
           </h3>
           <div className="signup-module">
             <Link
-              to=""
+              to=''
               className="signup-large"
               onClick={this.toggleSessionModal}
             >
@@ -165,7 +174,7 @@ class SplashPage extends Component {
           <div className="account-exists">
             Already have an account?
             <Link
-              to=""
+              to=''
               className="signin-large"
               onClick={this.toggleSessionModal}
             >

@@ -23,7 +23,7 @@ class DiscoverPage extends Component {
       return (
         <Link to={`/dethklok/${song.songTitle}`}>
           <li>
-            <img src={song.albumImgUrl} />
+            <img src={song.albumImgUrl} alt={song.songTitle} />
             {song.songTitle}
           </li>
         </Link>
