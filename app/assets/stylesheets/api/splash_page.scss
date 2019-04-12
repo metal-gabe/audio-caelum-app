@@ -110,7 +110,7 @@
   }
 
   .splash-trending {
-    height: 350px;
+    height: 610px;
 
     h2 {
       text-align: center;
@@ -315,7 +315,22 @@
     width: 100%;
 
     .splash-mobile {
+      background-size: 50%;
       height: 325px;
+
+      .mobile-caption {
+        width: 45%;
+
+        h1 {
+          font-size: 32px;
+          margin-bottom: 13px;
+        }
+
+        p {
+          font-size: 20px;
+          margin-bottom: 32px;
+        }
+      }
     }
 
     .splash-creators {

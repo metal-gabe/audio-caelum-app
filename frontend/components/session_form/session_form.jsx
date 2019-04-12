@@ -104,9 +104,7 @@ class SessionForm extends Component {
           <div
             className="close-button"
             onClick={this.props.toggleSessionModal}
-          >
-            x
-          </div>
+          ></div>
           {renderFormComponent}
           {executeRedirect}
         </section>

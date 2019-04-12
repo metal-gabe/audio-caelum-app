@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { Link, withRouter, Redirect, Route } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container';
 import SearchBar from '../navbar/search_bar';
-import appStoreBadge from '../../../app/assets/images/splash_page/app_store_badges/apple-app-store.png';
-import playStoreBadge from '../../../app/assets/images/splash_page/app_store_badges/google-play-store.png';
+import TrendingSongItem from './trending_item';
 
 class SplashPage extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      sessionModalIsOpen: false,
-    };
+    this.state = { sessionModalIsOpen: false, };
 
     this.toggleSessionModal = this.toggleSessionModal.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+  };
+
+  componentDidMount() {
+    this.props.requestAllSongs();
   };
 
   toggleSessionModal() {
@@ -27,9 +27,40 @@ class SplashPage extends Component {
     this.props.login(demoUser);
   };
 
+  grabTrendingSongs() {
+    const allSongs = this.props.allSongs;
+    let songs = [];
+
+    while (songs.length < 12) {
+      const randIdx = Math.floor(Math.random() * allSongs.length);
+      const randSong = allSongs[randIdx];
+      if (randSong && !songs.includes(randSong)) songs.push(randSong);
+    }
+
+    return (songs);
+  };
+
   render() {
+    if (this.props.allSongs.length === 0) return null;
+
     const renderSessionForm = this.state.sessionModalIsOpen ?
       <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null
+
+    const trendingSongs = this.grabTrendingSongs();
+    const tsMid = Math.floor(trendingSongs.length / 2);
+    const trendGroup1 = trendingSongs.slice(0, tsMid);
+    const trendGroup2 = trendingSongs.slice(tsMid);
+
+    const renderTrendingGroup1 = trendGroup1.map((song) => {
+      return (
+        <TrendingSongItem key={song.id} song={song} />
+      );
+    });
+    const renderTrendingGroup2 = trendGroup2.map((song) => {
+      return (
+        <TrendingSongItem key={song.id} song={song} />
+      );
+    });
 
     return (
       <div className="splash-page">
@@ -70,13 +101,17 @@ class SplashPage extends Component {
         <section className="splash-trending">
           <h2>Hear what's trending for free in the AudioCaelum community</h2>
           <div className="trending-songs">
-            Stuff goes here
+            <div className="trending-group-1">
+              {renderTrendingGroup1}
+            </div>
+            <div className="trending-group-2">
+              {renderTrendingGroup2}
+            </div>
           </div>
         </section>
         <section className="splash-mobile">
           <div className="mobile-caption">
             <h1>Never stop listening</h1>
-            <div className="color-divider"></div>
             <p>
               AudioCaelum is available here only. But you can find really cool games & apps at these locations.
             </p>
