@@ -101,7 +101,12 @@ class SessionForm extends Component {
     return (
       <section className="modal">
         <section className="modal-screen">
-          <div className="close-button" onClick={this.props.toggleSessionModal}>&times;</div>
+          <div
+            className="close-button"
+            onClick={this.props.toggleSessionModal}
+          >
+            x
+          </div>
           {renderFormComponent}
           {executeRedirect}
         </section>

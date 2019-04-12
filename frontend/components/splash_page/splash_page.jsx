@@ -116,17 +116,19 @@ class SplashPage extends Component {
         <section className="splash-thanks">
           <h1>Thanks for listening. Now join in.</h1>
           <h3>
-            Upload tracks, hear songs and sleep peacefully. All for free (sort of).
+            Upload tracks, hear songs and sleep peacefully. All for free <span>(sort of)</span>.
           </h3>
-          <Link
-            to=""
-            className="signup-large"
-            onClick={this.toggleSessionModal}
-          >
-            Create account
-          </Link>
+          <div className="signup-module">
+            <Link
+              to=""
+              className="signup-large"
+              onClick={this.toggleSessionModal}
+            >
+              Create account
+            </Link>
+          </div>
           <div className="account-exists">
-            <p>Already have an account?</p>
+            Already have an account?
             <Link
               to=""
               className="signin-large"
@@ -137,7 +139,13 @@ class SplashPage extends Component {
           </div>
         </section>
         <div className="footer-container">
-          <footer>Footer</footer>
+          <footer>
+            <div className="footer-links">
+              There - Should be - Some - Links - Here -
+              I will - Add - Those - Later
+            </div>
+            <div className="footer-lang">Language: English (US)</div>
+          </footer>
         </div>
       </div>
     );
