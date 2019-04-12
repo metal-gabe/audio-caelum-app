@@ -74,29 +74,25 @@ class SplashPage extends Component {
           </div>
         </section>
         <section className="splash-mobile">
-          <div className="devices"></div>
           <div className="mobile-caption">
-            <p>Never stop listening</p>
+            <h1>Never stop listening</h1>
             <div className="color-divider"></div>
             <p>
-              AudioCaelum is available here only.<br />
-              But you can find really cool games & apps at these locations:
+              AudioCaelum is available here only. But you can find really cool games & apps at these locations.
             </p>
             <div className="mobile-links">
               <div className="app-store">
-                <a href=''>
-                  <img
-                    alt='Download on the App Store'
-                    src={appStoreBadge}
-                  />
+                <a href='https://www.apple.com/itunes/charts/free-apps/'
+                  target="_blank"
+                >
+                  <div className="app-store-img"></div>
                 </a>
               </div>
               <div className="play-store">
-                <a href='https://play.google.com/store/apps/details?id=com.soundcloud.android&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                  <img
-                    alt='Get it on Google Play'
-                    src={playStoreBadge}
-                  />
+                <a href='https://play.google.com/store/apps'
+                  target="_blank"
+                >
+                  <div className="play-store-img"></div>
                 </a>
               </div>
             </div>

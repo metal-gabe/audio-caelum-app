@@ -1,7 +1,21 @@
-// @import 'css_reset';
 @import 'font-awesome';
 
+@font-face {
+  font-family: 'Interstate';
+  font-style: normal;
+  font-weight: normal;
+  src: url(font_path('interstate/interstate-light.ttf'));
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  src: url(font_path('proxima_nova/proxima_nova_regular.otf'));
+}
+
 $font-stack:
+Interstate,
 'Proxima Nova',
 'Lucida Grande',
 'Lucida Sans Unicode',

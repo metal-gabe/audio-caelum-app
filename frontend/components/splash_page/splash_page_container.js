@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { loginAC } from '../../actions/session_actions';
 import SplashPage from './splash_page';
 

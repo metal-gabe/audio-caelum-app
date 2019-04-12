@@ -127,10 +127,57 @@
     justify-content: flex-end;
 
     .mobile-caption {
-      outline: 1px dashed red;
       box-sizing: border-box;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
       padding: 40px;
       width: 35%;
+
+      h1 {
+        font-size: 36px;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 70px;
+          height: 3px;
+          background-image: linear-gradient(to right,#7d01a1,#f30 50%,#f50);
+          margin-top: 15px;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 0 0 48px;
+      }
+
+      .mobile-links {
+        display: flex;
+
+        .app-store,
+        .play-store {
+          .app-store-img,
+          .play-store-img {
+            background-repeat: no-repeat;
+            background-position: left;
+            height: 50px;
+          }
+
+          .app-store-img {
+            background-image: url(image-path('splash_page/app_store_badges/apple-app-store'));
+            background-size: contain;
+            width: 150px;
+          }
+
+          .play-store-img {
+            background-image: url(image-path('splash_page/app_store_badges/google-play-store'));
+            background-size: 100%;
+            width: 200px;
+          }
+        }
+      }
     }
   }
 
@@ -156,6 +203,7 @@
       p {
         font-size: 22px;
         font-weight: 200;
+        line-height: 1.5;
         padding-bottom: 1.25em;
 
         span { font-size: 12px; }
