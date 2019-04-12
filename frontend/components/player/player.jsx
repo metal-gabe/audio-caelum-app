@@ -34,6 +34,8 @@ class Player extends Component {
     const song = this.props.loadedSong ? this.props.loadedSong : '';
     document.addEventListener("keydown", this.togglePlayPause);
 
+    const renderAlbumImg = song ? <img src={song.albumImgUrl} /> : null;
+
     return (
       <div className="audio-player-wrapper">
         <div className="player-container">
@@ -41,10 +43,10 @@ class Player extends Component {
             Your browser does not support the HTML5 audio player
           </audio>
           <div className="playing-artist">
-            <img src="https://s3-us-west-1.amazonaws.com/audio-caelum-dev/album_imgs/album_wow_1.jpg" />
+            {renderAlbumImg}
             <div className="artist-info">
-              <div className="band-name">AnneX</div>
-              <div className="song-title">Bound by Goat's Blood</div>
+              <div className="band-name">{song.artistId}</div>
+              <div className="song-title">{song.songTitle}</div>
             </div>
           </div>
         </div>

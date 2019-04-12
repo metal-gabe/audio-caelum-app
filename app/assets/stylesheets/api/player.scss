@@ -47,20 +47,20 @@
   }
 }
 
+/* ---------------------------------------------
+// MEDIA QUERIES && RESPONSIVENESS
+--------------------------------------------- */
 @media screen and ( min-width: 2560px ) {
-  .audio-player-wrapper {
-    .player-container { width: 48.8%; }
-  }
-}
+.audio-player-wrapper {
+  .player-container { width: 48.8%; }
+}}
 
 @media screen and ( max-width: 1280px ) {
-  .audio-player-wrapper {
-    .player-container { width: 100%; }
-  }
-}
+.audio-player-wrapper {
+  .player-container { width: 100%; }
+}}
 
 @media screen and ( max-width: 1024px ) {
-  .audio-player-wrapper {
-    .player-container { width: 100%; }
-  }
-}
+.audio-player-wrapper {
+  .player-container { width: 100%; }
+}}
