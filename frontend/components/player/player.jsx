@@ -41,7 +41,7 @@ class Player extends Component {
             Your browser does not support the HTML5 audio player
           </audio>
           <div className="playing-artist">
-            <img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d6e882ee85e18d60f492166e1f5400b4af1310d3/album_wow_1.jpg" />
+            <img src="https://s3-us-west-1.amazonaws.com/audio-caelum-dev/album_imgs/album_wow_1.jpg" />
             <div className="artist-info">
               <div className="band-name">AnneX</div>
               <div className="song-title">Bound by Goat's Blood</div>
