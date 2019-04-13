@@ -198,3 +198,40 @@
     }
   }
 }
+
+/* ---------------------------------------------
+// MEDIA QUERIES && RESPONSIVENESS
+--------------------------------------------- */
+@media screen and ( max-width: 1024px ) {
+.nav-parent {
+  .navbar {
+    width: 100%;
+
+    .navbar-right {
+      .menu-user {
+        .menu-content { left: 794px; }
+      }
+
+      .menu-system {
+        .menu-content { left: 839px; }
+      }
+    }
+  }
+}}
+
+@media screen and ( max-width: 960px ) {
+.nav-parent {
+  .navbar {
+    width: 100%;
+
+    .navbar-right {
+      .menu-user {
+        .menu-content { left: 768px; }
+      }
+
+      .menu-system {
+        .menu-content { left: 775px; }
+      }
+    }
+  }
+}}
