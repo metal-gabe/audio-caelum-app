@@ -49,12 +49,12 @@ class NavbarRight extends Component {
     const btnClassUserMenu = classNames({
       'nav-button': true,
       'menu-user': true,
-      // 'menu-is-shown': this.state.userMenuShown,
+      'menu-is-shown': this.state.userMenuShown,
     });
     const btnClassSysMenu = classNames({
       'nav-button': true,
       'menu-system': true,
-      // 'menu-is-shown': this.state.systemMenuShown,
+      'menu-is-shown': this.state.systemMenuShown,
     });
 
     /* ---------------------------------------------
@@ -64,13 +64,13 @@ class NavbarRight extends Component {
       <UserMenu /> : null
 
     const renderSystemMenu = this.state.systemMenuShown ?
-      <SystemMenu handleLogout={this.handleLogout} /> : null
+      <SystemMenu handleLogout={this.handleLogout} /> : null;
 
     const renderUserInfo = this.props.currentUser.username ?
-      this.props.currentUser.username : this.props.currentUser.email
+      this.props.currentUser.username : this.props.currentUser.email;
 
     const renderProfileImg = this.props.currentUser.profileImgUrl ?
-      this.props.currentUser.profileImgUrl : window.images.defaultProfileImg
+      this.props.currentUser.profileImgUrl : window.images.defaultProfileImg;
 
     /* ---------------------------------------------
     // FINAL RETURN/RENDER/OUTPUT

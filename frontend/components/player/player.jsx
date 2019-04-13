@@ -36,8 +36,10 @@ class Player extends Component {
 
     const renderAlbumImg = song ? <img src={song.albumImgUrl} /> : null;
 
+    const isSongLoaded = song ? {display: 'flex'} : {display: 'none'};
+
     return (
-      <div className="audio-player-wrapper">
+      <div className="audio-player-wrapper" style={isSongLoaded} >
         <div className="player-container">
           <audio id="player" className="audio-player" src={song.songUrl} controls>
             Your browser does not support the HTML5 audio player

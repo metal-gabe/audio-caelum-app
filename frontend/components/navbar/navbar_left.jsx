@@ -27,6 +27,7 @@ class NavbarLeft extends Component {
           to='/discover'>
           <div>Home</div>
         </Link>
+        {/*
         <Link
           className={btnClass}
           onClick={this.props.updateIsActive}
@@ -39,6 +40,7 @@ class NavbarLeft extends Component {
           to='/you/library'>
           <div>Library</div>
         </Link>
+        */}
       </div>
     );
   };
