@@ -24,21 +24,35 @@ class NavbarLeft extends Component {
         <Link
           className={btnClass}
           onClick={this.props.updateIsActive}
-          to='/discover'>
+          to="/discover">
           <div>Home</div>
         </Link>
+        <a href="https://streamlabs.com/"
+          target="_blank"
+          className={btnClass}
+        >
+          Stream
+        </a>
+        <a href="https://sfpl.org/"
+          target="_blank"
+          className={btnClass}
+        >
+          Library
+        </a>
+        {/*
         <Link
           className={btnClass}
           onClick={this.props.updateIsActive}
-          to='/stream'>
+          to="/stream">
           <div>Stream</div>
         </Link>
         <Link
           className={btnClass}
           onClick={this.props.updateIsActive}
-          to='/you/library'>
+          to="/you/library">
           <div>Library</div>
         </Link>
+        */}
       </div>
     );
   };

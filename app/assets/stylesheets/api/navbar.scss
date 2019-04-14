@@ -202,6 +202,21 @@
 /* ---------------------------------------------
 // MEDIA QUERIES && RESPONSIVENESS
 --------------------------------------------- */
+@media screen and ( max-width: 1440px ) {
+.nav-parent {
+  .navbar {
+    .navbar-right {
+      .menu-user {
+        .menu-content { left: 1001px; }
+      }
+
+      .menu-system {
+        .menu-content { left: 1005px; }
+      }
+    }
+  }
+}}
+
 @media screen and ( max-width: 1024px ) {
 .nav-parent {
   .navbar {
