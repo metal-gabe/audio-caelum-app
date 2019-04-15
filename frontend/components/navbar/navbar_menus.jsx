@@ -37,22 +37,32 @@ export const SystemMenu = (props) => {
           <a href="https://gflujan.com">About the dev</a>
         </li>
         <li>
-          <a href="https://www.ca.gov/" target="_blank">Legal Info</a>
+          <a href="https://www.ca.gov/" target="_blank">CA Legal Info</a>
         </li>
         <li>
           <a href="https://www.copyright.gov/"
             target="_blank"
           >
-            Copyright Info
+            Copyright.gov
           </a>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="">Subscription</a>
+          <a
+            href="http://www.looknohands.com/chordhouse/"
+            target="_blank"
+          >
+            Look, no hands!
+          </a>
         </li>
         <li>
-          <a href="">Settings</a>
+          <a
+            href="https://nexus.leagueoflegends.com/en-us/esports/"
+            target="_blank"
+          >
+            LoL Esports
+          </a>
         </li>
         <li>
           <a onClick={props.handleLogout}>Sign out</a>
