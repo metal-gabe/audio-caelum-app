@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container';
 import SearchBar from '../navbar/search_bar';
-import TrendingSongItem from './trending_item';
+import SongItem from './song_item';
 
 class SplashPage extends Component {
   constructor(props) {
@@ -53,12 +53,12 @@ class SplashPage extends Component {
 
     const renderTrendingGroup1 = trendGroup1.map((song) => {
       return (
-        <TrendingSongItem key={song.id} song={song} />
+        <SongItem key={song.id} song={song} />
       );
     });
     const renderTrendingGroup2 = trendGroup2.map((song) => {
       return (
-        <TrendingSongItem key={song.id} song={song} />
+        <SongItem key={song.id} song={song} />
       );
     });
 

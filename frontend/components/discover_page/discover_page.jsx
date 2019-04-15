@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 // import { playSongAC } from '';
 import NavbarContainer from '../navbar/navbar_container';
 import SidebarContainer from '../sidebar/sidebar_container';
+import SongItem from '../splash_page/song_item';
 
 class DiscoverPage extends Component {
   constructor(props) {
@@ -14,11 +15,17 @@ class DiscoverPage extends Component {
   };
 
   componentDidMount() {
+    // this.props.requestAllUsers();
     this.props.requestAllSongs();
   };
 
   render() {
     const { allSongs } = this.props;
+    if (allSongs.length === 0) return (null);
+
+    console.log('ALL USERS: ', this.props.allUsers);
+    console.log('ALL SONGS:', allSongs);
+
     const formattedSongs = allSongs.map((song) => {
       return (
         <Link to={`/dethklok/${song.songTitle}`}>

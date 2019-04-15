@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class TrendingSongItem extends Component {
+class SongItem extends Component {
   render() {
     const { song } = this.props;
     return (
-      <div className="trending-song">
+      <div className="song-item">
         <img src={song.albumImgUrl} alt={song.songTitle} />
         <div className="song-title">{song.songTitle}</div>
         <div className="artist-name">{song.artistId}</div>
@@ -13,4 +13,4 @@ class TrendingSongItem extends Component {
   };
 };
 
-export default TrendingSongItem;
+export default SongItem;

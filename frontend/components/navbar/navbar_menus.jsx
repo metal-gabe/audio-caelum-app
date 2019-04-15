@@ -64,6 +64,8 @@ export const SystemMenu = (props) => {
             LoL Esports
           </a>
         </li>
+      </ul>
+      <ul>
         <li>
           <a onClick={props.handleLogout}>Sign out</a>
         </li>
