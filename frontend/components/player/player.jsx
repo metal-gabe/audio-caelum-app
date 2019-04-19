@@ -39,7 +39,7 @@ class Player extends Component {
     const isSongLoaded = song ? {display: 'flex'} : {display: 'none'};
 
     return (
-      <div className="audio-player-wrapper" style={isSongLoaded} >
+      <div className="audio-player-wrapper">
         <div className="player-container">
           <audio id="player" className="audio-player" src={song.songUrl} controls>
             Your browser does not support the HTML5 audio player
@@ -58,3 +58,5 @@ class Player extends Component {
 };
 
 export default Player;
+
+{/* <div className="audio-player-wrapper" style={isSongLoaded} > */}
