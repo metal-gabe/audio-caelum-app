@@ -22,6 +22,7 @@ class Player extends Component {
       if (x === 32 && this.state.isSongPlaying) {
         player.pause();
         e.stopPropagation();
+        // there might a listener for on spacebar
       } else {
         player.play();
         e.stopPropagation();
