@@ -19,7 +19,29 @@
     width: 100%;
 
     .song-info {
+      display: flex;
       margin-top: 4px;
+
+      .play-button {
+        align-items: center;
+        background-color: $sc-orange;
+        border: 1px solid $sc-orange;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        font-size: 2rem;
+        height: 60px;
+        justify-content: center;
+        margin: 0 .5em;
+        width: 60px;
+
+        &:hover { background-color: $sc-orange-dark; }
+
+        .fa-play {
+          color: $white;
+          padding-left: 6.5%;
+        }
+      }
 
       .artist-name,
       .song-title {
@@ -41,7 +63,6 @@
     }
 
     .album-img {
-      cursor: pointer;
       height: 340px;
       width: 340px;
 

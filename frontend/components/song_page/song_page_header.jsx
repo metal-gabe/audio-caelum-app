@@ -16,14 +16,16 @@ class SongPageHeader extends Component {
     return (
       <div className="song-page-header">
         <div className="song-info">
-          {/* add a div here for a big orange play button here */}
+          <div className="play-button" onClick={this.playThisSong}>
+            <i class="fas fa-play"></i>
+          </div>
           <div>
             <span className="artist-name">{this.capitalize(this.props.artist)}</span>
             <div className="song-title">{this.capitalize(this.props.songTitle)}</div>
           </div>
-        {/* add a div to hold submission age & genre tags info */}
+          {/* add a div to hold submission age & genre tags info */}
         </div>
-        <div className="album-img" onClick={this.playThisSong}>
+        <div className="album-img">
           <img src={this.props.song.albumImgUrl} />
         </div>
       </div>
