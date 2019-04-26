@@ -8,6 +8,7 @@ class Player extends Component {
     this.togglePlayPause = this.togglePlayPause.bind(this);
   };
 
+  // THIS CONTROLS WHETHER THE SONG SHOULD PLAY IMMEDIATELY ONCE A PLAY BUTTON IS PRESSED
   // componentDidUpdate() {
   //   if (!this.state.isSongPlaying && this.props.loadedSong) {
   //     const player = document.getElementById('player');

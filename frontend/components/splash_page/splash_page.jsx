@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container';
 import SearchBar from '../navbar/search_bar';
 import SongItem from './song_item';

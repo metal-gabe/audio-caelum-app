@@ -7,10 +7,7 @@ class SongItem extends Component {
     this._playThisSong = this.playThisSong.bind(this);
   };
 
-  playThisSong() {
-    debugger;
-    this.props.playSong(this.props.song);
-  };
+  playThisSong() { this.props.playSong(this.props.song); };
 
   render() {
     const playButtonSplashPageStyle = 'play-button-splash-page';
@@ -21,9 +18,12 @@ class SongItem extends Component {
         <div className="play-and-img">
           <PlayButton
             style={playButtonSplashPageStyle}
-            onClick={this._playThisSong}
+            playThisSong={this._playThisSong}
           />
-          <img src={song.albumImgUrl} alt={song.songTitle} />
+          <img
+            src={song.albumImgUrl}
+            alt={`${song.songTitle} by ${song.artistId}`}
+          />
         </div>
         <div className="song-title">{song.songTitle}</div>
         <div className="artist-name">{song.artistId}</div>
