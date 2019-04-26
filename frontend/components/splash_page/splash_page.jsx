@@ -28,7 +28,7 @@ class SplashPage extends Component {
   };
 
   grabTrendingSongs() {
-    const allSongs = this.props.allSongs;
+    const { allSongs } = this.props;
     let songs = [];
 
     while (songs.length < 12) {
@@ -53,12 +53,12 @@ class SplashPage extends Component {
 
     const renderTrendingGroup1 = trendGroup1.map((song) => {
       return (
-        <SongItem key={song.id} song={song} />
+        <SongItem key={song.id} song={song} playSong={this.props.playSong} />
       );
     });
     const renderTrendingGroup2 = trendGroup2.map((song) => {
       return (
-        <SongItem key={song.id} song={song} />
+        <SongItem key={song.id} song={song} playSong={this.props.playSong} />
       );
     });
 

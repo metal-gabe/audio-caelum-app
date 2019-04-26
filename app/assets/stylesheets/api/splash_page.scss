@@ -127,7 +127,28 @@
           margin: 10px;
           width: 16.666%;
 
-          img { width: 100%; }
+          .play-and-img {
+            .play-button-splash-page {
+              align-items: center;
+              background-color: $sc-orange;
+              border: 1px solid $sc-orange;
+              border-radius: 50%;
+              cursor: pointer;
+              display: none;
+              font-size: 2rem;
+              height: 60px;
+              justify-content: center;
+              margin: 3%;
+              position: absolute;
+              width: 60px;
+
+              &:hover { background-color: $sc-orange-dark; }
+            }
+
+            img { width: 100%; }
+
+            &:hover .play-button-splash-page { display: flex; }
+          }
 
           .song-title,
           .artist-name {
@@ -410,5 +431,23 @@
 
   .splash-thanks {
     height: 375px;
+  }
+}}
+
+@media screen and ( max-width: 960px ) {
+.splash-page {
+  .splash-trending {
+    .trending-songs {
+      .trending-group-1,
+      .trending-group-2 {
+        .song-item {
+          .play-and-img {
+            .play-button-splash-page {
+              margin: 3.75%;
+            }
+          }
+        }
+      }
+    }
   }
 }}

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PlayButton from '../player/play_button';
 
 class SongPageHeader extends Component {
   constructor(props) {
     super(props);
-    this.playThisSong = this.playThisSong.bind(this);
+    this._playThisSong = this.playThisSong.bind(this);
   };
   capitalize(string) {
     const newStr = string[0].toUpperCase() + string.slice(1).toLowerCase();
@@ -13,12 +14,15 @@ class SongPageHeader extends Component {
   playThisSong() { this.props.playSong(this.props.song); };
 
   render() {
+    const playButtonSongPageStyle = 'play-button-song-page';
+
     return (
       <div className="song-page-header">
         <div className="song-info">
-          <div className="play-button" onClick={this.playThisSong}>
-            <i class="fas fa-play"></i>
-          </div>
+          <PlayButton
+            style={playButtonSongPageStyle}
+            playThisSong={this._playThisSong}
+          />
           <div>
             <span className="artist-name">{this.capitalize(this.props.artist)}</span>
             <div className="song-title">{this.capitalize(this.props.songTitle)}</div>

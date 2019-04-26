@@ -22,7 +22,7 @@
       display: flex;
       margin-top: 4px;
 
-      .play-button {
+      .play-button-song-page {
         align-items: center;
         background-color: $sc-orange;
         border: 1px solid $sc-orange;
@@ -36,11 +36,6 @@
         width: 60px;
 
         &:hover { background-color: $sc-orange-dark; }
-
-        .fa-play {
-          color: $white;
-          padding-left: 6.5%;
-        }
       }
 
       .artist-name,
