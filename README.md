@@ -21,7 +21,6 @@ From conception, design & documentation to implementation, the initial version w
 * Instant database AJAX query to verify user email during signup/login
 * User is able to upload their own songs
     - Custom file restrictions on song uploads
-* m
 
 ## Code Example 
 
