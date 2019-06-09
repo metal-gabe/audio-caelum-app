@@ -108,6 +108,25 @@ def verify_email_db
 end
 ``` 
 
+Once the response comes back, I then use the component's local state, a custom class method and conditional checking to render the appropriate form component. 
+
+``` 
+checkEmail(email) {
+  return ((e) => {
+    e.preventDefault();
+
+    if (email === '') {
+      return
+    } else {
+      this.props.checkEmail(email).then(
+        () => { this.setState({ currentFormComponent: "LoginFormView"  }); },
+        () => { this.setState({ currentFormComponent: "SignupFormView" }); },
+      );
+    }
+  });
+};
+``` 
+
 If the response from my backend comes back as `true`, I render the `login_form` component with the email pre-filled out. 
 
 ![AudioCaelum 3](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-03.png) 
@@ -118,9 +137,34 @@ If the response from my backend comes back as `false`, I render the `signup_form
 
 ## User Uploads 
 
-words about how the upload page works 
+One of the challenging parts of this form was implementing a custom `file_picker` button. I did this by inserting the standard `input` HTML element, then hiding it (`.file-picker { display: none; }`) using S/CSS. From there, I added the `button` element that I wanted displayed and used a custom class method to initiate a virtual click. 
+
+To make sure the user only selected files that were compatible with my backend, I added some constraints to the `input` element that only allowed `.mp3` or `.m4a` files. This worked natively with the OS/browser file picker to grey out options that would not be accepted. 
 
 ![AudioCaelum 5](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-05.png) 
+
+``` 
+<input
+  required
+  className="file-picker"
+  type="file"
+  accept=".mp3, .m4a"
+  onChange={this.updateAudioFile}
+/>
+<button onClick={this.selectFile}>instead, choose A FILE to upload</button>
+``` 
+
+``` 
+/* --------------------------------------------- 
+// Custom class method to create a virtual click 
+// onto the actual .file-picker input element  
+--------------------------------------------- */ 
+selectFile(e) {
+  e.preventDefault();
+  const fileInput = document.querySelector('.file-picker');
+  fileInput.click();
+};
+``` 
 
 ## Future Features & Tasks 
 * Dynamically render audio player whether there is a song/playlist stored or not 
