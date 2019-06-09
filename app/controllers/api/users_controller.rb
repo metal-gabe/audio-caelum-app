@@ -13,6 +13,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     if @user.save
       login!(@user)
       render :show
@@ -24,6 +25,7 @@ class Api::UsersController < ApplicationController
   # BONUS FEATURE TO BE ADDED LATER ON THE FRONT END
   def update
     @user = User.find(params[:id])
+
     if @user.update(user_params)
       render :show
     else
@@ -33,6 +35,7 @@ class Api::UsersController < ApplicationController
 
   def verify_email_db
     @user = User.find_by(email: params[:email])
+
     if @user
       render json: 'true', status: 200
     else

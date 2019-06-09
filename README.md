@@ -15,8 +15,6 @@ From conception, design & documentation to implementation, the initial version w
 
 ## Features
 
-![AudioCaelum Home Page](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-01.png) 
-
 * Asynchronous & continuous global audio player
     - Keyboard spacebar play/pause functionality
 * Instant database AJAX query to verify user email during signup/login
@@ -24,11 +22,13 @@ From conception, design & documentation to implementation, the initial version w
     - Custom file restrictions on song uploads
 * Secure frontend to backend user authentication using BCrypt 
 
+![AudioCaelum Home Page](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-01.png) 
+
 ## Async Audio Player 
 
 This is one of the main features that drew me to this project. The goal of the player is to continuously play music while a user browses the site. As they go from section to section, "page" to "page", the audio is still going until the user decides to stop it.
 
-To implement this, I made use of Redux's global store. As a user selects a song to play, the song is pulled from the `entities` slice of state using a custom selector method (see code snippet below) which then gets passed through it's own, custom reducer. From here, I send the object along to the `ui` slice of state where the audio player component can read whether a song is loaded or not. 
+To implement this, I made use of Redux's global store. As a user selects a song to play, the song is pulled from the `entities` slice of state using a custom selector method (see code snippet below) which then gets passed through it's own custom reducer. From here, I send the object along to the `ui` slice of state where the audio player component can read whether a song is loaded or not. 
 
 ![AudioCaelum 6](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-06.png) 
 
@@ -75,21 +75,51 @@ togglePlayPause(e) {
 
 ## Session Auth Modal & Email API 
 
-words about auth 
+As I was building out the user/session auth, I noticed that SoundCloud did something I hadn't seen before. As a user enters their email into the form the database is immediately queried to verify the existence of the input. If the response is `true` then the modal renders a `login` form next. If the response is `false` then the modal renders a `signup` form. 
+
+The first step to implementing this was to create a custom, RESTful API call that would go straight to the database. Since I only needed to check existence, I bypassed the use of thunks or reducers on the frontend. 
+
+However, a potential pitfall of this idea is that if two users have the same email address. To avoid any troubles this might cause, uniqueness constraints and validations were placed on the backend. 
 
 ![AudioCaelum 2](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-02.png) 
 
-words about login 
+``` 
+export const verifyEmailAPI = (email) => {
+  return ($.ajax({
+    method: `GET`,
+    url: `/api/users/email`,
+    data: { email },
+    success: () => true,
+    failure: () => false,
+  }));
+};
+
+# --------------------------------------------- 
+# Custom method on the backend on the "users_controller" 
+# --------------------------------------------- 
+def verify_email_db
+  @user = User.find_by(email: params[:email])
+
+  if @user
+    render json: 'true', status: 200
+  else
+    render json: 'false', status: 404
+  end
+end
+``` 
+
+If the response from my backend comes back as `true`, I render the `login_form` component with the email pre-filled out. 
 
 ![AudioCaelum 3](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-03.png) 
 
-words about signup 
+If the response from my backend comes back as `false`, I render the `signup_form` component with the email pre-filled out. 
 
 ![AudioCaelum 4](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-04.png) 
 
-## Stuff 
+## User Uploads 
 
-upload page: 
+words about how the upload page works 
+
 ![AudioCaelum 5](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-05.png) 
 
 ## Future Features & Tasks 
