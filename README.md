@@ -2,8 +2,6 @@
 
 [Live Demo: gfl-ac.herokuapp.com](http://gfl-ac.herokuapp.com/)
 
-## About 
-
 AudioCaelum is a music sharing, discovery and entertainment web app. The source inspiration coming from SoundCloud.
 
 From conception, design & documentation to implementation, the initial version was built over a 10 day period. However, I will continue to update, add features and, overall, refine the quality of the site.
@@ -25,7 +23,11 @@ From conception, design & documentation to implementation, the initial version w
 ## Code Example 
 
 ```
-// This is a custom class function to toggle play/pause of the currently loaded song in state using the keyboard's spacebar 
+/* --------------------------------------------- 
+// This is a custom class function to toggle 
+// play/pause of the currently loaded song in 
+// state using the keyboard's spacebar 
+--------------------------------------------- */ 
 
 togglePlayPause(e) {
   const x = e.which;
