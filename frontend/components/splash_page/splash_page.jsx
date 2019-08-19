@@ -45,7 +45,7 @@ class SplashPage extends Component {
       if (randSong && !songs.includes(randSong)) songs.push(randSong);
     }
 
-    return (songs);
+    return songs;
   }
 
   render() {
@@ -53,9 +53,9 @@ class SplashPage extends Component {
     if (allSongs.length === 0) return null;
 
     const { sessionModalIsOpen } = this.state;
-    const renderSessionForm = sessionModalIsOpen
-      ? <SessionFormContainer toggleSessionModal={this.toggleSessionModal} />
-      : null;
+    const renderSessionForm = sessionModalIsOpen ? (
+      <SessionFormContainer toggleSessionModal={this.toggleSessionModal} />
+    ) : null;
 
     const trendingSongs = this.grabTrendingSongs();
 
@@ -76,7 +76,8 @@ class SplashPage extends Component {
           <div className="mobile-caption">
             <h1>Never stop listening</h1>
             <p>
-              AudioCaelum is available here only. But you can find really cool games & apps at these locations.
+              AudioCaelum is available here only. But you can find really cool
+              games & apps at these locations.
             </p>
             <div className="mobile-links">
               <div className="app-store">
@@ -96,7 +97,9 @@ class SplashPage extends Component {
           <div className="creators-caption">
             <h2>Calling all creators</h2>
             <p>
-              Get on AudioCaelum <span>(and remember, you sell your soul)</span> to connect with fans & share your sounds. What are you waiting for? 😈
+              Get on AudioCaelum <span>(and remember, you sell your soul)</span>{' '}
+              to connect with fans & share your sounds. What are you waiting
+              for? 😈
             </p>
             <Link
               className="creators-start"
@@ -110,7 +113,8 @@ class SplashPage extends Component {
         <section className="splash-thanks">
           <h1>Thanks for listening. Now join in.</h1>
           <h3>
-            Upload tracks, hear songs and sleep peacefully <span>(maybe)</span>. All for free <span>(sort of)</span>.
+            Upload tracks, hear songs and sleep peacefully <span>(maybe)</span>.
+            All for free <span>(sort of)</span>.
           </h3>
           <div className="signup-module">
             <Link
@@ -135,8 +139,8 @@ class SplashPage extends Component {
         <div className="footer-container">
           <footer>
             <div className="footer-links">
-              There - Should be - Some - Links - Here -
-              I will - Add - Those - Later
+              There - Should be - Some - Links - Here - I will - Add - Those -
+              Later
             </div>
             <div className="footer-lang">Language: English (US)</div>
           </footer>

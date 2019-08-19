@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 // import { Link, Redirect, Route } from 'react-router-dom';
-import NavbarContainer from "../navbar/navbar_container";
-import UploadNavbar from "./upload_navbar";
-import UploadForm from "./upload_form";
-import UploadFooter from "./upload_footer";
+import NavbarContainer from '../navbar/navbar_container';
+import UploadNavbar from './upload_navbar';
+import UploadForm from './upload_form';
+import UploadFooter from './upload_footer';
 
 const UploadPage = props => {
   const { createSong, currentUser, errors, history } = props;

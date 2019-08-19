@@ -19,6 +19,7 @@
   "private": true,
   "scripts": {
     "start": "webpack -w --mode=development",
+    "eslc": "eslint --print-config ./frontend/components/splash_page/splash_page.jsx | eslint-config-prettier-check",
     "postinstall": "webpack"
   },
   "version": "1.0.0",
