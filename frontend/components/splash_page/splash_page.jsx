@@ -8,31 +8,36 @@ import SplashTrending from './splash_trending';
 class SplashPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { sessionModalIsOpen: false, };
+    this.state = { sessionModalIsOpen: false };
 
     this.toggleSessionModal = this.toggleSessionModal.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
-  };
+  }
 
-  componentDidMount() { this.props.requestAllSongs(); };
+  componentDidMount() {
+    const { requestAllSongs } = this.props;
+    requestAllSongs();
+  }
 
   toggleSessionModal() {
-    this.setState({ sessionModalIsOpen: !this.state.sessionModalIsOpen, });
-  };
+    const { sessionModalIsOpen } = this.state;
+    this.setState({ sessionModalIsOpen: !sessionModalIsOpen });
+  }
 
   demoLogin(e) {
     e.preventDefault();
+    const { login } = this.props;
     const demoUser = {
       username: 'bueller',
       email: 'b@b.com',
-      password: 'password'
+      password: 'password',
     };
-    this.props.login(demoUser);
-  };
+    login(demoUser);
+  }
 
   grabTrendingSongs() {
     const { allSongs } = this.props;
-    let songs = [];
+    const songs = [];
 
     while (songs.length < 12) {
       const randIdx = Math.floor(Math.random() * allSongs.length);
@@ -41,13 +46,16 @@ class SplashPage extends Component {
     }
 
     return (songs);
-  };
+  }
 
   render() {
-    if (this.props.allSongs.length === 0) return null;
+    const { allSongs, playSong } = this.props;
+    if (allSongs.length === 0) return null;
 
-    const renderSessionForm = this.state.sessionModalIsOpen ?
-      <SessionFormContainer toggleSessionModal={this.toggleSessionModal} /> : null
+    const { sessionModalIsOpen } = this.state;
+    const renderSessionForm = sessionModalIsOpen
+      ? <SessionFormContainer toggleSessionModal={this.toggleSessionModal} />
+      : null;
 
     const trendingSongs = this.grabTrendingSongs();
 
@@ -55,14 +63,14 @@ class SplashPage extends Component {
       <div className="splash-page">
         {renderSessionForm}
         <SplashHeader
-          toggleSessionModal={this.toggleSessionModal}
           demoLogin={this.demoLogin}
+          toggleSessionModal={this.toggleSessionModal}
         />
         <SplashSearch />
         <SplashTrending
+          playSong={playSong}
           toggleSessionModal={this.toggleSessionModal}
           trendingSongs={trendingSongs}
-          playSong={this.props.playSong}
         />
         <section className="splash-mobile">
           <div className="mobile-caption">
@@ -72,17 +80,13 @@ class SplashPage extends Component {
             </p>
             <div className="mobile-links">
               <div className="app-store">
-                <a href='https://www.apple.com/itunes/charts/free-apps/'
-                  target="_blank"
-                >
-                  <div className="app-store-img"></div>
+                <a href="https://www.apple.com/itunes/charts/free-apps/">
+                  <div className="app-store-img" />
                 </a>
               </div>
               <div className="play-store">
-                <a href='https://play.google.com/store/apps'
-                  target="_blank"
-                >
-                  <div className="play-store-img"></div>
+                <a href="https://play.google.com/store/apps">
+                  <div className="play-store-img" />
                 </a>
               </div>
             </div>
@@ -95,9 +99,9 @@ class SplashPage extends Component {
               Get on AudioCaelum <span>(and remember, you sell your soul)</span> to connect with fans & share your sounds. What are you waiting for? 😈
             </p>
             <Link
-              to=""
               className="creators-start"
               onClick={this.toggleSessionModal}
+              to=""
             >
               Get started now
             </Link>
@@ -110,9 +114,9 @@ class SplashPage extends Component {
           </h3>
           <div className="signup-module">
             <Link
-              to=''
               className="signup-large"
               onClick={this.toggleSessionModal}
+              to=""
             >
               Create account
             </Link>
@@ -120,9 +124,9 @@ class SplashPage extends Component {
           <div className="account-exists">
             Already have an account?
             <Link
-              to=''
               className="signin-large"
               onClick={this.toggleSessionModal}
+              to=""
             >
               Sign in
             </Link>
@@ -139,7 +143,7 @@ class SplashPage extends Component {
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default SplashPage;

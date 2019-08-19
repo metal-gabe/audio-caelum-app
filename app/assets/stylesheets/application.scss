@@ -14,15 +14,15 @@
  *= require_self
  */
 
-@import './api/_base_styles.scss';
+@import './api/base_styles';
 
 .content {
   margin-top: 2.75em;
 }
 
-@media screen and ( max-width: 1024px ) {
-  .navbar,
+@media screen and (max-width: 1024px) {
   .discover-content,
+  .navbar,
   .song-page-content,
   .upload-content {
     width: 100%;

@@ -1,4 +1,4 @@
-@import '_base_styles.scss';
+@import './base_styles';
 
 .sidebar-content {
   border-left: 1px solid $body-bg;
@@ -57,7 +57,7 @@
   }
 }
 
-@media screen and ( max-width: 1024px ) {
+@media screen and (max-width: 1024px) {
   .sidebar-content {
     width: 43%;
   }

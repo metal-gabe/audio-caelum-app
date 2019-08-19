@@ -120,17 +120,12 @@
 
             &:last-child { border-bottom: none; }
           }
-
         }
-      }
-
-      .menu-user {
-        .menu-content { left: 1348px; }
       }
 
       .menu-system {
         font-size: 40px;
-        padding: 0 8px .75em;
+        padding: 0 8px 0.75em;
         width: 18%;
 
         .ellipsis {
@@ -151,6 +146,8 @@
         display: flex;
         justify-content: space-around;
         padding: 0 10px;
+
+        .menu-content { left: 1348px; }
 
         span {
           &:nth-child(2) {
@@ -177,7 +174,7 @@
     .search {
       border-left: $gray-dark;
       height: 100%;
-      padding: 0 .5em;
+      padding: 0 0.5em;
       width: 40%;
 
       input {
@@ -205,51 +202,54 @@
 /* ---------------------------------------------
 // MEDIA QUERIES && RESPONSIVENESS
 --------------------------------------------- */
-@media screen and ( max-width: 1440px ) {
-.nav-parent {
-  .navbar {
-    .navbar-right {
-      .menu-user {
-        .menu-content { left: 1001px; }
-      }
+@media screen and (max-width: 1440px) {
+  .nav-parent {
+    .navbar {
+      .navbar-right {
+        .menu-user {
+          .menu-content { left: 1001px; }
+        }
 
-      .menu-system {
-        .menu-content { left: 1005px; }
-      }
-    }
-  }
-}}
-
-@media screen and ( max-width: 1024px ) {
-.nav-parent {
-  .navbar {
-    width: 100%;
-
-    .navbar-right {
-      .menu-user {
-        .menu-content { left: 794px; }
-      }
-
-      .menu-system {
-        .menu-content { left: 839px; }
+        .menu-system {
+          .menu-content { left: 1005px; }
+        }
       }
     }
   }
-}}
+}
 
-@media screen and ( max-width: 960px ) {
-.nav-parent {
-  .navbar {
-    width: 100%;
+@media screen and (max-width: 1024px) {
+  .nav-parent {
+    .navbar {
+      width: 100%;
 
-    .navbar-right {
-      .menu-user {
-        .menu-content { left: 768px; }
-      }
+      .navbar-right {
+        .menu-user {
+          .menu-content { left: 794px; }
+        }
 
-      .menu-system {
-        .menu-content { left: 775px; }
+        .menu-system {
+          .menu-content { left: 839px; }
+        }
       }
     }
   }
-}}
+}
+
+@media screen and (max-width: 960px) {
+  .nav-parent {
+    .navbar {
+      width: 100%;
+
+      .navbar-right {
+        .menu-user {
+          .menu-content { left: 768px; }
+        }
+
+        .menu-system {
+          .menu-content { left: 775px; }
+        }
+      }
+    }
+  }
+}

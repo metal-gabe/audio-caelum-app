@@ -1,4 +1,4 @@
-@import '_base_styles.scss';
+@import "./base_styles";
 
 .splash-page {
   background-color: $white;
@@ -31,7 +31,7 @@
         top: 0;
 
         .logo {
-          background-image: url(image-path('splash_page/logo-banner-grade'));
+          background-image: url(image-path("splash_page/logo-banner-grade"));
           background-position: center;
           background-repeat: no-repeat;
           background-size: 100%;
@@ -41,7 +41,7 @@
 
         h4 {
           margin: 0;
-          margin-left: .75em;
+          margin-left: 0.75em;
           text-transform: uppercase;
         }
       }
@@ -54,14 +54,16 @@
         a {
           text-decoration: none;
 
-          &:visited { color: inherit; }
+          &:visited {
+            color: inherit;
+          }
         }
 
         .signin,
         .signup {
           border-radius: 3px;
           font-weight: 100;
-          margin-right: .75em;
+          margin-right: 0.75em;
           padding: 8px 18px;
         }
 
@@ -74,14 +76,14 @@
           border: 1px solid $sc-orange;
         }
 
-        .demo-login {}
+        // .demo-login {}
       }
     }
 
     .carousel {
       background-blend-mode: darken;
-      background-color: rgba(0, 0, 0, .55);
-      background-image: url(image-path('splash_page/carousel/listening-04'));
+      background-color: rgba(0, 0, 0, 0.55);
+      background-image: url(image-path("splash_page/carousel/listening-04"));
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
@@ -94,12 +96,12 @@
     }
   }
 
-  .splash-search,
-  .splash-trending,
-  .splash-mobile,
+  .footer-container,
   .splash-creators,
+  .splash-mobile,
+  .splash-search,
   .splash-thanks,
-  .footer-container {
+  .splash-trending {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -112,7 +114,9 @@
   .splash-trending {
     padding-bottom: 70px;
 
-    h2 { text-align: center; }
+    h2 {
+      text-align: center;
+    }
 
     .trending-songs {
       .trending-group-1,
@@ -142,12 +146,18 @@
               position: absolute;
               width: 60px;
 
-              &:hover { background-color: $sc-orange-dark; }
+              &:hover {
+                background-color: $sc-orange-dark;
+              }
             }
 
-            img { width: 100%; }
+            img {
+              width: 100%;
+            }
 
-            &:hover .play-button-splash-page { display: flex; }
+            &:hover .play-button-splash-page {
+              display: flex;
+            }
           }
 
           .song-title,
@@ -168,8 +178,13 @@
         }
       }
 
-      .trending-group-1 { margin-bottom: 12px; }
-      .trending-group-2 { margin-bottom: 44px; }
+      .trending-group-1 {
+        margin-bottom: 12px;
+      }
+
+      .trending-group-2 {
+        margin-bottom: 44px;
+      }
 
       .explore-trending {
         height: 46px;
@@ -192,7 +207,7 @@
 
   .splash-mobile {
     background-color: $body-bg;
-    background-image: url(image-path('splash_page/devices'));
+    background-image: url(image-path("splash_page/devices"));
     background-position: bottom left 12.5%;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -211,12 +226,12 @@
       h1 {
         font-size: 36px;
 
-        &:after {
-          content: '';
+        &::after {
+          content: "";
           display: block;
           width: 70px;
           height: 3px;
-          background-image: linear-gradient(to right,#7d01a1,#f30 50%,#f50);
+          background-image: linear-gradient(to right, #7d01a1, #f30 50%, #f50);
           margin-top: 15px;
         }
       }
@@ -240,13 +255,23 @@
           }
 
           .app-store-img {
-            background-image: url(image-path('splash_page/app_store_badges/apple-app-store'));
+            background-image:
+              url(
+                image-path(
+                  "splash_page/app_store_badges/apple-app-store"
+                )
+              );
             background-size: contain;
             width: 150px;
           }
 
           .play-store-img {
-            background-image: url(image-path('splash_page/app_store_badges/google-play-store'));
+            background-image:
+              url(
+                image-path(
+                  "splash_page/app_store_badges/google-play-store"
+                )
+              );
             background-size: 100%;
             width: 200px;
           }
@@ -257,8 +282,8 @@
 
   .splash-creators {
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, .15);
-    background-image: url(image-path('splash_page/creators/recording-05'));
+    background-color: rgba(0, 0, 0, 0.15);
+    background-image: url(image-path("splash_page/creators/recording-05"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -272,7 +297,9 @@
       margin-top: 1.5em;
       width: 35%;
 
-      h2 { font-size: 34px; }
+      h2 {
+        font-size: 34px;
+      }
 
       p {
         font-size: 22px;
@@ -280,7 +307,9 @@
         line-height: 1.5;
         padding-bottom: 1.25em;
 
-        span { font-size: 12px; }
+        span {
+          font-size: 12px;
+        }
       }
 
       .creators-start {
@@ -312,7 +341,9 @@
       font-size: 24px;
       margin-top: 15px;
 
-      span { font-size: 14px; }
+      span {
+        font-size: 14px;
+      }
     }
 
     .signup-module {
@@ -366,7 +397,9 @@
         line-height: 20px;
       }
 
-      .footer-links { color: $gray-light; }
+      .footer-links {
+        color: $gray-light;
+      }
     }
   }
 }
@@ -374,80 +407,87 @@
 /* ---------------------------------------------
 // MEDIA QUERIES && RESPONSIVENESS
 --------------------------------------------- */
+@media screen and (min-width: 2560px) {
+  .splash-page {
+    width: 48.8%;
+  }
+}
 
-@media screen and ( min-width: 2560px ) {
-.splash-page {
-  width: 48.8%;
-}}
+@media screen and (max-width: 1280px) {
+  .splash-page {
+    width: 98%;
+  }
+}
 
-@media screen and ( max-width: 1280px ) {
-.splash-page {
-  width: 98%;
-}}
+@media screen and (max-width: 1079px) {
+  .splash-page {
+    width: 100%;
 
-@media screen and ( max-width: 1079px ) {
-.splash-page {
-  width: 100%;
-
-  .splash-trending {
-    .trending-songs {
-      .trending-group-1,
-      .trending-group-2 {
-        padding-left: 10px;
-        padding-right: 10px;
+    .splash-trending {
+      .trending-songs {
+        .trending-group-1,
+        .trending-group-2 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
       }
     }
-  }
 
-  .splash-mobile {
-    background-size: 50%;
-    height: 325px;
+    .splash-mobile {
+      background-size: 50%;
+      height: 325px;
 
-    .mobile-caption {
-      width: 45%;
+      .mobile-caption {
+        width: 45%;
 
-      h1 {
-        font-size: 32px;
-        margin-bottom: 13px;
-      }
+        h1 {
+          font-size: 32px;
+          margin-bottom: 13px;
+        }
 
-      p {
-        font-size: 20px;
-        margin-bottom: 32px;
+        p {
+          font-size: 20px;
+          margin-bottom: 32px;
+        }
       }
     }
-  }
 
-  .splash-creators {
-    .creators-caption {
-      margin-left: 3em;
-      margin-top: 3em;
+    .splash-creators {
+      .creators-caption {
+        margin-left: 3em;
+        margin-top: 3em;
 
-      h2 { font-size: 26px; }
+        h2 {
+          font-size: 26px;
+        }
 
-      p { font-size: 18px; }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .splash-thanks {
+      height: 375px;
     }
   }
+}
 
-  .splash-thanks {
-    height: 375px;
-  }
-}}
-
-@media screen and ( max-width: 960px ) {
-.splash-page {
-  .splash-trending {
-    .trending-songs {
-      .trending-group-1,
-      .trending-group-2 {
-        .song-item {
-          .play-and-img {
-            .play-button-splash-page {
-              margin: 3.75%;
+@media screen and (max-width: 960px) {
+  .splash-page {
+    .splash-trending {
+      .trending-songs {
+        .trending-group-1,
+        .trending-group-2 {
+          .song-item {
+            .play-and-img {
+              .play-button-splash-page {
+                margin: 3.75%;
+              }
             }
           }
         }
       }
     }
   }
-}}
+}

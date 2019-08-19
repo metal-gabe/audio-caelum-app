@@ -15,16 +15,15 @@
 }
 
 $font-stack:
-Interstate,
-'Proxima Nova',
-'Lucida Grande',
-'Lucida Sans Unicode',
-'Lucida Sans',
-Garuda,
-Verdana,
-Tahoma,
-sans-serif
-;
+  Interstate,
+  'Proxima Nova',
+  'Lucida Grande',
+  'Lucida Sans Unicode',
+  'Lucida Sans',
+  Garuda,
+  Verdana,
+  Tahoma,
+  sans-serif;
 
 // BASE COLORS
 $black: #000;
@@ -33,15 +32,15 @@ $disclaimer-text: #9a9a9a;
 $fb-blue: #304f97;
 $goog-blue: #4285f4;
 $gray-dark: #111;
-$gray-light: #c0c0c0;
 $gray-light-med: #999;
+$gray-light: #c0c0c0;
 $gray-med: #333;
 $gray: #666;
 $link-blue: #398bde;
-$modal-grayscale: rgba(242,242,242,.9);
+$modal-grayscale: rgba(242, 242, 242, 0.9);
 $red: #f00;
-$sc-orange: #f50;
 $sc-orange-dark: #ff3200;
+$sc-orange: #f50;
 $search-bg: #e5e5e5;
 $white: #fff;
 

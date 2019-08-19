@@ -1,4 +1,4 @@
-@import './_base_styles.scss';
+@import './base_styles';
 
 .modal {
   display: block;
@@ -108,7 +108,7 @@
       border-top: 1px solid $gray-med;
       content: ' ';
       display: inline-block;
-      padding: .1em;
+      padding: 0.1em;
       width: 46%;
     }
   }

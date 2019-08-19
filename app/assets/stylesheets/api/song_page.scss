@@ -1,4 +1,4 @@
-@import './_base_styles.scss';
+@import './base_styles';
 
 .song-page-content {
   background-color: $white;
@@ -32,7 +32,7 @@
         font-size: 2rem;
         height: 60px;
         justify-content: center;
-        margin: 0 .5em;
+        margin: 0 0.5em;
         width: 60px;
 
         &:hover { background-color: $sc-orange-dark; }
@@ -89,7 +89,7 @@
 
           p {
             color: $gray-med;
-            margin-top: .3em;
+            margin-top: 0.3em;
           }
         }
 

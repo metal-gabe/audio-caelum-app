@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 
 class Player extends Component {
   constructor(props) {
     super(props);
-    this.state = { isSongPlaying: false, };
+    this.state = { isSongPlaying: false };
     this.togglePlayPause = this.togglePlayPause.bind(this);
-  };
+  }
 
   // THIS CONTROLS WHETHER THE SONG SHOULD PLAY IMMEDIATELY ONCE A PLAY BUTTON IS PRESSED
   // componentDidUpdate() {
-  //   if (!this.state.isSongPlaying && this.props.loadedSong) {
+  //   const { isSongPlaying } = this.state;
+  //   const { loadedSong } = this.props;
+
+  //   if (!isSongPlaying && loadedSong) {
   //     const player = document.getElementById('player');
   //     player.play();
   //   }
-  // };
+  // }
 
   togglePlayPause(e) {
+    const { isSongPlaying } = this.state;
     const x = e.which;
     const player = document.getElementById('player');
-    if (this.props.loadedSong) {
-      if (x === 32 && this.state.isSongPlaying) {
+    const { loadedSong } = this.props;
+    if (loadedSong) {
+      if (x === 32 && isSongPlaying) {
         player.pause();
         e.stopPropagation();
         // there might a listener for on spacebar
@@ -28,22 +33,30 @@ class Player extends Component {
         player.play();
         e.stopPropagation();
       }
-      this.setState({ isSongPlaying: !this.state.isSongPlaying, });
+      this.setState({ isSongPlaying: !isSongPlaying });
     }
-  };
+  }
 
   render() {
-    const song = this.props.loadedSong ? this.props.loadedSong : '';
-    document.addEventListener("keydown", this.togglePlayPause);
+    const { loadedSong } = this.props;
+    const song = loadedSong ? loadedSong : '';
+    document.addEventListener('keydown', this.togglePlayPause);
 
-    const renderAlbumImg = song ? <img src={song.albumImgUrl} /> : null;
-
-    const isSongLoaded = song ? {display: 'flex'} : {display: 'none'};
+    const renderAlbumImg = song ? (
+      <img alt="Album Artwork" src={song.albumImgUrl} />
+    ) : null;
+    // const isSongLoaded = song ? { display: 'flex' } : { display: 'none' };
 
     return (
       <div className="audio-player-wrapper">
         <div className="player-container">
-          <audio id="player" className="audio-player" src={song.songUrl} controls>
+          <audio
+            controls
+            className="audio-player"
+            id="player"
+            src={song.songUrl}
+          >
+            <track default kind="captions" src="" srcLang="en" />
             Your browser does not support the HTML5 audio player
           </audio>
           <div className="playing-artist">
@@ -56,9 +69,9 @@ class Player extends Component {
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default Player;
 
-{/* <div className="audio-player-wrapper" style={isSongLoaded} > */}
+/* <div className="audio-player-wrapper" style={isSongLoaded} > */

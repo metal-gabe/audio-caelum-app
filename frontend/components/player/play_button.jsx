@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class PlayButton extends Component {
-  render() {
-    return (
-      <div className={this.props.style} onClick={this.props.playThisSong}>
-        <i className="fas fa-play"></i>
-      </div>
-    );
-  };
+const PlayButton = props => {
+  const { playThisSong, style } = props;
+
+  return (
+    <button className={style} onClick={playThisSong}>
+      <i className="fas fa-play" />
+    </button>
+  );
 };
 
 export default PlayButton;

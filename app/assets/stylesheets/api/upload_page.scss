@@ -1,10 +1,45 @@
-@import './_base_styles.scss';
+@import "./base_styles";
 
 .upload-content {
   background-color: $white;
   height: 100vh;
   margin: 0 auto;
   width: 65%;
+
+  .upload-footer {
+    color: $gray-med;
+    font-size: 14px;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 62%;
+
+    em {
+      font-weight: 900;
+      text-decoration: underline;
+    }
+
+    .divider {
+      border-top: 1px solid $body-bg;
+      color: $gray;
+      font-size: 12px;
+      margin-top: 10px;
+      padding-top: 16px;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: $gray-light-med;
+        }
+      }
+    }
+
+    small {
+      color: $gray-light-med;
+      font-style: italic;
+    }
+  }
 
   .upload-navbar {
     // border: 1px solid $red;
@@ -66,7 +101,9 @@
         width: 300px;
       }
 
-      .file-picker { display: none; }
+      .file-picker {
+        display: none;
+      }
 
       h1 {
         // outline: 1px dashed red;
@@ -79,7 +116,7 @@
 
       .mac-or-pc {
         span {
-          margin: 0 .5em;
+          margin: 0 0.5em;
         }
       }
 
@@ -121,44 +158,13 @@
         font-style: italic;
 
         span {
-          margin-right: .8em;
+          margin-right: 0.8em;
 
-          &:last-child { margin-right: 0; }
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
-    }
-  }
-
-  .upload-footer {
-    color: $gray-med;
-    font-size: 14px;
-    margin: 0 auto;
-    padding-top: 10px;
-    width: 62%;
-
-    em {
-      font-weight: 900;
-      text-decoration: underline;
-    }
-
-    .divider {
-      border-top: 1px solid $body-bg;
-      color: $gray;
-      font-size: 12px;
-      margin-top: 10px;
-      padding-top: 16px;
-      text-align: left;
-
-      a {
-        text-decoration: none;
-
-        &:hover { color: $gray-light-med; }
-      }
-    }
-
-    small {
-      color: $gray-light-med;
-      font-style: italic;
     }
   }
 }
