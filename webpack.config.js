@@ -12,10 +12,7 @@ const options = {
   files: '**/*.s?(a|c)ss',
   formatter: StyleLint.formatters.string,
   lintDirtyModulesOnly: false,
-  syntax: [
-    'css-in-js', 'html',
-    'less', 'sass', 'scss',
-  ],
+  syntax: ['css-in-js', 'html', 'less', 'sass', 'scss'],
 };
 
 module.exports = {
@@ -56,9 +53,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: './bundle.js',
   },
-  plugins: [
-    new StyleLintPlugin(options),
-  ],
+  plugins: [new StyleLintPlugin(options)],
   resolve: {
     extensions: ['.js', '.jsx', '*'],
   },
