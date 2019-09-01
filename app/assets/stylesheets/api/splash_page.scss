@@ -1,4 +1,4 @@
-@import "./base_styles";
+@import './base_styles';
 
 .splash-page {
   background-color: $white;
@@ -193,13 +193,18 @@
 
         .explore-music-btn {
           background-color: $sc-orange;
-          border: 1px solid $sc-orange;
           border-radius: 3px;
+          border: 1px solid $sc-orange;
           color: $white;
+          cursor: pointer;
           font-size: 18px;
           line-height: 18px;
           padding: 13px 23px;
           text-decoration: none;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
