@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link, withRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PlayerContainer from './player/player_container';
 import SplashPageContainer from './splash_page/splash_page_container';
@@ -11,7 +10,7 @@ import SongPageContainer from './song_page/song_page_container';
 const App = () => {
   // let renderPlayer;
   // GET THIS FROM A SLICE/REDUCER/GLOBAL STORE SITUATION
-    // (This is for when I decide to make the player more dynamic)
+  // ---- (This is for when I decide to make the player more dynamic)
 
   // if (this.playerIsActive) {
   //   renderPlayer = <PlayerContainer />;
@@ -20,14 +19,14 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <ProtectedRoute path="/discover" component={DiscoverPageContainer} />
-        <ProtectedRoute path="/upload" component={UploadPageContainer} />
+        <ProtectedRoute component={DiscoverPageContainer} path="/discover" />
+        <ProtectedRoute component={UploadPageContainer} path="/upload" />
         <ProtectedRoute
-          path="/:username/:songTitle"
           component={SongPageContainer}
+          path="/:username/:songTitle"
         />
-        {/*<ProtectedRoute path="/you" component={YouPageContainer} />*/}
-        <AuthRoute path="/" component={SplashPageContainer} />
+        {/* <ProtectedRoute path="/you" component={YouPageContainer} /> */}
+        <AuthRoute component={SplashPageContainer} path="/" />
       </Switch>
       <PlayerContainer />
     </div>
