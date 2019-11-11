@@ -1,15 +1,18 @@
 # credentials.yml.enc
 
-# directories
+# Directories
 log/
 node_modules/
 tmp/
 
-# files
+# Files
 bundle.js
 bundle.js.map
 npm-debug.log
 
-# invis files
+# Invis Files
 .DS_store
 .byebug_history
+
+# Project Files
+*.code-workspace
