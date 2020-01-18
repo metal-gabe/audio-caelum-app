@@ -12,9 +12,18 @@ class NavbarRight extends Component {
       systemMenuShown: false,
     };
 
-    this.handleLogout = this.handleLogout.bind(this);
-    this.toggleUserMenu = this.toggleUserMenu.bind(this);
-    this.toggleSystemMenu = this.toggleSystemMenu.bind(this);
+    // this.handleLogout = this.handleLogout.bind(this);
+    // this.toggleUserMenu = this.toggleUserMenu.bind(this);
+    // this.toggleSystemMenu = this.toggleSystemMenu.bind(this);
+
+    [
+      // prettier-ignore
+      'handleLogout',
+      'toggleUserMenu',
+      'toggleSystemMenu',
+    ].forEach(m => {
+      this[m] = this[m].bind(this);
+    });
   }
 
   handleLogout(e) {
