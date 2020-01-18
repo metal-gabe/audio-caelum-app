@@ -1,6 +1,6 @@
 {
   "author": "Gabriel F. Lujan",
-  "decription": "AudioCaelum is your spot to find major name artists, as well as local, unsigned talent. Find your sonic heaven here!",
+  "description": "AudioCaelum is your spot to find major name artists, as well as local, unsigned talent. Find your sonic heaven here!",
   "directories": {},
   "engines": {
     "node": "10.13.0",
@@ -15,7 +15,7 @@
     "ruby"
   ],
   "license": "ISC",
-  "name": "AudioCaelum",
+  "name": "audio-caelum-app",
   "private": true,
   "scripts": {
     "start": "webpack -w --mode=development",

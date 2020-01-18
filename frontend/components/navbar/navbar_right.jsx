@@ -15,89 +15,105 @@ class NavbarRight extends Component {
     this.handleLogout = this.handleLogout.bind(this);
     this.toggleUserMenu = this.toggleUserMenu.bind(this);
     this.toggleSystemMenu = this.toggleSystemMenu.bind(this);
-  };
+  }
 
   handleLogout(e) {
+    const { history, logout } = this.props;
+
     e.preventDefault();
-    this.props.logout();
-    this.props.history.push('/');
-  };
+    logout();
+    history.push('/');
+  }
 
   toggleUserMenu() {
+    const { userMenuShown } = this.state;
+
     this.setState({
-      userMenuShown: !this.state.userMenuShown,
+      userMenuShown: !userMenuShown,
       systemMenuShown: false,
     });
-  };
+  }
 
   toggleSystemMenu() {
+    const { systemMenuShown } = this.state;
+
     this.setState({
       userMenuShown: false,
-      systemMenuShown: !this.state.systemMenuShown,
+      systemMenuShown: !systemMenuShown,
     });
-  };
+  }
 
   render() {
+    const { userMenuShown, systemMenuShown } = this.state;
+    const { currentUser, updateIsActive, uploadBtnIsActive } = this.props;
+    const { email, profileImgUrl, username } = currentUser;
+
     /* ---------------------------------------------
     // "CLASSNAMES" OBJECTS FOR DYNAMIC STYLING
     --------------------------------------------- */
     const btnClassUpload = classNames({
       upload: true,
       'nav-button': true,
-      'nav-selected': this.props.uploadBtnIsActive,
+      'nav-selected': uploadBtnIsActive,
     });
     const btnClassUserMenu = classNames({
       'nav-button': true,
       'menu-user': true,
-      'menu-is-shown': this.state.userMenuShown,
+      'menu-is-shown': userMenuShown,
     });
     const btnClassSysMenu = classNames({
       'nav-button': true,
       'menu-system': true,
-      'menu-is-shown': this.state.systemMenuShown,
+      'menu-is-shown': systemMenuShown,
     });
 
     /* ---------------------------------------------
     // RENDERING MENUS & USER INFO
     --------------------------------------------- */
-    const renderUserMenu = this.state.userMenuShown ?
-      <UserMenu /> : null
+    const renderUserMenu = userMenuShown ? <UserMenu /> : null;
 
-    const renderSystemMenu = this.state.systemMenuShown ?
-      <SystemMenu handleLogout={this.handleLogout} /> : null;
+    const renderSystemMenu = systemMenuShown ? (
+      <SystemMenu handleLogout={this.handleLogout} />
+    ) : null;
 
-    const renderUserInfo = this.props.currentUser.username ?
-      this.props.currentUser.username : this.props.currentUser.email;
-
-    const renderProfileImg = this.props.currentUser.profileImgUrl ?
-      this.props.currentUser.profileImgUrl : window.images.defaultProfileImg;
+    const renderUserInfo = username || email;
+    const renderProfileImg = profileImgUrl || window.images.defaultProfileImg;
 
     /* ---------------------------------------------
     // FINAL RETURN/RENDER/OUTPUT
     --------------------------------------------- */
     return (
       <div className="navbar-right">
-        <Link
-          className={btnClassUpload}
-          onClick={this.props.updateIsActive}
-          to='/upload'>
+        <Link className={btnClassUpload} onClick={updateIsActive} to="/upload">
           <div>Upload</div>
         </Link>
-        <div className={btnClassUserMenu} onClick={this.toggleUserMenu}>
+        <div
+          className={btnClassUserMenu}
+          onClick={() => {}}
+          onKeyPress={this.toggleUserMenu}
+          role="button"
+          tabIndex={0}
+        >
           <span className="profile-img">
-            <img src={renderProfileImg} />
+            <img alt="User Profile" src={renderProfileImg} />
           </span>
           {renderUserInfo}
           <span>&#62;</span>
           {renderUserMenu}
         </div>
-        <div className={btnClassSysMenu} onClick={this.toggleSystemMenu}>
+        <div
+          className={btnClassSysMenu}
+          onClick={() => {}}
+          onKeyPress={this.toggleSystemMenu}
+          role="button"
+          tabIndex={0}
+        >
           <div className="ellipsis">&#8230;</div>
           {renderSystemMenu}
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default NavbarRight;
