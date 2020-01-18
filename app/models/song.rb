@@ -22,4 +22,5 @@ class Song < ApplicationRecord
   ## BONUS FEATURES
   # has_many :comments
   # has_one :album
+  # has_many :playlists
 end

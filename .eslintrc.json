@@ -43,7 +43,7 @@
     // React Plugin
     "react/button-has-type": "off",
     // 'react/jsx-filename-extension': ['warn', { extensions: ['.js'] }],
-    // the above line gives me a warning when using JSX syntax inside of a .jsx file
+    // ^ the above line gives me a warning when using JSX syntax inside of a .jsx file
     "react/jsx-filename-extension": [
       1,
       {

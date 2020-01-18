@@ -22,13 +22,13 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        // a regular expression that tests what kind of files
+        // ^ a regular expression that tests what kind of files
         // to run through this loader.
         exclude: /(node_modules)/,
-        // ignore these files
+        // ^ ignore these files
         use: {
           loader: 'babel-loader',
-          // the name of the loader we are going to use (babel-loader).
+          // ^ the name of the loader we are going to use (babel-loader).
           query: {
             presets: ['@babel/env', '@babel/react'],
           },
