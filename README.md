@@ -33,7 +33,7 @@ To implement this, I made use of Redux's global store. As a user selects a song 
 
 ![AudioCaelum 6](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-06.png)
 
-```
+```JavaScript
 function selectSong(state, songTitle) {
   const songs = Object.values(state.entities.songs);
   for (let i = 0; i < songs.length; i++) {
@@ -50,7 +50,7 @@ export default selectSong;
 
 Another fun part of building out this audio player was adding in the play/pause toggle functionality. This is controlled by the keyboard's spacebar.
 
-```
+```JavaScript
 /* ---------------------------------------------
 // This is a custom class function to toggle
 // play/pause of the currently loaded song in
@@ -84,7 +84,7 @@ However, a potential pitfall of this idea is that if two users have the same ema
 
 ![AudioCaelum 2](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-02.png)
 
-```
+```JavaScript
 export const verifyEmailAPI = (email) => {
   return ($.ajax({
     method: `GET`,
@@ -94,7 +94,9 @@ export const verifyEmailAPI = (email) => {
     failure: () => false,
   }));
 };
+```
 
+```Ruby
 # ---------------------------------------------
 # Custom method on the backend on the "users_controller"
 # ---------------------------------------------
@@ -111,7 +113,7 @@ end
 
 Once the response comes back, I then use the component's local state, a custom class method and conditional checking to render the appropriate form component.
 
-```
+```JavaScript
 checkEmail(email) {
   return ((e) => {
     e.preventDefault();
@@ -144,7 +146,7 @@ To make sure the user only selected files that were compatible with my backend, 
 
 ![AudioCaelum 5](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-05.png)
 
-```
+```JSX
 <input
   required
   className="file-picker"
@@ -152,10 +154,11 @@ To make sure the user only selected files that were compatible with my backend, 
   accept=".mp3, .m4a"
   onChange={this.updateAudioFile}
 />
+
 <button onClick={this.selectFile}>instead, choose A FILE to upload</button>
 ```
 
-```
+```JavaScript
 /* ---------------------------------------------
 // Custom class method to create a virtual click
 // onto the actual .file-picker input element
