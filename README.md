@@ -4,7 +4,8 @@
 
 AudioCaelum is a music sharing, discovery and entertainment web app. The source inspiration coming from SoundCloud.
 
-From conception, design & documentation to implementation, the initial version was built over a 10 day period. However, I will continue to update, add features and, overall, refine the quality of the site.
+From conception, design & documentation to implementation, the initial version was built over a 10 day period.
+However, I will continue to update, add features and, overall, refine the quality of the site.
 
 ## Technology
 
@@ -27,9 +28,12 @@ From conception, design & documentation to implementation, the initial version w
 
 ## Async Audio Player
 
-This is one of the main features that drew me to this project. The goal of the player is to continuously play music while a user browses the site. As they go from section to section, "page" to "page", the audio is still going until the user decides to stop it.
+This is one of the main features that drew me to this project.
+The goal of the player is to continuously play music while a user browses the site.
+As they go from section to section, "page" to "page", the audio is still going until the user decides to stop it.
 
-To implement this, I made use of Redux's global store. As a user selects a song to play, the song is pulled from the `entities` slice of state using a custom selector method (see code snippet below) which then gets passed through it's own custom reducer. From here, I send the object along to the `ui` slice of state where the audio player component can read whether a song is loaded or not.
+To implement this, I made use of Redux's global store. As a user selects a song to play, the song is pulled from the `entities` slice of state using a custom selector method (see code snippet below) which then gets passed through it's own custom reducer.
+From here, I send the object along to the `ui` slice of state where the audio player component can read whether a song is loaded or not.
 
 ![AudioCaelum 6](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-06.png)
 
@@ -48,7 +52,8 @@ function selectSong(state, songTitle) {
 export default selectSong;
 ```
 
-Another fun part of building out this audio player was adding in the play/pause toggle functionality. This is controlled by the keyboard's spacebar.
+Another fun part of building out this audio player was adding in the play/pause toggle functionality.
+This is controlled by the keyboard's spacebar.
 
 ```JavaScript
 /* ---------------------------------------------
@@ -76,11 +81,15 @@ togglePlayPause(e) {
 
 ## Session Auth Modal & Email API
 
-As I was building out the user/session auth, I noticed that SoundCloud did something I hadn't seen before. As a user enters their email into the form the database is immediately queried to verify the existence of the input. If the response is `true` then the modal renders a `login` form next. If the response is `false` then the modal renders a `signup` form.
+As I was building out the user/session auth, I noticed that SoundCloud did something I hadn't seen before.
+As a user enters their email into the form the database is immediately queried to verify the existence of the input.
+If the response is `true` then the modal renders a `login` form next. If the response is `false` then the modal renders a `signup` form.
 
-The first step to implementing this was to create a custom, RESTful API call that would go straight to the database. Since I only needed to check existence, I bypassed the use of thunks or reducers on the frontend.
+The first step to implementing this was to create a custom, RESTful API call that would go straight to the database.
+Since I only needed to check existence, I bypassed the use of thunks or reducers on the frontend.
 
-However, a potential pitfall of this idea is that if two users have the same email address. To avoid any troubles this might cause, uniqueness constraints and validations were placed on the backend.
+However, a potential pitfall of this idea is that if two users have the same email address.
+To avoid any troubles this might cause, uniqueness constraints and validations were placed on the backend.
 
 ![AudioCaelum 2](https://github.com/gflujan/AudioCaelum/blob/master/docs/readme_pix/gfl-ac-02.png)
 
