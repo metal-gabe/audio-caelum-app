@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// ALL IMPORTS
-// -----------------------------------------------------------------------------
+/* -------------------------------------------------------------------------- */
+/* ALL IMPORTS */
+/* -------------------------------------------------------------------------- */
 // React
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,17 +15,17 @@ import Root from './components/root';
 // Constants
 
 // Utils / Methods
-import configureStore from './store/store';
 // import {
 //   requestAllSongsAC,
 //   requestSongAC,
 // } from './actions/song_actions';
+import configureStore from './store/store';
 
 // Styles
 
-// -----------------------------------------------------------------------------
-// START OF MAIN ENTRY LOGIC
-// -----------------------------------------------------------------------------
+/* -------------------------------------------------------------------------- */
+/* START OF MAIN ENTRY LOGIC */
+/* -------------------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
   const mainEl = document.getElementById('main');
   let store;
