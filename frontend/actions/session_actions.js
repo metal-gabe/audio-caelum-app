@@ -7,48 +7,42 @@ export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
 /* ---------------------------------------------
 // NORMAL ACTION CREATORS
 --------------------------------------------- */
-const receiveCurrentUserAC = (user) => {
-  return ({
+const receiveCurrentUserAC = user => {
+  return {
     type: RECEIVE_CURRENT_USER,
     user,
-  });
+  };
 };
 const logoutCurrentUserAC = () => {
-  return ({
+  return {
     type: LOGOUT_CURRENT_USER,
-  });
+  };
 };
-const receiveSessionErrorsAC = (errors) => {
-  return ({
+const receiveSessionErrorsAC = errors => {
+  return {
     type: RECEIVE_SESSION_ERRORS,
     errors,
-  });
+  };
 };
 
 /* ---------------------------------------------
 // THUNK ACTION CREATORS
 --------------------------------------------- */
-export const signupAC = (user) => (dispatch) => {
-  return (SessionApiUtil.signupAPI(user)
-    .then(
-      (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => dispatch(receiveSessionErrorsAC(error.responseJSON))
-    )
+export const signupAC = user => dispatch => {
+  return SessionApiUtil.signupAPI(user).then(
+    currentUser => dispatch(receiveCurrentUserAC(currentUser)),
+    error => dispatch(receiveSessionErrorsAC(error.responseJSON))
   );
 };
-export const loginAC = (user) => (dispatch) => {
-  return (SessionApiUtil.loginAPI(user)
-    .then(
-      (user) => dispatch(receiveCurrentUserAC(user)),
-      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
-    )
+export const loginAC = user => dispatch => {
+  return SessionApiUtil.loginAPI(user).then(
+    currentUser => dispatch(receiveCurrentUserAC(currentUser)),
+    error => dispatch(receiveSessionErrorsAC(error.responseText))
   );
 };
-export const logoutAC = () => (dispatch) => {
-  return (SessionApiUtil.logoutAPI()
-    .then(
-      (user) => dispatch(logoutCurrentUserAC(user)),
-      (error) => dispatch(receiveSessionErrorsAC(error.responseText))
-    )
+export const logoutAC = () => dispatch => {
+  return SessionApiUtil.logoutAPI().then(
+    currentUser => dispatch(logoutCurrentUserAC(currentUser)),
+    error => dispatch(receiveSessionErrorsAC(error.responseText))
   );
 };
