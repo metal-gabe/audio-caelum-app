@@ -1,12 +1,28 @@
+/* -------------------------------------------------------------------------- */
+/* ALL IMPORTS */
+/* -------------------------------------------------------------------------- */
+// React
+// Packages
+// Context
+// Components
+// Assets
+// Constants
+
+// Utils / Methods
 import * as SessionApiUtil from '../util/session_api_util';
 
+// Styles
+
+/* -------------------------------------------------------------------------- */
+/* GLOBAL VARIABLES */
+/* -------------------------------------------------------------------------- */
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 export const LOGOUT_CURRENT_USER = `LOGOUT_CURRENT_USER`;
 export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
 
-/* ---------------------------------------------
-// NORMAL ACTION CREATORS
---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* NORMAL ACTION CREATORS */
+/* -------------------------------------------------------------------------- */
 const receiveCurrentUserAC = user => {
   return {
     type: RECEIVE_CURRENT_USER,
@@ -25,9 +41,9 @@ const receiveSessionErrorsAC = errors => {
   };
 };
 
-/* ---------------------------------------------
-// THUNK ACTION CREATORS
---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* THUNK ACTION CREATORS */
+/* -------------------------------------------------------------------------- */
 export const signupAC = user => dispatch => {
   return SessionApiUtil.signupAPI(user).then(
     currentUser => dispatch(receiveCurrentUserAC(currentUser)),
