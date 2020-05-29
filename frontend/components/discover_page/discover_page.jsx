@@ -21,25 +21,31 @@ class DiscoverPage extends Component {
 
   render() {
     const { allSongs } = this.props;
-    if (allSongs.length === 0) return null;
 
-    const formattedSongs = allSongs.map(song => {
-      return (
-        <Link to={`/dethklok/${song.songTitle}`}>
-          <li>
-            <img alt={song.songTitle} src={song.albumImgUrl} />
-            {song.songTitle}
-          </li>
-        </Link>
-      );
-    });
+    if (!allSongs.length) {
+      return null;
+    }
 
     return (
       <div className="content">
         <NavbarContainer />
         <div className="discover-content">
           <div className="index-wrapper">
-            <ul>{formattedSongs}</ul>
+            <ul>
+              {allSongs.length &&
+                allSongs.map(song => {
+                  const { albumImgUrl, songTitle } = song;
+
+                  return (
+                    <Link to={`/dethklok/${songTitle}`}>
+                      <li>
+                        <img alt={songTitle} src={albumImgUrl} />
+                        {songTitle}
+                      </li>
+                    </Link>
+                  );
+                })}
+            </ul>
           </div>
           <SidebarContainer />
         </div>
