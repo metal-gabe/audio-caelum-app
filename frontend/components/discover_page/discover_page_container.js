@@ -24,24 +24,24 @@ import { requestAllSongsAC } from '../../actions/song_actions';
 /* START OF REDUX CONTAINER FOR DISCOVER PAGE */
 /* -------------------------------------------------------------------------- */
 const mapStateToProps = ({ entities, session, errors }) => {
-  return {
-    currentUser: entities.users[session.id],
-    loggedIn: Boolean(session.id),
-    allUsers: entities.users,
-    allSongs: Object.values(entities.songs),
-  };
+	return {
+		currentUser: entities.users[session.id],
+		loggedIn: Boolean(session.id),
+		allUsers: entities.users,
+		allSongs: Object.values(entities.songs),
+	};
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-    requestAllUsers: () => dispatch(requestAllUsersAC()),
-    requestAllSongs: () => dispatch(requestAllSongsAC()),
-  };
+	return {
+		requestAllUsers: () => dispatch(requestAllUsersAC()),
+		requestAllSongs: () => dispatch(requestAllSongsAC()),
+	};
 };
 
 const DiscoverPageContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(DiscoverPage);
 
 export default DiscoverPageContainer;
