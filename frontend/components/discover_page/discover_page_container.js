@@ -41,7 +41,7 @@ const mapDispatchToProps = dispatch => {
 
 const DiscoverPageContainer = connect(
 	mapStateToProps,
-	mapDispatchToProps
+	mapDispatchToProps,
 )(DiscoverPage);
 
 export default DiscoverPageContainer;

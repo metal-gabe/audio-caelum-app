@@ -15,8 +15,9 @@ class DiscoverPage extends Component {
 	}
 
 	componentDidMount() {
-		// this.props.requestAllUsers();
-		this.props.requestAllSongs();
+		const { requestAllSongs } = this.props;
+		requestAllSongs();
+		// requestAllUsers();
 	}
 
 	render() {
