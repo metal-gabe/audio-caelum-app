@@ -6,6 +6,7 @@ export const signupAPI = user => {
       data: { user },
    });
 };
+
 export const loginAPI = user => {
    return $.ajax({
       method: `POST`,
@@ -13,12 +14,14 @@ export const loginAPI = user => {
       data: { user },
    });
 };
+
 export const logoutAPI = () => {
    return $.ajax({
       method: `DELETE`,
       url: `/api/session`,
    });
 };
+
 export const verifyEmailAPI = email => {
    return $.ajax({
       method: `GET`,

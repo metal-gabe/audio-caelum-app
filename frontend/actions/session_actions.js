@@ -24,41 +24,51 @@ export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
 /* NORMAL ACTION CREATORS */
 /* -------------------------------------------------------------------------- */
 const receiveCurrentUserAC = user => {
-  return {
-    type: RECEIVE_CURRENT_USER,
-    user,
-  };
+   return {
+      type: RECEIVE_CURRENT_USER,
+      user,
+   };
 };
+
 const logoutCurrentUserAC = () => {
-  return {
-    type: LOGOUT_CURRENT_USER,
-  };
+   return {
+      type: LOGOUT_CURRENT_USER,
+   };
 };
+
 const receiveSessionErrorsAC = errors => {
-  return {
-    type: RECEIVE_SESSION_ERRORS,
-    errors,
-  };
+   return {
+      type: RECEIVE_SESSION_ERRORS,
+      errors,
+   };
 };
 
 /* -------------------------------------------------------------------------- */
 /* THUNK ACTION CREATORS */
 /* -------------------------------------------------------------------------- */
 export const signupAC = user => dispatch => {
-  return SessionApiUtil.signupAPI(user).then(
-    currentUser => dispatch(receiveCurrentUserAC(currentUser)),
-    error => dispatch(receiveSessionErrorsAC(error.responseJSON))
-  );
+   return SessionApiUtil.signupAPI(user).then(
+      // success callback
+      currentUser => dispatch(receiveCurrentUserAC(currentUser)),
+      // failure callback
+      error => dispatch(receiveSessionErrorsAC(error.responseJSON)),
+   );
 };
+
 export const loginAC = user => dispatch => {
-  return SessionApiUtil.loginAPI(user).then(
-    currentUser => dispatch(receiveCurrentUserAC(currentUser)),
-    error => dispatch(receiveSessionErrorsAC(error.responseText))
-  );
+   return SessionApiUtil.loginAPI(user).then(
+      // success callback
+      currentUser => dispatch(receiveCurrentUserAC(currentUser)),
+      // failure callback
+      error => dispatch(receiveSessionErrorsAC(error.responseText)),
+   );
 };
+
 export const logoutAC = () => dispatch => {
-  return SessionApiUtil.logoutAPI().then(
-    currentUser => dispatch(logoutCurrentUserAC(currentUser)),
-    error => dispatch(receiveSessionErrorsAC(error.responseText))
-  );
+   return SessionApiUtil.logoutAPI().then(
+      // success callback
+      currentUser => dispatch(logoutCurrentUserAC(currentUser)),
+      // failure callback
+      error => dispatch(receiveSessionErrorsAC(error.responseText)),
+   );
 };
