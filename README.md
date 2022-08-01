@@ -185,3 +185,4 @@ selectFile(e) {
 - Incorporate user playlists
 - Add like & follow functionality
 - Build out a user's profile page
+
