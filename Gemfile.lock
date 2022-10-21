@@ -130,7 +130,7 @@ GEM
     minitest (5.16.2)
     msgpack (1.5.3)
     nio4r (2.5.8)
-    nokogiri (1.13.7-x86_64-darwin)
+    nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.1)
     pry (0.14.1)
@@ -229,7 +229,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   annotate
