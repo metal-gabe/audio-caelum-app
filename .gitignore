@@ -10,6 +10,7 @@ tmp/
 bundle.js
 bundle.js.map
 npm-debug.log
+bun.lock
 
 # Invisible Files
 .DS_store
